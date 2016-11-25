@@ -1,47 +1,29 @@
 # HPU二狗 - 最适合河南理工大学童鞋使用的手机APP。
 
-[![forthebadge](http://forthebadge.com/images/badges/built-by-developers.svg)](http://)
-
-[![Gitter](https://badges.gitter.im/LaraDock/laradock.svg)](https://gitter.im/LaraDock/laradock?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-[![powerby](https://travis-ci.org/meolu/walden.svg?branch=master)](https://travis-ci.org/meolu/walden)
+[![forthebadge](http://forthebadge.com/images/badges/built-by-developers.svg)](http://jenes.site)
 
 ## 截图
 
 ![image](screenshot-home.jpg)
 
+## 技术栈
 
-目前项目正在开发中，我会持续更新,可能有些慢。另外还有一个angularjs的项目，进展比较快，angularjs的项目将作为主要版本开发和公开发布。在这里你可以下载到开发中的所有测试用例。当然，在这里你可以下载最新版本的APP。
+![image](temp.jpg)
 
 ## 加入我们
 
-> 你需要了解下面一些技术，你不必完全了解他们，只要你能写一些`JS`, `HTML`, `CSS`,那就情加入我们吧！
-
-- **vue**  https://github.com/jeneser/vue
-- **webpack**  https://github.com/webpack/webpack
-- **vux**  https://github.com/airyland/vux
-- **cordova** http://cordova.apache.org/
+如果你会写一些`JS`, `HTML`, `CSS`, 了解一些前端框架，并有迈向移动端的想法，加入我们吧！
 
 ## 如何开始
 
 ``` bash
-# install dependencies
-npm install
+# 克隆仓库
+git clone https://github.com/jeneser/hpuHelper.git
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 运行
+ionic serve
 
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+# OK good job！
 ```
 
 ## License
