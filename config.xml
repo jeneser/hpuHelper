@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.jeneser.hpuHelper" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>HPU助手</name>
+  <name>HPU二狗</name>
   <description>
-        河南理工大学生活必备APP
+        最适合河南理工大学童鞋使用的手机APP
     </description>
-  <author email="jeneserwang@gmail.com" href="">
+  <author email="jeneserwang@gmail.com" href="http://jenes.site">
       jeneser
     </author>
   <content src="index.html"/>

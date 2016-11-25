@@ -1,5 +1,5 @@
 {
-  "name": "HPU助手",
+  "name": "hpu",
   "app_id": "com.jeneser.hpuHelper",
   "gulpStartupTasks": [
     "sass",

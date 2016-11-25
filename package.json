@@ -1,7 +1,7 @@
 {
-  "name": "HPU助手",
-  "version": "1.1.1",
-  "description": "hpu-helper: An HPU project",
+  "name": "hpu",
+  "version": "1.0.0",
+  "description": "The most suitable app for HPU students",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
@@ -20,7 +20,15 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-compat",
+    "cordova-plugin-app-event",
+    "cordova-plugin-compat",
+    "cordova-plugin-network-information",
+    "phonegap-plugin-barcodescanner",
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-x-toast",
+    "jpush-phonegap-plugin"
   ],
   "cordovaPlatforms": [],
   "main": "gulpfile.js",
@@ -29,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeneser/hpu-angular.git"
+    "url": "git+https://github.com/jeneser/hpuHelper.git"
   },
   "keywords": [
     "hpu"
@@ -37,7 +45,7 @@
   "author": "Jeneser",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeneser/hpu-angular/issues"
+    "url": "https://github.com/jeneser/hpuHelper/issues"
   },
-  "homepage": "https://github.com/jeneser/hpu-angular#readme"
+  "homepage": "https://github.com/jeneser/hpuHelper#readme"
 }

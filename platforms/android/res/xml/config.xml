@@ -37,11 +37,11 @@
     <feature name="JPushPlugin">
         <param name="android-package" value="cn.jpush.phonegap.JPushPlugin" />
     </feature>
-    <name>HPU助手</name>
+    <name>HPU二狗</name>
     <description>
-        河南理工大学生活必备APP
+        最适合河南理工大学童鞋使用的手机APP
     </description>
-    <author email="jeneserwang@gmail.com" href="">
+    <author email="jeneserwang@gmail.com" href="http://jenes.site">
       jeneser
     </author>
     <content src="index.html" />
