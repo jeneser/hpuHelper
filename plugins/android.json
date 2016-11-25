@@ -1,0 +1,56 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "jpush-phonegap-plugin": {
+            "API_KEY": "d0f47073d008035a59fbe1a6",
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        },
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.jeneser.hpuHelper"
+        }
+    }
+}

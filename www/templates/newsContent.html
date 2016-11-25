@@ -1,0 +1,27 @@
+<ion-view title="" id="newsContent">
+    <ion-nav-bar class="bar-light">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content padding="true" has-bouncing="true" class="has-header news-content">
+        <div class="content-loading">
+            <img ng-show="loading" src="img/loading.svg" alt="loading...">  
+        </div>
+        <div ng-hide="loading">
+            <h2 id="newsContent-heading1">{{item.title}}</h2>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-ios-pricetags-outline"></i>
+                {{item.from}}&nbsp;{{item.created_at}} &nbsp;{{item.author}}
+            </a>
+            <hr>
+            <div class="news-body" ng-bind-html="item.content"></div>
+            
+            <div class="spacer" style="width: 300px; height: 32px;"></div>
+            <div class="news-footer">
+                <img src="img/like.png" alt="赞">
+                <p>445赞</p>
+                <div class="spacer" style="width:300px; height:20px;"></div>
+                <a class="button button-outline button-balanced" ng-href="{{item.url}}">原文链接</a>
+            </div> 
+        </div>
+    </ion-content>
+</ion-view>

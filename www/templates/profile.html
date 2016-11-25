@@ -1,0 +1,39 @@
+<ion-view title="个人中心" id="profile">
+    <ion-nav-bar class="bar bar-header bar-light" align-title="center"></ion-nav-bar>
+    <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
+        <div class="spacer-1x"></div>
+        <ion-list>
+            <ion-item class="item-avatar" ui-sref="setting">
+                <img src="img/avatar.png">
+                <h2>王江山</h2>
+                <p>昵称: Jeneser</p>
+            </ion-item>
+        </ion-list>
+        <div class="spacer-1x"></div>
+        <ion-list>
+            <ion-item class="item-icon-left">
+                <i class="icon ion-ios-chatbubble"></i>我的消息
+                <span class="badge badge-assertive">0</span>
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <i class="icon ion-ios-compose"></i>我的发布
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <i class="icon ion-ios-heart"></i>我的关注
+            </ion-item>
+        </ion-list>
+        <div class="spacer-1x"></div>
+        <ion-list>
+            <ion-item class="item-icon-left" ui-sref="binding">
+                <i class="icon ion-ios-locked"></i>密码绑定
+                <span class="item-note">未完成</span>
+            </ion-item>
+            <ion-item class="item-icon-left" ui-sref="setting">
+                <i class="icon ion-ios-gear"></i>设置
+            </ion-item>
+            <ion-item class="item-icon-left" ui-sref="about">
+                <i class="icon ion-ios-information"></i>关于
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
