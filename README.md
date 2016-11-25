@@ -4,7 +4,11 @@
 
 
 
-## 进度
+## 截图
+
+![image](screenshot-home.jpg)
+![image](screenshot-tools.jpg)
+
 
 目前项目正在开发中，我会持续更新,可能有些慢。另外还有一个angularjs的项目，进展比较快，angularjs的项目将作为主要版本开发和公开发布。在这里你可以下载到开发中的所有测试用例。当然，在这里你可以下载最新版本的APP。
 
