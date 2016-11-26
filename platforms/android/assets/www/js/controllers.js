@@ -155,14 +155,22 @@ function ($scope, $stateParams, $cordovaBarcodeScanner, $cordovaInAppBrowser, $i
 .controller('exploreCtrl', ['$scope', '$timeout', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', 
 function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
     $scope.exploreTabs = [{name:'精选'}, {name: '活动'}, {name:'生活'}];
+    $scope.flag;
 
     $scope.slideChanged = function (index) {
-        $ionicTabsDelegate._instances[2].select(index);
+        $ionicTabsDelegate._instances[$scope.flag].select(index);
     };
 
     $scope.$on('$ionicView.afterEnter', function () {
         //等待视图加载完成的时候默认选中第一个菜单
-        $ionicTabsDelegate._instances[2].select($ionicSlideBoxDelegate.currentIndex());
+        if ($scope.flag == undefined) {
+            console.log($ionicTabsDelegate._instances.length);
+            $scope.flag = $ionicTabsDelegate._instances.length - 1;
+        };
+        $ionicTabsDelegate._instances[$scope.flag].select($ionicSlideBoxDelegate.currentIndex());
+    });
+    $scope.$on('$ionicView.leave', function () {
+        console.log($scope.flag);
     });
 
     $scope.selectTab = function (index) {
@@ -176,14 +184,23 @@ function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
 .controller('toolsCtrl', ['$scope', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', '$timeout', 
 function ($scope, $ionicSlideBoxDelegate, $ionicTabsDelegate, $timeout) {
     $scope.toolsTabs = [{name:'常用'}, {name: '最爱'}];
+    $scope.flag;
 
     $scope.slideChanged = function (index) {
-        $ionicTabsDelegate._instances[3].select(index);
+        $ionicTabsDelegate._instances[$scope.flag].select(index);
     };
 
     $scope.$on('$ionicView.afterEnter', function () {
         //等待视图加载完成的时候默认选中第一个菜单
-        $ionicTabsDelegate._instances[3].select($ionicSlideBoxDelegate.currentIndex());
+        
+        if ($scope.flag == undefined) {
+            console.log($ionicTabsDelegate._instances.length);
+            $scope.flag = $ionicTabsDelegate._instances.length - 1;
+        };
+        $ionicTabsDelegate._instances[$scope.flag].select($ionicSlideBoxDelegate.currentIndex());
+    });
+    $scope.$on('$ionicView.leave', function () {
+        console.log($scope.flag);
     });
 
     $scope.selectTab = function (index) {
