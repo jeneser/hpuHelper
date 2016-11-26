@@ -173,9 +173,23 @@ function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
 }])
 
 // 工具
-.controller('toolsCtrl', ['$scope', '$stateParams',  
-function ($scope, $stateParams, $ionicLoading) {
+.controller('toolsCtrl', ['$scope', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', '$timeout', 
+function ($scope, $ionicSlideBoxDelegate, $ionicTabsDelegate, $timeout) {
+    $scope.toolsTabs = [{name:'常用'}, {name: '最爱'}];
 
+    $scope.slideChanged = function (index) {
+        $ionicTabsDelegate._instances[3].select(index);
+    };
+
+    $scope.$on('$ionicView.afterEnter', function () {
+        //等待视图加载完成的时候默认选中第一个菜单
+        $ionicTabsDelegate._instances[3].select($ionicSlideBoxDelegate.currentIndex());
+    });
+
+    $scope.selectTab = function (index) {
+        //滑动的索引
+        $ionicSlideBoxDelegate.slide(index);
+    }
 }])
 
 // 个人中心 
