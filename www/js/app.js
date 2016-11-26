@@ -13,12 +13,12 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
             StatusBar.styleDefault();
         }
         if (cordova.platformId == 'android') {
-            StatusBar.backgroundColorByHexString("#4e85c1");
+            StatusBar.backgroundColorByHexString("#1d8ae7");
         }else{
             $cordovaStatusbar.overlaysWebView(false);
             $cordovaStatusbar.style(1);
             StatusBar.styleLightContent();
-            $cordovaStatusbar.styleColor('#4e85c1');
+            $cordovaStatusbar.styleColor('#1d8ae7');
         }
         //启动极光推送服务
         window.plugins.jPushPlugin.init();
