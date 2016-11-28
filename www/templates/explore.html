@@ -2,7 +2,20 @@
 	<ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)">
 		<!-- 精选 -->
         <ion-slide>
-            <ion-content class="has-header bg" has-bouncing="true" overflow-scroll="false">
+            <!-- 背景层快速拨号 -->
+            <div class="dial">
+                <div class="">
+                    <ul class="list">
+                        <li>写文章<i class="ion-edit"></i></li>
+                        <li>回答</li>
+                        <li>随机</li>
+                    </ul>
+                    <span class="btn" ng-click="showDial()">
+                        <i class="icon ion-plus"></i>
+                    </span>
+                </div>
+            </div>
+            <ion-content class="has-header bg d-bg" has-bouncing="true" overflow-scroll="false">
                 <div class="spacer-1x"></div>
                 <ion-slide-box does-continue="true" auto-play="true" slide-interval="3000" show-pager="false" class="p-slide">
 					<ion-slide>
@@ -135,7 +148,9 @@
                         </p>
                     </div>
                 </ion-card>
+                
             </ion-content>
+
         </ion-slide>
         <!-- 活动 -->
         <ion-slide>

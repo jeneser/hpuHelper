@@ -44,7 +44,7 @@ $spacer-height:                   10px !default;
 /* 顶部tabs */
 .tabs-top > .tabs {
 	margin-top: -$bar-height;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* 底部tabs */
@@ -58,9 +58,9 @@ $spacer-height:                   10px !default;
 }
 
 /* header阴影 */
-.bar-header {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-}
+// .bar-header {
+//     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+// }
 
 
 .item-icon-left {
@@ -89,11 +89,6 @@ $item-thumbnail-height:           90px;
 // .list {
 // 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1),6px 0 10px rgba(0, 0, 0, 0.1);
 // }
-
-/* 导航 */
-.bar.bar-light .title {
-	text-align: center;
-}
 
 
 /*首页理工事样式*/
@@ -156,6 +151,42 @@ $item-thumbnail-height:           90px;
 		width: 100%;
 		height: auto;
 	}
+}
+/* 背景层快速拨号 */
+.dial {
+	.btn {
+		position: absolute;
+	    bottom: 72px;
+	    right: 20px;
+	    display: block;
+	    width: 56px;
+	    height: 56px;
+	    background-color: #feca28;
+	    border-radius: 50%;
+	    font-size: 18px;
+	    color: #fff;
+	    padding: 17.5px 21.25px;
+	    box-shadow: 0 6px 10px rgba(0,0,0, 0.2);
+	    z-index: 99; 
+	}
+	.list {
+		position: absolute;
+	    bottom: 120px;
+	    right: 30px;
+	    text-align: right;
+	    z-index: 99;
+
+	}
+}
+.d-bg:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(240,244,245,0.7);
 }
 
 
