@@ -152,8 +152,8 @@ function ($scope, $stateParams, $cordovaBarcodeScanner, $cordovaInAppBrowser, $i
 }])
 
 // 发现
-.controller('exploreCtrl', ['$scope', '$timeout', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', 
-function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
+.controller('exploreCtrl', ['$scope', '$timeout', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', '$ionicBackdrop', 
+function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, $ionicBackdrop) {
     $scope.exploreTabs = [{name:'精选'}, {name: '活动'}, {name:'生活'}];
     $scope.flag;
 
@@ -177,6 +177,12 @@ function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate) {
         //滑动的索引
         $ionicSlideBoxDelegate.slide(index);
     }
+
+    // 背景层快速拨号
+    $scope.isShow = 0;
+    $scope.showDial = function() {
+       $scope.isShow = !$scope.isShow;
+    }; 
 
 }])
 

@@ -179,11 +179,9 @@ function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, $ionicBa
     }
 
     // 背景层快速拨号
+    $scope.isShow = 0;
     $scope.showDial = function() {
-       $ionicBackdrop.retain();
-       // $timeout(function() {    //默认让它1秒后消失
-       //   $ionicBackdrop.release();
-       // }, 1000);
+       $scope.isShow = !$scope.isShow;
     }; 
 
 }])

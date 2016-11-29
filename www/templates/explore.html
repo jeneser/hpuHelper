@@ -3,19 +3,29 @@
 		<!-- 精选 -->
         <ion-slide>
             <!-- 背景层快速拨号 -->
-            <div class="dial">
-                <div class="">
-                    <ul class="list">
-                        <li>写文章<i class="ion-edit"></i></li>
-                        <li>回答</li>
-                        <li>随机</li>
+            <div class="fab-dial">
+                <div ng-class="{'fab-bg': isShow}" ng-click="showDial()"></div>
+                <div class="fab-group">
+                    <ul class="fab-actions" ng-show="isShow">
+                        <li>
+                            <span>发布话题</span>
+                            <i class="ion-pound"></i>
+                        </li>
+                        <li>
+                            <span>写文章</span>
+                            <i class="ion-edit"></i>
+                        </li>
+                        <li>
+                            <span>随机读</span>
+                            <i class="ion-shuffle"></i>
+                        </li>
                     </ul>
-                    <span class="btn" ng-click="showDial()">
+                    <span class="fab-trigger" ng-click="showDial()">
                         <i class="icon ion-plus"></i>
                     </span>
                 </div>
             </div>
-            <ion-content class="has-header bg d-bg" has-bouncing="true" overflow-scroll="false">
+            <ion-content class="has-header bg" has-bouncing="true" overflow-scroll="false">
                 <div class="spacer-1x"></div>
                 <ion-slide-box does-continue="true" auto-play="true" slide-interval="3000" show-pager="false" class="p-slide">
 					<ion-slide>
@@ -154,6 +164,29 @@
         </ion-slide>
         <!-- 活动 -->
         <ion-slide>
+            <!-- 背景层快速拨号 -->
+            <div class="fab-dial">
+                <div ng-class="{'fab-bg': isShow}" ng-click="showDial()"></div>
+                <div class="fab-group">
+                    <ul class="fab-actions" ng-show="isShow">
+                        <li>
+                            <span>发布话题</span>
+                            <i class="ion-pound"></i>
+                        </li>
+                        <li>
+                            <span>写文章</span>
+                            <i class="ion-edit"></i>
+                        </li>
+                        <li>
+                            <span>随机读</span>
+                            <i class="ion-shuffle"></i>
+                        </li>
+                    </ul>
+                    <span class="fab-trigger" ng-click="showDial()">
+                        <i class="icon ion-plus"></i>
+                    </span>
+                </div>
+            </div>
             <ion-content class="has-header" has-bouncing="true" overflow-scroll="false">
                 <div class="list has-header">
                 <div class="spacer" style="height: 200px;"></div>
@@ -163,6 +196,29 @@
         </ion-slide>
         <!-- 生活 -->
         <ion-slide>
+            <!-- 背景层快速拨号 -->
+            <div class="fab-dial">
+                <div ng-class="{'fab-bg': isShow}" ng-click="showDial()"></div>
+                <div class="fab-group">
+                    <ul class="fab-actions" ng-show="isShow">
+                        <li>
+                            <span>发布话题</span>
+                            <i class="ion-pound"></i>
+                        </li>
+                        <li>
+                            <span>写文章</span>
+                            <i class="ion-edit"></i>
+                        </li>
+                        <li>
+                            <span>随机读</span>
+                            <i class="ion-shuffle"></i>
+                        </li>
+                    </ul>
+                    <span class="fab-trigger" ng-click="showDial()">
+                        <i class="icon ion-plus"></i>
+                    </span>
+                </div>
+            </div>
             <ion-content class="has-header" has-bouncing="true" overflow-scroll="false">
                 
                 <div class="list has-header">
