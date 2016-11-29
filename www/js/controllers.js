@@ -11,6 +11,7 @@ angular.module('app.controllers', [])
     // 加载数据
     var getData = function (index) {
         var c = classify[index];
+        console.log(c);
         // 安卓平台不会自动触发加载
         if (ionic.Platform.isAndroid()) {
             c.doRefresh();
@@ -25,9 +26,7 @@ angular.module('app.controllers', [])
     getData(0);
 
     $scope.slideChanged = function (index) {
-        if (index != 5) {
-            getData(index);
-        };
+        getData(index);
         
         //这里使用instances[1]的原因是视图中有两个tabs
         $ionicTabsDelegate._instances[1].select(index);
@@ -303,14 +302,6 @@ function ($scope, $stateParams) {
 
    
 .controller('page15Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-
-
-}])
-   
-.controller('page10Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
