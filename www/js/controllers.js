@@ -12,6 +12,7 @@ angular.module('app.controllers', [])
     var getData = function (index) {
         var c = classify[index];
         console.log(c);
+        c.doRefresh();
         // 安卓平台不会自动触发加载
         if (ionic.Platform.isAndroid()) {
             c.doRefresh();
@@ -31,12 +32,10 @@ angular.module('app.controllers', [])
         //这里使用instances[1]的原因是视图中有两个tabs
         $ionicTabsDelegate._instances[1].select(index);
     };
-
     $scope.$on('$ionicView.afterEnter', function () {
         //等待视图加载完成的时候默认选中第一个菜单
         $ionicTabsDelegate._instances[1].select($ionicSlideBoxDelegate.currentIndex());
     });
-
     $scope.selectedTab = function (index) {
         //滑动的索引和速度
         $ionicSlideBoxDelegate.slide(index);

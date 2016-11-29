@@ -260,16 +260,6 @@ angular.module('app.routes', ['ionicUIRouter'])
     templateUrl: 'templates/setting.html',
     controller: 'settingCtrl'
   })
-  //自定义空白路由tab1
-  .state('tabsController.page10', {
-    url: '/blank',
-    views: {
-      'tab11': {
-        templateUrl: 'templates/page10.html',
-        controller: 'page10Ctrl'
-      }
-    }
-  })
 
   .state('search', {
     url: '/search',

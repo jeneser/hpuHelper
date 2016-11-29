@@ -1,93 +1,68 @@
 <ion-view title="HPU" id="home">
     <ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)">
-        <ion-slide ng-repeat="slide in slides">
-            <ion-content class="news-list">
-                <ion-refresher pulling-text="下拉刷新" on-refresh="slide.doRefresh()"></ion-refresher>
-                <!-- 推荐视图 -->
-                <div class="list has-header" ng-show="$index == 0">
-                    <a ng-repeat="item in slide.items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
+        <!-- 推荐视图 -->
+        <ion-slide>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
+                <ion-refresher pulling-text="下拉刷新" refreshing-text="拼命加载中..." on-refresh="slide.doRefresh()"></ion-refresher>
+                <div class="list news-list">
+                    <a ng-repeat="item in slides[0].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
                         <img ng-src="http://pic.68ps.com/down/UploadFile/20131001/sc131001_1a.jpg" width="30" height="30" alt="">
                         {{item.title}}
                     </a>
-                    <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
-                    </ion-infinite-scroll>
+                    helll
                 </div>
-                <!-- 校内视图 -->
-                <div class="list has-header news-list" ng-show="$index == 1">
-                    <a ng-repeat="item in slide.items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
+                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                </ion-infinite-scroll>
+            </ion-content>
+        </ion-slide>
+        <!-- 校内视图 -->
+        <ion-slide>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
+                <ion-refresher pulling-text="下拉刷新" refreshing-text="拼命加载中..." on-refresh="slide.doRefresh()"></ion-refresher>
+                <div class="list news-list">
+                    <a ng-repeat="item in slides[1].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
                         <img ng-src="{{item.cover}}" width="30" height="30" alt="">
                         {{item.title}}
                         <p>{{item.from}}</p>
                     </a>
+                </div>
+                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                </ion-infinite-scroll>
+            </ion-content>
+        </ion-slide>
+        <!-- 公告视图 -->
+        <ion-slide>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
+                    公告
+                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                </ion-infinite-scroll>
+            </ion-content>
+        </ion-slide>
+        <!-- 图说视图 -->
+        <ion-slide>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
+                    图说
                     <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
                     </ion-infinite-scroll>
-                </div>
-                <!-- 微博视图 -->
-                <div class="list has-header" ng-show="$index == 2">
-                    <div ng-repeat="item in slide.items" class="list card">
-                        <a class="item item-avatar" href="#">
-                            <img ng-src="{{item.profile_image_url}}">
-                            <h3>{{item.name}}</h3>
-                            <p>{{item.created_at}}</p>
-                        </a>
-                        <div class="item item-body weibo-body">
-                            <p>{{item.text}}</p>
-                            <div class="weibo-list">
-                                <img ng-repeat="img in item.pic_urls" width="100%" ng-src="{{img.thumbnail_pic}}">
-                            </div>
-                            <p>
-                              <a href="#" class="subdued icon-left ion-android-favorite-outline">&nbsp;445</a>
-                              <a href="#" class="subdued icon-left ion-ios-chatboxes-outline">&nbsp;5</a>
-                            </p>
-                        </div>
-                    </div>
-                    <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
-                    </ion-infinite-scroll>
-                </div>
-                <!-- 视频视图 -->
-                <div class="list has-header" ng-show="$index == 3">
-                    <div class="list card">
-                        <div class="item item-avatar">
-                        <img src="img/tS3ZQHcAS32SttFIvvyc_.png">
-                        <h2>爱拍客</h2>
-                        <p>2016-6-10</p>
-                        </div>
-                        <div class="item item-image">
-                        <img src="http://ionicframework.com/img/docs/delorean.jpg">
-                        </div>
-                        <a class="item item-icon-left assertive" href="#">
-                        <i class="icon ion-social-youtube"></i>
-                        我的理工大的一天
-                        </a>
-                    </div>
-                    <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
-                    </ion-infinite-scroll>
-                </div>
-                <!-- 图片视图 -->
-                <div class="list has-header" ng-show="$index == 4">
-                    <a ng-repeat="item in slide.items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
-                        <img ng-src="{{item.cover}}" width="30" height="30" alt="">
-                        {{item.title}}
-                    </a>
-                    <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
-                    </ion-infinite-scroll>
-                </div>
-                <!-- 更多视图 -->
-                <div class="list has-header" ng-show="$index == 5">
+                </ion-infinite-scroll>
+            </ion-content>
+        </ion-slide>
+        <!-- 招聘视图 -->
+        <ion-slide>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
+                <div class="list">
                     <!-- <a ng-repeat="item in slide.items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
                         <img ng-src="{{item.cover}}" width="30" height="30" alt="">
                         {{item.title}}
                     </a> -->
-                    我是更多！
+                    456
                 </div>
-<!-- 
                 <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
-                </ion-infinite-scroll> -->
+                </ion-infinite-scroll>
             </ion-content>
         </ion-slide>
     </ion-slide-box>
     <ion-tabs class="tabs-top tabs-striped tabs-positive">
         <ion-tab ng-repeat="item in tabs" on-select="selectedTab($index)" title="{{item.name}}"></ion-tab>
     </ion-tabs>
-
 </ion-view>

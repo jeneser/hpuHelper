@@ -21,9 +21,6 @@
 .bottom-tabs .tab-item-active {
   color: #1d8ae7; }
 
-.bottom-tabs > .tabs {
-  box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.1); }
-
 /* header阴影 */
 .item-icon-left .icon {
   color: #d4d4d4; }

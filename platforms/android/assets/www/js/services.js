@@ -17,18 +17,19 @@ angular.module('app.services', [])
                 isload: true,
                 page: 1,
                 rows: 20,
+                url: 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=' + this.page + '&callback=JSON_CALLBACK',
                 items: [],
                 loadMore: function() {
                     $this = this;
-                    var url= 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page='+$this.page+'&callback=JSON_CALLBACK';
                     console.log("正在加载更多数据..." + this.page);
-                    $http.jsonp(url).success(function (response) {
+                    $http.jsonp(this.url).success(function (response) {
                         $this.items = $this.items.concat(response.result);
 
                         if(response.length<20){
                             $this.isload=false;
                         }
                         $this.page++;
+                        console.log($this);
                         $this.callback();
                     });
                 },
@@ -39,6 +40,7 @@ angular.module('app.services', [])
                         $this.page = 2;
 
                         $this.items = response.result;
+                        $log($this);
                         $this.callback();
                     });
                 },
@@ -79,7 +81,7 @@ angular.module('app.services', [])
                 }
             },
             {
-                name: '微博',
+                name: '公告',
                 isload: true,
                 limit: 3,
                 skip: 0,
@@ -112,7 +114,7 @@ angular.module('app.services', [])
                 }
             },
             {
-                name: '视频',
+                name: '图说',
                 isload: true,
                 page: 1,
                 rows: 20,
@@ -145,7 +147,7 @@ angular.module('app.services', [])
                 }
             },
             {
-                name: '图片', isload: true,
+                name: '招聘', isload: true,
 
                 page: 1, rows: 20,
                 items: [],
@@ -174,10 +176,6 @@ angular.module('app.services', [])
                 callback: function() {
                     //回掉函数
                 }
-            },
-            {
-                name: '更多',
-                
             }
         ]
     }

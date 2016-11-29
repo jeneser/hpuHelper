@@ -220,12 +220,13 @@
                 </div>
             </div>
             <ion-content class="has-header" has-bouncing="true" overflow-scroll="false">
-                
+                <ion-refresher pulling-text="下拉刷新" refreshing-text="拼命加载中..." on-refresh="slide.doRefresh()"></ion-refresher>
                 <div class="list has-header">
                 <div class="spacer" style="height: 200px;"></div>
                     我是生活
                 </div>
-                
+                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                    </ion-infinite-scroll>
             </ion-content>
         </ion-slide>
     </ion-slide-box>

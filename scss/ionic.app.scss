@@ -52,17 +52,12 @@ $spacer-height:                   10px !default;
 	.tab-item-active {
 		color: $positive;
 	}
-	// > .tabs {
-	// 	box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.1);
-	// }
+	> .tabs {
+		box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.1);
+	}
 }
 
-/* header阴影 */
-// .bar-header {
-//     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-// }
-
-
+/* item左侧图标 */
 .item-icon-left {
 	.icon {
 		color: $stable;
@@ -82,13 +77,6 @@ $item-thumbnail-height:           90px;
     max-height: $item-thumbnail-height;
   }
 }
-
-
-
-/* list阴影 */
-// .list {
-// 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1),6px 0 10px rgba(0, 0, 0, 0.1);
-// }
 
 
 /*首页理工事样式*/
@@ -137,7 +125,7 @@ $item-thumbnail-height:           90px;
 }
 .news-content h2, .news-body img{
 	width: 100%;
-	color: #000000;
+	color: #000;
 }
 .news-footer{
 	text-align: center;

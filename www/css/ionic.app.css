@@ -21,7 +21,10 @@
 .bottom-tabs .tab-item-active {
   color: #1d8ae7; }
 
-/* header阴影 */
+.bottom-tabs > .tabs {
+  box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.1); }
+
+/* item左侧图标 */
 .item-icon-left .icon {
   color: #d4d4d4; }
 
@@ -33,7 +36,6 @@
   max-width: 110px;
   max-height: 90px; }
 
-/* list阴影 */
 /*首页理工事样式*/
 .con {
   line-height: 180%; }
@@ -73,7 +75,7 @@
 
 .news-content h2, .news-body img {
   width: 100%;
-  color: #000000; }
+  color: #000; }
 
 .news-footer {
   text-align: center; }
