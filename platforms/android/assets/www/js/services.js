@@ -49,7 +49,7 @@ angular.module('app.services', [])
                 }
             },
             {
-                name: '校内',
+                name: '新闻',
                 isload: true,
                 limit: 3,
                 skip: 0,
