@@ -175,9 +175,10 @@ $item-thumbnail-height:           90px;
 /* 活动 */
 .explore-activity {
 	.poster {
+		line-height: initial;
 		.info {
 			position: absolute;
-    		margin: 32% 10px 0;
+    		margin: 30% 10px 0;
 		}
 		p {
 			width: 300px;
@@ -186,13 +187,14 @@ $item-thumbnail-height:           90px;
 			white-space: nowrap;
 			text-overflow: ellipsis;
 			overflow: hidden;
+			margin: 0 0 5px;
 		}
 		span {
 			color: $light;
 		}
 		.tag {
 			border: solid 1px #1d8ae7;
-		    border-radius: 10px;
+		    border-radius: 8px;
 		    padding: 1px 5px;
 		}
 		img {
@@ -206,7 +208,28 @@ $item-thumbnail-height:           90px;
 
 /* 生活 */
 .explore-life {
-
+	.title {
+		margin: 0 0 10px 0;
+	}
+	.description {
+    	white-space: nowrap;
+		text-overflow: ellipsis;
+    	overflow: hidden;
+	}
+	.tag, .follow {
+		line-height: 25px;
+    	vertical-align: middle;
+	}
+	.tag {
+		border: solid 1px $positive;
+		border-radius: 8px;
+		padding: 0 10px;
+    	margin: 0 5px;
+	}
+	.follow {
+		float: right;
+		text-align: right;
+	}
 }
 
 /* 背景层快速拨号 */
@@ -251,6 +274,7 @@ $item-thumbnail-height:           90px;
 	    span {
 			background-color: rgba($calm, $alpha);
 			padding: 5px;
+			border-radius: 5px;
 		}
 	}
 
