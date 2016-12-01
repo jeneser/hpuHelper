@@ -178,7 +178,7 @@ $item-thumbnail-height:           90px;
 		line-height: initial;
 		.info {
 			position: absolute;
-    		margin: 30% 10px 0;
+    		margin: 31% 10px 0;
 		}
 		p {
 			width: 300px;
@@ -229,6 +229,60 @@ $item-thumbnail-height:           90px;
 	.follow {
 		float: right;
 		text-align: right;
+	}
+}
+
+// 工具　tools
+// -------------------------------
+
+.course {
+	height: 40px;
+	margin-top: 10px;
+	margin-left: -4px;
+	span:first-child {
+		display: inline-block;
+	    width: 42px;
+	    height: 40px;
+	    background-color: $calm;
+	    text-align: center;
+		
+	}
+	span:nth-child(2) {
+    	position: absolute;
+    	width: 78%;
+    	height: 40px;
+		line-height: 40px;
+		background-color: $calm;
+    	vertical-align: middle;
+    	margin: 0 10px;
+    	padding: 0 5px;
+    	overflow: hidden;
+    	i:nth-child(1) {
+		    display: inline-block;
+		    width: 130px;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    text-overflow: ellipsis;
+		}
+		i:nth-child(2), i:nth-child(3) {
+			float: right;
+			font-weight: lighter;
+		}
+	}
+}
+
+.tools-group1 {
+	img {
+		float: left;
+		width: 40px;
+		height: 40px;
+		margin: -10px 10px 0 -10px;
+
+	}
+	h2 {
+		margin: 0;
+		padding: 0;
+		margin: 0px 0 -7px 0;
 	}
 }
 

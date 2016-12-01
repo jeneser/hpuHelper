@@ -116,7 +116,7 @@
   line-height: initial; }
   .explore-activity .poster .info {
     position: absolute;
-    margin: 30% 10px 0; }
+    margin: 31% 10px 0; }
   .explore-activity .poster p {
     width: 300px;
     color: #fff;
@@ -158,6 +158,47 @@
 .explore-life .follow {
   float: right;
   text-align: right; }
+
+.course {
+  height: 40px;
+  margin-top: 10px;
+  margin-left: -4px; }
+  .course span:first-child {
+    display: inline-block;
+    width: 42px;
+    height: 40px;
+    background-color: #f0f4f5;
+    text-align: center; }
+  .course span:nth-child(2) {
+    position: absolute;
+    width: 78%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f0f4f5;
+    vertical-align: middle;
+    margin: 0 10px;
+    padding: 0 5px;
+    overflow: hidden; }
+    .course span:nth-child(2) i:nth-child(1) {
+      display: inline-block;
+      width: 130px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .course span:nth-child(2) i:nth-child(2), .course span:nth-child(2) i:nth-child(3) {
+      float: right;
+      font-weight: lighter; }
+
+.tools-group1 img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: -10px 10px 0 -10px; }
+
+.tools-group1 h2 {
+  margin: 0;
+  padding: 0;
+  margin: 0px 0 -7px 0; }
 
 /* 背景层快速拨号 */
 .fab-dial .fab-bg {
