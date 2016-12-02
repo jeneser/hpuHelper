@@ -69,6 +69,12 @@ $spacer-height:                   10px !default;
     height: 100%;
 }
 
+%cover {
+	width: 100%;
+	height: 100%;
+	max-height: 180px;
+}
+
 // 首页　home
 // -------------------------------
 
@@ -95,6 +101,17 @@ $item-thumbnail-height:           90px !default;
 	    }
 	}
 }
+
+/* 图说 */
+.picture {
+	.title {
+		margin: 8px 0;
+	}
+	.cover {
+		@extend %cover;
+	}
+}
+
 
 
 
@@ -155,9 +172,7 @@ $item-thumbnail-height:           90px !default;
 		margin: 8px 0;
 	}
 	.cover {
-		width: 100%;
-		height: 100%;
-		max-height: 180px;
+		@extend %cover;
 	}
 }
 
@@ -196,7 +211,7 @@ $item-thumbnail-height:           90px !default;
 }
 
 /* 生活 */
-.explore-life, .notice {
+.explore-life, .notice, .recruit {
 	.title {
 		margin: 0 0 10px 0;
 	}
