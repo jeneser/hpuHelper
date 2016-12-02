@@ -189,16 +189,24 @@
       float: right;
       font-weight: lighter; }
 
-.tools-group1 img {
-  float: left;
-  width: 40px;
-  height: 40px;
-  margin: -10px 10px 0 -10px; }
+.tools-group1 {
+  background-color: #fff; }
+  .tools-group1 .col {
+    height: 80px;
+    padding: 10px;
+    border: solid 1px #f0f4f5; }
+  .tools-group1 h2 {
+    font-size: 16px;
+    margin: 5px 0; }
 
-.tools-group1 h2 {
-  margin: 0;
-  padding: 0;
-  margin: 0px 0 -7px 0; }
+.tools-pic {
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  margin-right: 20px; }
+  .tools-pic img {
+    width: 40px;
+    height: 40px; }
 
 /* 背景层快速拨号 */
 .fab-dial .fab-bg {
