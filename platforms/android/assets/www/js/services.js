@@ -81,7 +81,7 @@ angular.module('app.services', [])
                 }
             },
             {
-                name: '公告',
+                name: '图说',
                 isload: true,
                 limit: 3,
                 skip: 0,
@@ -114,7 +114,7 @@ angular.module('app.services', [])
                 }
             },
             {
-                name: '图说',
+                name: '公告',
                 isload: true,
                 page: 1,
                 rows: 20,
