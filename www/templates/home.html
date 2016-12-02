@@ -49,9 +49,13 @@
                 <ion-refresher pulling-text="下拉刷新" refreshing-text="拼命加载中..." on-refresh="slide.doRefresh()"></ion-refresher>
                 <div class="list news-list">
                     <a ng-repeat="item in slides[1].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
-                        <img ng-src="{{item.cover}}" width="30" height="30" alt="">
-                        {{item.title}}
-                        <p>{{item.from}}</p>
+                        <img ng-src="{{item.cover}}" alt="pic">
+                        <h2>
+                            <b>{{ item.title }}</b>
+                        </h2>
+                        <span>
+                            <i>{{item.from}}</i>
+                        </span>
                     </a>
                 </div>
                 <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
@@ -60,9 +64,83 @@
         </ion-slide>
         <!-- 公告视图 -->
         <ion-slide>
-            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
-                    公告
-                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
+                <div class="notice">
+                    <div class="spacer-1x"></div>
+                    <ion-card>
+                        <div class="item item-body">
+                            <h2 class="title">
+                                <b>关于做好2017年度国家艺术基金项目申报工作的通知</b>
+                            </h2>
+                            <span class="time">2016-11-30</span>
+                            <span class="tag">最新公告</span>
+                        </div>
+                    </ion-card>
+                </div>
+                <div class="notice">
+                    <div class="spacer-1x"></div>
+                    <ion-card>
+                        <div class="item item-body">
+                            <h2 class="title">
+                                <b>关于做好2017年度国家艺术基金项目申报工作的通知</b>
+                            </h2>
+                            <span class="time">2016-11-30</span>
+                            <span class="tag">最新公告</span>
+                        </div>
+                    </ion-card>
+                </div>
+                <div class="notice">
+                    <div class="spacer-1x"></div>
+                    <ion-card>
+                        <div class="item item-body">
+                            <h2 class="title">
+                                <b>数学美学，未来数学和成功</b>
+                            </h2>
+                            <p class="description">报告中，袁院士将利用实例来说明数学和美学，数学的美，大学数学教育，数学发展面临的困难，新时代数学的特征</p>
+                            <span class="time">2016年12月13日10:00</span>
+                            <span class="tag">讲座</span>
+                        </div>
+                    </ion-card>
+                </div>
+                <div class="notice">
+                    <div class="spacer-1x"></div>
+                    <ion-card>
+                        <div class="item item-body">
+                            <h2 class="title">
+                                <b>关于做好2017年度国家艺术基金项目申报工作的通知</b>
+                            </h2>
+                            <span class="time">2016-11-30</span>
+                            <span class="tag">最新公告</span>
+                        </div>
+                    </ion-card>
+                </div>
+                <div class="notice">
+                    <div class="spacer-1x"></div>
+                    <ion-card>
+                        <div class="item item-body">
+                            <h2 class="title">
+                                <b>数学美学，未来数学和成功</b>
+                            </h2>
+                            <p class="description">报告中，袁院士将利用实例来说明数学和美学，数学的美，大学数学教育，数学发展面临的困难，新时代数学的特征</p>
+                            <span class="time">2016年12月13日10:00</span>
+                            <span class="tag">讲座</span>
+                        </div>
+                    </ion-card>
+                </div>
+                <div class="notice">
+                    <div class="spacer-1x"></div>
+                    <ion-card>
+                        <div class="item item-body">
+                            <h2 class="title">
+                                <b>数学美学，未来数学和成功</b>
+                            </h2>
+                            <p class="description">报告中，袁院士将利用实例来说明数学和美学，数学的美，大学数学教育，数学发展面临的困难，新时代数学的特征</p>
+                            <span class="time">2016年12月13日10:00</span>
+                            <span class="tag">讲座</span>
+                        </div>
+                    </ion-card>
+                </div>
+            <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
                 </ion-infinite-scroll>
             </ion-content>
         </ion-slide>
