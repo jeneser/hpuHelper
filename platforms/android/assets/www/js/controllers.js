@@ -187,7 +187,7 @@ function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, $ionicBa
 // 工具
 .controller('toolsCtrl', ['$scope', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', '$timeout', 
 function ($scope, $ionicSlideBoxDelegate, $ionicTabsDelegate, $timeout) {
-    $scope.toolsTabs = [{name:'常用'}, {name: '最爱'}];
+    $scope.toolsTabs = [{name:'常用'}, {name: '收藏'}];
     $scope.flag;
 
     $scope.slideChanged = function (index) {

@@ -64,51 +64,40 @@ $spacer-height:                   10px !default;
 	}
 }
 
-
-/* 重写全局变量 item */
-$item-thumbnail-width:            110px;
-$item-thumbnail-height:           90px;
-
-.item-thumbnail-right,
-.item-thumbnail-right .item-content {
-  > img:first-child,
-  .item-image {
-    max-width: $item-thumbnail-width;
-    max-height: $item-thumbnail-height;
-  }
-}
-
-
-/*首页理工事样式*/
-.con{
-    line-height: 180%;
-}
-.con img{
-    max-width: 90%;
-    display: block;
-    margin: 0 auto;
-
-}
+/* 滑动框高度 */
 .slider{
     height: 100%;
 }
-.slider-slide{
-    padding-top: 2px;
-    color: #000;
-    background-color: #fff;
-}
 
-.news-list{
+// 首页　home
+// -------------------------------
+
+$item-thumbnail-width:            110px !default;
+$item-thumbnail-height:           90px !default;
+
+/* 推荐　*/
+.recommend-list{
 	.item{
 		border: none;
-		border-bottom: solid 1px rgba(221, 221, 221, 0.5);
-    	margin: 12px;
+		border-bottom: solid 1px rgba($calm, 0.5);
+    	margin: 12px 0 0 12px;
     	padding-left: 0;
+    	padding-bottom: 10px;
 	}
-	img{
-		right: 0 !important;
+	span {
+    	position: absolute;
+	    bottom: 10px;
+	    color: rgba($positive, .6);
+	    i {
+	    	padding: 2px 10px;
+	    	border: solid 1px;
+	    	border-radius: 10px;
+	    }
 	}
 }
+
+
+
 
 /*内容加载中*/
 .content-loading{

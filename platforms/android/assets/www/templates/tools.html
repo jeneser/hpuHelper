@@ -2,7 +2,7 @@
     <ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)">
         <!-- 常用工具 -->
         <ion-slide>
-            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
                 <div class="spacer-2x"></div>
                 <ion-card>
                     <div class="item item-body">
@@ -61,85 +61,81 @@
                     </div>
                 </ion-card>
                 <div class="spacer-2x"></div>
-                <div class="tools-group1">
-                    
-                    <div class="row">
-                        <div class="col">
-                            <div class="tools-pic">
-                                <img src="img/notes.png" alt="">
-                            </div>
-                            <h2><b>成绩查询</b></h2>
-                            <p>本学期、历年</p>
-                        </div>
-                        <div class="col">
-                            <div class="tools-pic">
-                                <img src="img/graduation.png" alt="">
-                            </div>
-                            <h2><b>四六级</b></h2>
-                            <p>查询</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="tools-pic">
-                                <img src="img/desk-lamp.png" alt="">
-                            </div>
-                            <h2><b>空闲教室</b></h2>
-                            <p>去自习</p>
-                        </div>
-                        <div class="col">
-                            
-                        </div>
-                    </div>
-                </div>
+                <ion-list>
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page26">
+                        <img src="img/blank_class.png">
+                        <h2>空教室</h2>
+                        <p>去自习，没空教室？</p>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page17">
+                        <img src="img/score.png">
+                        <h2>成绩</h2>
+                        <p>本学期，往年成绩一键查询</p>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.course">
+                        <img src="img/time_table.png">
+                        <h2>四六级</h2>
+                        <p>查询、经验</p>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+                </ion-list>
                 <div class="spacer-2x"></div>
-                <div class="tools-group1">
-                    <div class="row">
-                        <div class="col">
-                            <div class="tools-pic">
-                                <img src="img/id-card.png" alt="">
-                            </div>
-                            <h2><b>一卡通</b></h2>
-                            <p>查询、找回</p>
-                        </div>
-                        <div class="col">
-                            <div class="tools-pic">
-                                <img src="img/trophy.png" alt="">
-                            </div>
-                            <h2><b>图书馆</b></h2>
-                            <p>我要上自习</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="tools-pic">
-                                <img src="img/owl.png" alt="">
-                            </div>
-                            <h2><b>报修</b></h2>
-                            <p>本学期、历年</p>
-                        </div>
-                        <div class="col">
-                            <!-- <div class="tools-pic">
-                                <img src="img/time_table.png" alt="">
-                            </div>
-                            <h2><b>课程表</b></h2>
-                            <p>课程小助手</p> -->
-                        </div>
-                    </div>
-                </div>
-
-                
-                
+                <ion-list id="page2-list23">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.ecard">
+                        <img src="img/e_card.png">
+                        <h2>校园卡</h2>
+                        <p>看看狗粮还有多少</p>
+                        <i class="icon ion-card icon-accessory"></i>
+                    </ion-item>
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page29">
+                        <img src="img/librar.png">
+                        <h2>图书馆</h2>
+                        <p>人丑就要多读书</p>
+                        <i class="icon ion-android-create icon-accessory"></i>
+                    </ion-item>
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page30">
+                        <img src="img/repair.png">
+                        <h2>报修</h2>
+                        <p>报修，如此便捷</p>
+                        <i class="icon ion-android-settings icon-accessory"></i>
+                    </ion-item>
+                </ion-list>
+                <div class="spacer-2x"></div>
             </ion-content>
         </ion-slide>
         <ion-slide>
-            <ion-content class="has-header">
-                <!-- 最爱 -->
-                <div class="list has-header">
-                
-                    最爱
-                </div>
-                
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
+                <div class="spacer-2x"></div>
+                <ion-list>
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page26">
+                        <img src="img/blank_class.png">
+                        <h2>告白</h2>
+                        <p>来一场轰轰烈烈的爱情</p>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+                </ion-list>
+                <div class="spacer-2x"></div>
+                <ion-list>
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page17">
+                        <img src="img/score.png">
+                        <h2>地图</h2>
+                        <p>校园那么大</p>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+                </ion-list>
+                <div class="spacer-2x"></div>
+                <ion-list id="page2-list23">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.ecard">
+                        <img src="img/e_card.png">
+                        <h2>代取快递</h2>
+                        <p>为您服务</p>
+                        <i class="icon ion-card icon-accessory"></i>
+                    </ion-item>
+                    
+                </ion-list>
+                <div class="spacer-2x"></div>
             </ion-content>
         </ion-slide>
     </ion-slide-box>
