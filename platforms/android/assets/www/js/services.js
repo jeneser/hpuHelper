@@ -57,7 +57,7 @@ angular.module('app.services', [])
                 loadMore: function(callback) {
                     $this = this;
                     console.log("正在加载更多数据...");
-                    var url = 'http://jenes.site/hpu/public/getNewsList/json/' + this.limit + '/' + this.skip;
+                    var url = 'http://localhost:1337/jenes.site/hpu/public/getNewsList/json/' + this.limit + '/' + this.skip;
 
                     $http.get(url).success(function(response) {
                         $this.items = $this.items.concat(response.results);
@@ -68,7 +68,7 @@ angular.module('app.services', [])
                 doRefresh: function() {
                     $this = this;
                     console.log("正在执行refresh操作...");
-                    var url = 'http://jenes.site/hpu/public/getNewsList/json/6/0';
+                    var url = 'http://localhost:1337/jenes.site/hpu/public/getNewsList/json/6/0';
 
                     $http.get(url).success(function(response) {
                         $this.items = response.results;
@@ -187,7 +187,7 @@ angular.module('app.services', [])
     return {
         requestData: function(objectId) {
 
-            var newsContentUrl = 'http://jenes.site/hpu/public/getNewsContent/json/' + objectId;
+            var newsContentUrl = 'http://localhost:1337/jenes.site/hpu/public/getNewsContent/json/' + objectId;
 
             $http.get(newsContentUrl).success(
                 function(response){

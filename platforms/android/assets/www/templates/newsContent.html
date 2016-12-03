@@ -2,23 +2,21 @@
     <ion-nav-bar class="bar-positive">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content padding="true" has-bouncing="true" class="has-header news-content">
+    <ion-content padding="true" has-bouncing="true" class="has-header">
         <div class="loading" ng-show="loading">  
             <ion-spinner icon="lines" class="spinner-positive"></ion-spinner>
         </div>
-        <div ng-hide="loading">
-            <h2 id="newsContent-heading1">{{item.title}}</h2>
-            <a class="item item-icon-left" href="#">
-                <i class="icon ion-ios-pricetags-outline"></i>
-                {{item.from}}&nbsp;{{item.created_at}} &nbsp;{{item.author}}
-            </a>
+        <div class="news-content" ng-hide="loading">
+            <h2>{{item.title}}</h2>
+            <span class="time">{{item.created_at}}</span>
+            <span class="tag">{{item.from}}</span>
             <hr>
-            <div class="news-body" ng-bind-html="item.content"></div>
-            
+            <div class="content" ng-bind-html="item.content"></div>
             <div class="spacer-x3"></div>
-            <div class="news-footer">
-                <a class="button button-outline button-balanced" ng-href="{{item.url}}">原文链接</a>
-            </div> 
+            <div class="footer">
+                <span ng-click="openUrl(item.url)">阅读原文</span>
+            </div>
         </div>
+        <div class="spacer-x3"></div>
     </ion-content>
 </ion-view>

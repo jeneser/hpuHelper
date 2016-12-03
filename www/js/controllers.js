@@ -43,13 +43,30 @@ angular.module('app.controllers', [])
 }])
 
 // 新闻详情
-.controller('newsContentCtrl', ['$scope', '$state', '$rootScope', '$stateParams', 'newsContentService', 
-    function($scope, $state, $rootScope, $stateParams, newsContentService){
+.controller('newsContentCtrl', ['$scope', '$state', '$stateParams', '$cordovaInAppBrowser', 'newsContentService', 
+    function($scope, $state, $stateParams, $cordovaInAppBrowser, newsContentService){
     var objectId = $stateParams.objectId;
     console.log(objectId);
     $scope.loading = true;
 
     newsContentService.requestData(objectId);
+
+    // 打开原文链接
+    
+    $scope.openUrl = function(url) {
+        var options = {
+            location: 'yes',
+            clearcache: 'yes',
+            toolbar: 'no'
+        };
+        $cordovaInAppBrowser.open(url, '_blank', options)
+        .then(function(event) {
+        // success
+        })
+        .catch(function(event) {
+            alert("抱歉！链接出问题了");
+        });
+    }
 
     $scope.$on('newsContentServiceUpdata',function(event, data){
         
