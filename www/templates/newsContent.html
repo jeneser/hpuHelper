@@ -10,13 +10,10 @@
             <h2>{{item.title}}</h2>
             <span class="time">{{item.created_at}}</span>
             <span class="tag">{{item.from}}</span>
-            <hr>
             <div class="content" ng-bind-html="item.content"></div>
-            <div class="spacer-x3"></div>
             <div class="footer">
                 <span ng-click="openUrl(item.url)">阅读原文</span>
             </div>
         </div>
-        <div class="spacer-x3"></div>
     </ion-content>
 </ion-view>

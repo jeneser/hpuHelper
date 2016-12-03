@@ -79,18 +79,15 @@
   color: #9ea7ac; }
 
 .news-content .tag {
-  color: rgba(29, 138, 231, 0.3);
+  color: #1d8ae7;
   padding: 1px 10px;
   margin-left: 10px;
   border: solid 1px;
   border-radius: 5px; }
 
-.news-content hr {
-  margin-bottom: 20px;
-  border: solid 1px #f0f4f5; }
-
 .news-content .content {
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 18px;
   line-height: 1.5;
   color: #1f1f1f; }
 
@@ -98,8 +95,9 @@
   width: 100%; }
 
 .news-content .footer {
+  margin: 20px auto;
   text-align: right;
-  color: rgba(29, 138, 231, 0.8); }
+  color: #1d8ae7; }
 
 /* 发布者 */
 .publisher {
@@ -152,7 +150,10 @@
     height: 100%;
     max-height: 200px; }
 
-/* 生活 */
+/* 生活,公告,招聘 */
+.explore-life .item, .notice .item, .recruit .item {
+  border: none; }
+
 .explore-life .title, .notice .title, .recruit .title {
   margin: 0 0 10px 0; }
 
@@ -166,14 +167,18 @@
   vertical-align: middle; }
 
 .explore-life .tag, .notice .tag, .recruit .tag {
-  border: solid 1px #1d8ae7;
-  border-radius: 8px;
-  padding: 0 10px;
-  margin: 0 5px; }
+  padding: 1px 10px;
+  margin: 0 5px;
+  color: rgba(29, 138, 231, 0.8);
+  border: solid 1px;
+  border-radius: 6px; }
 
 .explore-life .follow, .notice .follow, .recruit .follow {
   float: right;
   text-align: right; }
+
+.explore-life .time, .notice .time, .recruit .time {
+  color: #9ea7ac; }
 
 .course {
   height: 40px;

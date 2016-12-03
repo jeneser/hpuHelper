@@ -143,17 +143,14 @@ $item-thumbnail-height:           90px !default;
 		color: $dark;
 	}
 	.tag {
-		color: rgba($positive, .3);
+		color: $positive;
 		padding: 1px 10px;
 	    margin-left: 10px;
 	    border: solid 1px;
 	    border-radius: 5px;
 	}
-	hr{
-		margin-bottom: 20px;
-		border: solid 1px $calm;
-	}
 	.content {
+		margin-top: 20px;
 		font-size: 16px;
 		line-height: 1.5;
 		color: $royal;
@@ -162,8 +159,9 @@ $item-thumbnail-height:           90px !default;
 		width: 100%;
 	}
 	.footer {
+		margin: 20px auto;
 		text-align: right;
-		color: rgba($positive, .8);
+		color: $positive;
 	}
 	
 }
@@ -230,7 +228,7 @@ $item-thumbnail-height:           90px !default;
 			color: $light;
 		}
 		.tag {
-			border: solid 1px #1d8ae7;
+			border: solid 1px $positive;
 		    border-radius: 8px;
 		    padding: 1px 5px;
 		}
@@ -243,8 +241,11 @@ $item-thumbnail-height:           90px !default;
 	}
 }
 
-/* 生活 */
+/* 生活,公告,招聘 */
 .explore-life, .notice, .recruit {
+	.item {
+		border: none;
+	}
 	.title {
 		margin: 0 0 10px 0;
 	}
@@ -258,14 +259,18 @@ $item-thumbnail-height:           90px !default;
     	vertical-align: middle;
 	}
 	.tag {
-		border: solid 1px $positive;
-		border-radius: 8px;
-		padding: 0 10px;
+		padding: 1px 10px;
     	margin: 0 5px;
+		color: rgba($positive, .8);
+	    border: solid 1px;
+	    border-radius: 6px;
 	}
 	.follow {
 		float: right;
 		text-align: right;
+	}
+	.time {
+		color: $dark;
 	}
 }
 
