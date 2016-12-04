@@ -53,12 +53,12 @@
 .recommend-list span, .news-list span {
   position: absolute;
   bottom: 10px;
-  font-weight: lighter; }
+  font-size: small; }
   .recommend-list span .tag, .news-list span .tag {
     color: rgba(29, 138, 231, 0.5);
     margin: 0 5px; }
   .recommend-list span .time, .news-list span .time {
-    color: #9ea7ac; }
+    color: rgba(158, 167, 172, 0.5); }
 
 /* 图说 */
 .picture .title {

@@ -53,12 +53,12 @@
 .recommend-list span, .news-list span {
   position: absolute;
   bottom: 10px;
-  color: rgba(29, 138, 231, 0.3);
-  font-weight: lighter; }
-  .recommend-list span i, .news-list span i {
-    padding: 1px 10px;
-    border: solid 1px;
-    border-radius: 6px; }
+  font-size: small; }
+  .recommend-list span .tag, .news-list span .tag {
+    color: rgba(29, 138, 231, 0.5);
+    margin: 0 5px; }
+  .recommend-list span .time, .news-list span .time {
+    color: rgba(158, 167, 172, 0.5); }
 
 /* 图说 */
 .picture .title {
@@ -87,7 +87,7 @@
 
 .news-content .content {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   color: #1f1f1f; }
 
@@ -96,7 +96,6 @@
 
 .news-content .footer {
   margin: 20px auto;
-  text-align: right;
   color: #1d8ae7; }
 
 /* 发布者 */

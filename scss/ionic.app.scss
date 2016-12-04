@@ -105,20 +105,14 @@ $item-thumbnail-height:           90px !default;
 	span {
     	position: absolute;
 	    bottom: 10px;
-	    font-weight: lighter;
+	    font-size: small;
 	    .tag {
 	    	color: rgba($positive, .5);
 	    	margin: 0 5px;
 	    }
 	    .time {
-	    	color: $dark;
-
+	    	color: rgba($dark, .5);
 	    }
-	    // i {
-	    // 	padding: 1px 5px;
-	    // 	// border: solid 1px;
-	    // 	// border-radius: 6px;
-	    // }
 	}
 }
 
