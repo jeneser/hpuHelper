@@ -165,19 +165,28 @@
   line-height: 25px;
   vertical-align: middle; }
 
-.explore-life .tag, .notice .tag, .recruit .tag {
-  padding: 1px 10px;
-  margin: 0 5px;
-  color: rgba(29, 138, 231, 0.8);
-  border: solid 1px;
-  border-radius: 6px; }
-
 .explore-life .follow, .notice .follow, .recruit .follow {
   float: right;
   text-align: right; }
 
 .explore-life .time, .notice .time, .recruit .time {
   color: #9ea7ac; }
+
+.explore-life .tag {
+  padding: 1px 10px;
+  margin: 0 5px;
+  color: rgba(29, 138, 231, 0.8);
+  border: solid 1px;
+  border-radius: 6px; }
+
+.notice span, .recruit span {
+  font-size: small;
+  color: rgba(158, 167, 172, 0.5); }
+
+.notice .tag, .recruit .tag {
+  font-size: small;
+  color: rgba(29, 138, 231, 0.5);
+  margin-right: 5px; }
 
 .course {
   height: 40px;

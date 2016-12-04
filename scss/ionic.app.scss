@@ -258,13 +258,6 @@ $item-thumbnail-height:           90px !default;
 		line-height: 25px;
     	vertical-align: middle;
 	}
-	.tag {
-		padding: 1px 10px;
-    	margin: 0 5px;
-		color: rgba($positive, .8);
-	    border: solid 1px;
-	    border-radius: 6px;
-	}
 	.follow {
 		float: right;
 		text-align: right;
@@ -272,6 +265,26 @@ $item-thumbnail-height:           90px !default;
 	.time {
 		color: $dark;
 	}
+}
+.explore-life {
+	.tag {
+		padding: 1px 10px;
+    	margin: 0 5px;
+		color: rgba($positive, .8);
+	    border: solid 1px;
+	    border-radius: 6px;
+	}
+}
+.notice, .recruit {
+	span {
+		font-size: small;
+		color: rgba($dark, .5);
+	}
+	.tag {
+		font-size: small;
+    	color: rgba($positive, .5);
+    	margin-right: 5px;
+    }
 }
 
 // 工具　tools
