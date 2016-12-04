@@ -37,7 +37,7 @@
     <feature name="JPushPlugin">
         <param name="android-package" value="cn.jpush.phonegap.JPushPlugin" />
     </feature>
-    <name>HPU二狗</name>
+    <name>真知</name>
     <description>
         最适合河南理工大学童鞋使用的手机APP
     </description>

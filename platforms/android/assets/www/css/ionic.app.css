@@ -56,7 +56,7 @@
   font-size: small; }
   .recommend-list span .tag, .news-list span .tag {
     color: rgba(29, 138, 231, 0.5);
-    margin: 0 5px; }
+    margin-right: 5px; }
   .recommend-list span .time, .news-list span .time {
     color: rgba(158, 167, 172, 0.5); }
 
@@ -159,7 +159,8 @@
 .explore-life .description, .notice .description, .recruit .description {
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 10px; }
 
 .explore-life .tag, .explore-life .follow, .notice .tag, .notice .follow, .recruit .tag, .recruit .follow {
   line-height: 25px;

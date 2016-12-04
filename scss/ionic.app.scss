@@ -108,7 +108,7 @@ $item-thumbnail-height:           90px !default;
 	    font-size: small;
 	    .tag {
 	    	color: rgba($positive, .5);
-	    	margin: 0 5px;
+	    	margin-right: 5px;
 	    }
 	    .time {
 	    	color: rgba($dark, .5);
@@ -253,6 +253,7 @@ $item-thumbnail-height:           90px !default;
     	white-space: nowrap;
 		text-overflow: ellipsis;
     	overflow: hidden;
+    	margin-bottom: 10px;
 	}
 	.tag, .follow {
 		line-height: 25px;
