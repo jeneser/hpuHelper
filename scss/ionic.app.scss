@@ -105,13 +105,20 @@ $item-thumbnail-height:           90px !default;
 	span {
     	position: absolute;
 	    bottom: 10px;
-	    color: rgba($positive, .3);
 	    font-weight: lighter;
-	    i {
-	    	padding: 1px 10px;
-	    	border: solid 1px;
-	    	border-radius: 6px;
+	    .tag {
+	    	color: rgba($positive, .5);
+	    	margin: 0 5px;
 	    }
+	    .time {
+	    	color: $dark;
+
+	    }
+	    // i {
+	    // 	padding: 1px 5px;
+	    // 	// border: solid 1px;
+	    // 	// border-radius: 6px;
+	    // }
 	}
 }
 
@@ -160,7 +167,6 @@ $item-thumbnail-height:           90px !default;
 	}
 	.footer {
 		margin: 20px auto;
-		text-align: right;
 		color: $positive;
 	}
 	
