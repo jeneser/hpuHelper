@@ -138,8 +138,8 @@ $item-thumbnail-height:           90px !default;
 	}
 }
 
-/* 新闻,推荐内容页 */
-.news-content {
+/* 新闻,推荐内容页 招聘内容页 */
+.news-content, .recruit-content {
 	.time {
 		color: $dark;
 	}

@@ -87,6 +87,17 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
+  // 招聘详情页
+  .state('tabsController.recruit', {
+    url: '/recruitContent',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/recruitContent.html',
+        controller: 'recruitContentCtrl'
+      }
+    }
+  })
+
   // 周边子页面路由
   .state('tabsController.page32', {
     url: '/cet46',

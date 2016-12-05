@@ -83,6 +83,12 @@ function ($scope, $stateParams) {
 
 }])
 
+// 招聘详情
+.controller('recruitContentCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
 // 赛课
 .controller('saikeCtrl', ['$scope', '$stateParams', '$cordovaBarcodeScanner', '$cordovaInAppBrowser', '$ionicPopup', '$timeout', '$cordovaNetwork', 
 function ($scope, $stateParams, $cordovaBarcodeScanner, $cordovaInAppBrowser, $ionicPopup, $timeout, $cordovaNetwork) {
