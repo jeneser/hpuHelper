@@ -76,6 +76,17 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
+  // 公告详情页
+  .state('tabsController.notice', {
+    url: '/noticeContent',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/noticeContent.html',
+        controller: 'noticeContentCtrl'
+      }
+    }
+  })
+
   // 周边子页面路由
   .state('tabsController.page32', {
     url: '/cet46',

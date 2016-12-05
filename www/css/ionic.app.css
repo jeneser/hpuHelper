@@ -98,6 +98,18 @@
   margin: 20px auto;
   color: #1d8ae7; }
 
+/* 公告内容页 */
+.notice-content {
+  text-align: center; }
+  .notice-content img {
+    margin-top: 20%; }
+  .notice-content span {
+    color: #9ea7ac; }
+  .notice-content button.button-block {
+    width: 63%;
+    margin: 0 auto;
+    margin-top: 40px; }
+
 /* 发布者 */
 .publisher {
   display: inline-block;

@@ -163,7 +163,22 @@ $item-thumbnail-height:           90px !default;
 		margin: 20px auto;
 		color: $positive;
 	}
-	
+}
+
+/* 公告内容页 */
+.notice-content {
+	text-align: center;
+	img {
+		margin-top: 20%;
+	}
+	span {
+		color: $dark;
+	}
+	button.button-block {
+		width: 63%;
+    	margin: 0 auto;
+    	margin-top: 40px;
+	}
 }
 
 

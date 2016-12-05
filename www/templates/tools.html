@@ -1,6 +1,6 @@
 <ion-view title="实用工具" id="tools">
     <ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)">
-        <!-- 常用工具 -->
+        <!-- 课表 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
                 <div class="spacer-2x"></div>
@@ -60,6 +60,12 @@
                         </div>
                     </div>
                 </ion-card>
+                
+            </ion-content>
+        </ion-slide>
+        <!-- 常用 -->
+        <ion-slide>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">                
                 <div class="spacer-2x"></div>
                 <ion-list>
                     <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page26">
@@ -105,6 +111,7 @@
                 <div class="spacer-2x"></div>
             </ion-content>
         </ion-slide>
+        <!-- 收藏 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
                 <div class="spacer-2x"></div>
