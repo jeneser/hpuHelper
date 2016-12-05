@@ -42,6 +42,10 @@
   height: 100%;
   max-height: 180px; }
 
+/* 无border item */
+#tools .item {
+  border: none; }
+
 /* 推荐　*/
 .recommend-list .item, .news-list .item {
   border: none;

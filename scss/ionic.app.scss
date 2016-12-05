@@ -87,6 +87,13 @@ $spacer-height:                   10px !default;
 	max-height: 180px;
 }
 
+/* 无border item */
+#tools {
+	.item {
+		border: none;
+	}
+}
+
 // 首页　home
 // -------------------------------
 

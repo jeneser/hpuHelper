@@ -74,29 +74,41 @@
     width: 48px !important;
     height: 48px !important; }
 
-/* 新闻,推荐内容页 */
-.news-content .time {
+/* 新闻,推荐内容页 招聘内容页 */
+.news-content .time, .recruit-content .time {
   color: #9ea7ac; }
 
-.news-content .tag {
+.news-content .tag, .recruit-content .tag {
   color: #1d8ae7;
   padding: 1px 10px;
   margin-left: 10px;
   border: solid 1px;
   border-radius: 5px; }
 
-.news-content .content {
+.news-content .content, .recruit-content .content {
   margin-top: 20px;
   font-size: 16px;
   line-height: 1.5;
   color: #1f1f1f; }
 
-.news-content .content img {
+.news-content .content img, .recruit-content .content img {
   width: 100%; }
 
-.news-content .footer {
+.news-content .footer, .recruit-content .footer {
   margin: 20px auto;
   color: #1d8ae7; }
+
+/* 公告内容页 */
+.notice-content {
+  text-align: center; }
+  .notice-content img {
+    margin-top: 20%; }
+  .notice-content span {
+    color: #9ea7ac; }
+  .notice-content button.button-block {
+    width: 63%;
+    margin: 0 auto;
+    margin-top: 40px; }
 
 /* 发布者 */
 .publisher {

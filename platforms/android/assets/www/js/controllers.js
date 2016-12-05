@@ -77,6 +77,18 @@ angular.module('app.controllers', [])
     })
 }])
 
+// 公告详情
+.controller('noticeContentCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 招聘详情
+.controller('recruitContentCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
 // 赛课
 .controller('saikeCtrl', ['$scope', '$stateParams', '$cordovaBarcodeScanner', '$cordovaInAppBrowser', '$ionicPopup', '$timeout', '$cordovaNetwork', 
 function ($scope, $stateParams, $cordovaBarcodeScanner, $cordovaInAppBrowser, $ionicPopup, $timeout, $cordovaNetwork) {
@@ -204,7 +216,7 @@ function ($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, $ionicBa
 // 工具
 .controller('toolsCtrl', ['$scope', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', '$timeout', 
 function ($scope, $ionicSlideBoxDelegate, $ionicTabsDelegate, $timeout) {
-    $scope.toolsTabs = [{name:'常用'}, {name: '收藏'}];
+    $scope.toolsTabs = [{name:'课表'}, {name: '常用'}, {name: '收藏'}];
     $scope.flag;
 
     $scope.slideChanged = function (index) {
@@ -480,14 +492,6 @@ function ($scope, $stateParams) {
 }])
    
 .controller('page42Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-
-
-}])
-   
-.controller('page43Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
