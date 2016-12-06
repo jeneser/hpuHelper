@@ -118,7 +118,7 @@
 .publisher {
   display: inline-block;
   line-height: 25px;
-  color: #d4d4d4; }
+  color: #9ea7ac; }
   .publisher img {
     float: left;
     width: 25px;
@@ -126,6 +126,7 @@
     border-radius: 50%;
     margin-right: 10px; }
   .publisher span {
+    font-size: small;
     vertical-align: middle; }
 
 /* 精选 */
@@ -148,34 +149,39 @@
   .choice-list a {
     text-decoration: none; }
   .choice-list .describtion {
-    color: #9ea7ac; }
+    color: rgba(31, 31, 31, 0.8);
+    margin-top: 10px; }
   .choice-list .like, .choice-list .comments {
     color: #d4d4d4; }
 
 /* 活动 */
 .explore-activity .poster {
-  line-height: initial; }
-  .explore-activity .poster .info {
+  position: relative;
+  margin: 5px 0; }
+  .explore-activity .poster a {
     position: absolute;
-    margin: 31% 10px 0; }
-  .explore-activity .poster p {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 42% 5% 5%;
+    text-decoration: none;
+    line-height: 1.5; }
+  .explore-activity .poster h2 {
     width: 300px;
     color: #fff;
     font-size: 18px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    margin: 0 0 5px; }
+    margin: 0 0 8px; }
   .explore-activity .poster span {
     color: #fff; }
-  .explore-activity .poster .tag {
-    border: solid 1px #1d8ae7;
-    border-radius: 8px;
-    padding: 1px 5px; }
   .explore-activity .poster img {
+    display: block;
     width: 100%;
     height: 100%;
-    max-height: 200px; }
+    max-height: 240px; }
 
 /* 生活,公告,招聘 */
 .explore-life .item, .notice .item, .recruit .item {

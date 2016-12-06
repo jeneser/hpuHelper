@@ -63,102 +63,25 @@
                 </ion-infinite-scroll>
             </ion-content>
         </ion-slide>
-        <!-- 图说视图 -->
+        <!-- 后勤视图 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
-                <div class="picture">
-                    <div class="spacer-1x"></div>
-                    <ion-card>
-                        <div class="item item-body">
-                            <div class="publisher">
-                                <img src="img/avatar.png" alt="">
-                                <span>黑咖啡</span>
-                            </div>
-                            <h2 class="title"><b>界面的不同部分分为子视图或包含</b></h2>
-                            <img class="cover" src="http://jenes.site/resource/food.jpg" alt="">
-                            
-                            <p>
-                              <a href="#" class="subdued">15 赞</a>
-                              <a href="#" class="subdued">4 评论</a>
-                            </p>
-                        </div>
-                    </ion-card>
+                <ion-refresher on-refresh="slide.doRefresh()"></ion-refresher>
+                <div class="list news-list">
+                    <a ng-repeat="item in slides[1].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
+                        <img ng-src="{{item.cover}}" alt="pic">
+                        <h2>
+                            <b>{{ item.title }}</b>
+                        </h2>
+                        <span>
+                            <i class="tag">{{　item.from　}}</i>
+                            <i class="time">2016/12/3</i>
+                        </span>
+                    </a>
                 </div>
-                <div class="picture">
-                    <div class="spacer-1x"></div>
-                    <ion-card>
-                        <div class="item item-body">
-                            <div class="publisher">
-                                <img src="img/avatar.png" alt="">
-                                <span>黑咖啡</span>
-                            </div>
-                            <h2 class="title"><b>界面的不同部分分为子视图或包含</b></h2>
-                            <img class="cover" src="http://jenes.site/resource/food.jpg" alt="">
-                            
-                            <p>
-                              <a href="#" class="subdued">15 赞</a>
-                              <a href="#" class="subdued">4 评论</a>
-                            </p>
-                        </div>
-                    </ion-card>
-                </div>
-                <div class="picture">
-                    <div class="spacer-1x"></div>
-                    <ion-card>
-                        <div class="item item-body">
-                            <div class="publisher">
-                                <img src="img/avatar.png" alt="">
-                                <span>黑咖啡</span>
-                            </div>
-                            <h2 class="title"><b>界面的不同部分分为子视图或包含</b></h2>
-                            <img class="cover" src="http://jenes.site/resource/food.jpg" alt="">
-                            
-                            <p>
-                              <a href="#" class="subdued">15 赞</a>
-                              <a href="#" class="subdued">4 评论</a>
-                            </p>
-                        </div>
-                    </ion-card>
-                </div>
-                <div class="picture">
-                    <div class="spacer-1x"></div>
-                    <ion-card>
-                        <div class="item item-body">
-                            <div class="publisher">
-                                <img src="img/avatar.png" alt="">
-                                <span>黑咖啡</span>
-                            </div>
-                            <h2 class="title"><b>界面的不同部分分为子视图或包含</b></h2>
-                            <img class="cover" src="http://jenes.site/resource/food.jpg" alt="">
-                            
-                            <p>
-                              <a href="#" class="subdued">15 赞</a>
-                              <a href="#" class="subdued">4 评论</a>
-                            </p>
-                        </div>
-                    </ion-card>
-                </div>
-                <div class="picture">
-                    <div class="spacer-1x"></div>
-                    <ion-card>
-                        <div class="item item-body">
-                            <div class="publisher">
-                                <img src="img/avatar.png" alt="">
-                                <span>黑咖啡</span>
-                            </div>
-                            <h2 class="title"><b>界面的不同部分分为子视图或包含</b></h2>
-                            <img class="cover" src="http://jenes.site/resource/food.jpg" alt="">
-                            
-                            <p>
-                              <a href="#" class="subdued">15 赞</a>
-                              <a href="#" class="subdued">4 评论</a>
-                            </p>
-                        </div>
-                    </ion-card>
-                </div>
-                
+                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                </ion-infinite-scroll>
             </ion-content>
-            <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%"></ion-infinite-scroll>
         </ion-slide>
         <!-- 公告视图 -->
         <ion-slide>
