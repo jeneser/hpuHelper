@@ -81,7 +81,7 @@ angular.module('app.services', [])
                 }
             },
             {
-                name: '图说',
+                name: '后勤',
                 isload: true,
                 limit: 3,
                 skip: 0,
