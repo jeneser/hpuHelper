@@ -197,6 +197,7 @@ $item-thumbnail-height:           90px !default;
 .publisher {
 	display: inline-block;
 	line-height: 25px;
+	color: $stable;
 	img {
 		float: left;
 		width: 25px;
@@ -210,7 +211,7 @@ $item-thumbnail-height:           90px !default;
 }
 
 /* 精选 */
-.explore-recommend {
+.explore-choice {
 	.top-slide {
 		height: 150px;
 		img {
@@ -226,6 +227,21 @@ $item-thumbnail-height:           90px !default;
 	}
 	.cover {
 		@extend %cover;
+	}
+}
+.choice-list {
+	margin: 10px 0;
+	.item {
+		border: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	.describtion {
+		color: $dark;
+	}
+	.like, .comments {
+		color: $stable;
 	}
 }
 
@@ -272,9 +288,9 @@ $item-thumbnail-height:           90px !default;
 		margin: 0 0 10px 0;
 	}
 	.description {
-    	white-space: nowrap;
-		text-overflow: ellipsis;
-    	overflow: hidden;
+  //   	white-space: nowrap;
+		// text-overflow: ellipsis;
+  //   	overflow: hidden;
     	margin-bottom: 10px;
 	}
 	.tag, .follow {
