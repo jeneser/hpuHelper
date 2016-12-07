@@ -206,7 +206,6 @@ $item-thumbnail-height:           90px !default;
 		margin-right: 10px;
 	}
 	span {
-		font-size: small;
 		vertical-align: middle;
 	}
 }
@@ -225,6 +224,7 @@ $item-thumbnail-height:           90px !default;
 	}
 	.title {
 		margin: 8px 0;
+		color: #000;
 	}
 	.cover {
 		@extend %cover;
@@ -239,11 +239,16 @@ $item-thumbnail-height:           90px !default;
 		text-decoration: none;
 	}
 	.describtion {
-		color: rgba($royal, .8);
+		height: 60px;
+    	overflow: hidden;
+		color: $dark;
 		margin-top: 10px;
 	}
 	.like, .comments {
 		color: $stable;
+	}
+	.hot {
+		margin-top: 10px;
 	}
 }
 
@@ -258,7 +263,7 @@ $item-thumbnail-height:           90px !default;
     		bottom: 0;
     		left: 0;
     		right: 0;
-    		margin: 42% 5% 5%;
+    		padding: 42% 4% 5%;
     		text-decoration: none;
     		line-height: 1.5;
 		}
