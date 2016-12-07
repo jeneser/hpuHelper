@@ -206,7 +206,6 @@ $item-thumbnail-height:           90px !default;
 		margin-right: 10px;
 	}
 	span {
-		font-size: small;
 		vertical-align: middle;
 	}
 }
@@ -242,7 +241,7 @@ $item-thumbnail-height:           90px !default;
 	.describtion {
 		height: 60px;
     	overflow: hidden;
-		color: $royal;
+		color: rgba($royal, .8);
 		margin-top: 10px;
 	}
 	.like, .comments {
@@ -314,8 +313,7 @@ $item-thumbnail-height:           90px !default;
     	padding-bottom: 10px;
 	}
 	.tag, .follow {
-		line-height: 25px;
-    	vertical-align: middle;
+		// line-height: 25px;
 	}
 	.follow {
 		color: $dark;
@@ -326,13 +324,15 @@ $item-thumbnail-height:           90px !default;
 }
 .topic-list {
 	.tag {
+		position: absolute;
+		bottom: 16px;
+    	right: 16px;
 		float: right;
-		padding: 1px 10px;
-    	margin: 0 5px;
+		padding: 1px 5px 0 5px;
     	font-size: small;
 		color: rgba($positive, .8);
 	    border: solid 1px;
-	    border-radius: 6px;
+	    border-radius: 5px;
 	}
 }
 .notice, .recruit {

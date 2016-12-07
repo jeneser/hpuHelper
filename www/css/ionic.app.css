@@ -126,7 +126,6 @@
     border-radius: 50%;
     margin-right: 10px; }
   .publisher span {
-    font-size: small;
     vertical-align: middle; }
 
 /* 精选 */
@@ -152,7 +151,7 @@
   .choice-list .describtion {
     height: 60px;
     overflow: hidden;
-    color: #1f1f1f;
+    color: rgba(31, 31, 31, 0.8);
     margin-top: 10px; }
   .choice-list .like, .choice-list .comments {
     color: #d4d4d4; }
@@ -201,22 +200,21 @@
     margin: 0 0 10px 0; }
   .topic-list p, .notice p, .recruit p {
     padding-bottom: 10px; }
-  .topic-list .tag, .topic-list .follow, .notice .tag, .notice .follow, .recruit .tag, .recruit .follow {
-    line-height: 25px;
-    vertical-align: middle; }
   .topic-list .follow, .notice .follow, .recruit .follow {
     color: #9ea7ac; }
   .topic-list .time, .notice .time, .recruit .time {
     color: #9ea7ac; }
 
 .topic-list .tag {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
   float: right;
-  padding: 1px 10px;
-  margin: 0 5px;
+  padding: 1px 5px 0 5px;
   font-size: small;
   color: rgba(29, 138, 231, 0.8);
   border: solid 1px;
-  border-radius: 6px; }
+  border-radius: 5px; }
 
 .notice span, .recruit span {
   font-size: small;
