@@ -87,13 +87,6 @@ $spacer-height:                   10px !default;
 	max-height: 180px;
 }
 
-/* 无border item */
-#tools {
-	.item {
-		border: none;
-	}
-}
-
 // 首页　home
 // -------------------------------
 
@@ -349,7 +342,12 @@ $item-thumbnail-height:           90px !default;
 
 // 工具　tools
 // -------------------------------
-
+/* 无border item */
+.used-list, .collection-list {
+	.item {
+		border: none;
+	}
+}
 .course {
 	height: 40px;
 	margin-top: 10px;
