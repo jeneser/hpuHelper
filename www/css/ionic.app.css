@@ -126,6 +126,7 @@
     border-radius: 50%;
     margin-right: 10px; }
   .publisher span {
+    font-size: small;
     vertical-align: middle; }
 
 /* 精选 */
@@ -151,7 +152,7 @@
   .choice-list .describtion {
     height: 60px;
     overflow: hidden;
-    color: #9ea7ac;
+    color: #1f1f1f;
     margin-top: 10px; }
   .choice-list .like, .choice-list .comments {
     color: #d4d4d4; }
@@ -188,29 +189,31 @@
     max-height: 240px; }
 
 /* 生活,公告,招聘 */
-.explore-life .item, .notice .item, .recruit .item {
-  border: none; }
+.topic-list, .notice, .recruit {
+  margin: 10px 0; }
+  .topic-list .item, .notice .item, .recruit .item {
+    border: none; }
+  .topic-list a, .notice a, .recruit a {
+    text-decoration: none; }
+  .topic-list a:first-child, .notice a:first-child, .recruit a:first-child {
+    display: block; }
+  .topic-list .title, .notice .title, .recruit .title {
+    margin: 0 0 10px 0; }
+  .topic-list p, .notice p, .recruit p {
+    padding-bottom: 10px; }
+  .topic-list .tag, .topic-list .follow, .notice .tag, .notice .follow, .recruit .tag, .recruit .follow {
+    line-height: 25px;
+    vertical-align: middle; }
+  .topic-list .follow, .notice .follow, .recruit .follow {
+    color: #9ea7ac; }
+  .topic-list .time, .notice .time, .recruit .time {
+    color: #9ea7ac; }
 
-.explore-life .title, .notice .title, .recruit .title {
-  margin: 0 0 10px 0; }
-
-.explore-life .description, .notice .description, .recruit .description {
-  margin-bottom: 10px; }
-
-.explore-life .tag, .explore-life .follow, .notice .tag, .notice .follow, .recruit .tag, .recruit .follow {
-  line-height: 25px;
-  vertical-align: middle; }
-
-.explore-life .follow, .notice .follow, .recruit .follow {
+.topic-list .tag {
   float: right;
-  text-align: right; }
-
-.explore-life .time, .notice .time, .recruit .time {
-  color: #9ea7ac; }
-
-.explore-life .tag {
   padding: 1px 10px;
   margin: 0 5px;
+  font-size: small;
   color: rgba(29, 138, 231, 0.8);
   border: solid 1px;
   border-radius: 6px; }

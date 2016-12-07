@@ -206,6 +206,7 @@ $item-thumbnail-height:           90px !default;
 		margin-right: 10px;
 	}
 	span {
+		font-size: small;
 		vertical-align: middle;
 	}
 }
@@ -241,7 +242,7 @@ $item-thumbnail-height:           90px !default;
 	.describtion {
 		height: 60px;
     	overflow: hidden;
-		color: $dark;
+		color: $royal;
 		margin-top: 10px;
 	}
 	.like, .comments {
@@ -295,35 +296,40 @@ $item-thumbnail-height:           90px !default;
 }
 
 /* 生活,公告,招聘 */
-.explore-life, .notice, .recruit {
+.topic-list, .notice, .recruit {
+	margin: 10px 0;
 	.item {
 		border: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	a:first-child {
+		display: block;
 	}
 	.title {
 		margin: 0 0 10px 0;
 	}
-	.description {
-  //   	white-space: nowrap;
-		// text-overflow: ellipsis;
-  //   	overflow: hidden;
-    	margin-bottom: 10px;
+	p {
+    	padding-bottom: 10px;
 	}
 	.tag, .follow {
 		line-height: 25px;
     	vertical-align: middle;
 	}
 	.follow {
-		float: right;
-		text-align: right;
+		color: $dark;
 	}
 	.time {
 		color: $dark;
 	}
 }
-.explore-life {
+.topic-list {
 	.tag {
+		float: right;
 		padding: 1px 10px;
     	margin: 0 5px;
+    	font-size: small;
 		color: rgba($positive, .8);
 	    border: solid 1px;
 	    border-radius: 6px;
