@@ -225,21 +225,19 @@
 .used-list .item, .collection-list .item {
   border: none; }
 
-.course {
+.course .title {
+  margin-bottom: 10px; }
+
+.course span:first-child {
+  display: block;
+  float: left;
+  width: 48px;
   height: 48px;
-  margin: 20px 0; }
-  .course .title {
-    margin-bottom: 10px; }
-  .course span:first-child {
-    display: block;
-    float: left;
-    width: 48px;
-    height: 48px;
-    margin-right: 20px;
-    padding: 4px 0;
-    text-align: center;
-    background-color: #1d8ae7;
-    color: #fff; }
+  margin-right: 20px;
+  padding: 4px 0;
+  text-align: center;
+  background-color: #1d8ae7;
+  color: #fff; }
 
 /* 背景层快速拨号 */
 .fab-dial .fab-bg {

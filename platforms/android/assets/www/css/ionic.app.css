@@ -226,34 +226,20 @@
   border: none; }
 
 .course {
-  height: 40px;
-  margin-top: 10px;
-  margin-left: -4px; }
+  height: 48px;
+  margin: 20px 0; }
+  .course .title {
+    margin-bottom: 10px; }
   .course span:first-child {
-    display: inline-block;
-    width: 42px;
-    height: 40px;
-    background-color: #f0f4f5;
-    text-align: center; }
-  .course span:nth-child(2) {
-    position: absolute;
-    width: 78%;
-    height: 40px;
-    line-height: 40px;
-    background-color: #f0f4f5;
-    vertical-align: middle;
-    margin: 0 10px;
-    padding: 0 5px;
-    overflow: hidden; }
-    .course span:nth-child(2) i:nth-child(1) {
-      display: inline-block;
-      width: 130px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis; }
-    .course span:nth-child(2) i:nth-child(2), .course span:nth-child(2) i:nth-child(3) {
-      float: right;
-      font-weight: lighter; }
+    display: block;
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    padding: 4px 0;
+    text-align: center;
+    background-color: #1d8ae7;
+    color: #fff; }
 
 /* 背景层快速拨号 */
 .fab-dial .fab-bg {
