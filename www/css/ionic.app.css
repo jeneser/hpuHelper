@@ -222,10 +222,19 @@
   margin-right: 5px; }
 
 /* 无border item */
-.used-list .item, .collection-list .item {
+.courses .item, .used-list .item, .collection-list .item {
   border: none; }
 
+.school-calendar span:first-child {
+  color: #1f1f1f; }
+
+.course-list .item {
+  border: none;
+  margin: 5px 0;
+  padding: 10px 16px; }
+
 .course .title {
+  margin-top: 0;
   margin-bottom: 10px; }
 
 .course span:first-child {
@@ -235,9 +244,13 @@
   height: 48px;
   margin-right: 20px;
   padding: 4px 0;
+  color: #fff;
   text-align: center;
-  background-color: #1d8ae7;
-  color: #fff; }
+  background-color: #1d8ae7; }
+
+.course .info {
+  margin-top: 10px;
+  color: #9ea7ac; }
 
 /* 背景层快速拨号 */
 .fab-dial .fab-bg {

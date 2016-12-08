@@ -343,15 +343,26 @@ $item-thumbnail-height:           90px !default;
 // 工具　tools
 // -------------------------------
 /* 无border item */
-.used-list, .collection-list {
+.courses, .used-list, .collection-list {
 	.item {
 		border: none;
 	}
 }
+.school-calendar {
+	span:first-child {
+		color: $royal;
+	}
+}
+.course-list {
+	.item {
+		border: none;
+		margin: 5px 0;
+		padding: 10px 16px;
+	}
+}
 .course {
-	// height: 48px;
-	// margin: 20px 0;
 	.title {
+		margin-top: 0;
 		margin-bottom: 10px;
 	}
 	span:first-child {
@@ -361,9 +372,13 @@ $item-thumbnail-height:           90px !default;
 	    height: 48px;
 	    margin-right: 20px;
 	    padding: 4px 0;
+	    color: $light;
 	    text-align: center;
 	    background-color: $positive;
-	    color: $light;
+	}
+	.info {
+		margin-top: 10px;
+		color: $dark;
 	}
 }
 
