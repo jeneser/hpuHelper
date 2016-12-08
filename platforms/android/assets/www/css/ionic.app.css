@@ -42,10 +42,6 @@
   height: 100%;
   max-height: 180px; }
 
-/* 无border item */
-#tools .item {
-  border: none; }
-
 /* 推荐　*/
 .recommend-list .item, .news-list .item {
   border: none;
@@ -151,7 +147,7 @@
   .choice-list .describtion {
     height: 60px;
     overflow: hidden;
-    color: #1f1f1f;
+    color: rgba(31, 31, 31, 0.8);
     margin-top: 10px; }
   .choice-list .like, .choice-list .comments {
     color: #d4d4d4; }
@@ -224,6 +220,10 @@
   font-size: small;
   color: rgba(29, 138, 231, 0.5);
   margin-right: 5px; }
+
+/* 无border item */
+.used-list .item, .collection-list .item {
+  border: none; }
 
 .course {
   height: 40px;
