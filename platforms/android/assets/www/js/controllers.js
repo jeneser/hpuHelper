@@ -299,11 +299,60 @@ function ($scope, $stateParams, $state, timetalesService) {
     })
 }])
 
-// 扫码
-.controller('BarcodeCtrl', function($scope, $cordovaBarcodeScanner) {
+// 空教室
+.controller('classroomCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
 
-})
-   
+}])
+
+// 查成绩
+.controller('markCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 四六级
+.controller('cet46Ctrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 图书馆
+.controller('libraryCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 报修
+.controller('repairCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 表白
+.controller('loveCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 地图
+.controller('mapCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 校历
+.controller('calendarCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
+// 代取快递
+.controller('expressCtrl', ['$scope', '$stateParams', 
+function ($scope, $stateParams) {
+
+}])
+
 .controller('ecardCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
@@ -345,13 +394,7 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('page17Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
-
-}])
    
 .controller('page18Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
@@ -394,31 +437,6 @@ function ($scope, $stateParams) {
 }])
 
    
-.controller('page26Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-
-
-}])
-
-   
-.controller('page29Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-
-
-}])
-   
-.controller('page30Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-
-
-}])
-   
 .controller('page31Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
@@ -427,13 +445,7 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('page32Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
-
-}])
    
 .controller('page33Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
@@ -443,13 +455,7 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('page34Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
-
-}])
    
 .controller('page35Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
@@ -459,13 +465,7 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('page36Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
-
-}])
    
 .controller('page37Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
@@ -475,13 +475,7 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('page38Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
-
-}])
    
 .controller('page40Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
@@ -523,13 +517,7 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('page41Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
-
-}])
    
 .controller('page46Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
