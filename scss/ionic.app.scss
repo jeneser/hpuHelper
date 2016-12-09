@@ -342,7 +342,7 @@ $item-thumbnail-height:           90px !default;
 
 // 工具　tools
 // -------------------------------
-/* 无border item */
+
 .courses, .used-list, .collection-list {
 	.item {
 		border: none;
@@ -350,6 +350,7 @@ $item-thumbnail-height:           90px !default;
 }
 .school-calendar {
 	span:first-child {
+		margin-left: 10px;
 		color: $royal;
 	}
 }

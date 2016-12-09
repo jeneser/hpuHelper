@@ -3,15 +3,16 @@
         <!-- 课表 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg courses">
+                <div class="spacer-1x"></div>
                 <div class="school-calendar">
-                    <a class="item" href="#">
+                    <a class="item"　ui-sref="tabsController.course">
                         <span>周三</span>
                         <span class="item-note">
                         第十三周
                         </span>
                     </a>
                 </div>
-                <div class="course-list">
+                <div class="course-list" ui-sref="tabsController.course">
                     <div class="item item-body course">
                         <div>
                             <span>
@@ -67,8 +68,6 @@
                     <button class="button button-positive  button-block button-outline">明日课程</button>
                     
                 </div>
-
-
             </ion-content>
         </ion-slide>
         <!-- 常用 -->
@@ -76,24 +75,24 @@
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg used-list">                
                 <div class="spacer-2x"></div>
                 <ion-list>
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page26">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.classroom">
                         <img src="img/blank_class.png">
                         <h2>空教室</h2>
                         <p>去自习，没空教室？</p>
                         <i class="icon ion-chevron-right icon-accessory"></i>
                     </ion-item>
                     <div class="spacer-1x"></div>
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page17">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.mark">
                         <img src="img/score.png">
                         <h2>成绩</h2>
                         <p>本学期，往年成绩一键查询</p>
                         <i class="icon ion-chevron-right icon-accessory"></i>
                     </ion-item>
                     <div class="spacer-1x"></div>
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.course">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.cet46">
                         <img src="img/time_table.png">
                         <h2>四六级</h2>
-                        <p>查询、经验</p>
+                        <p>查询入口</p>
                         <i class="icon ion-chevron-right icon-accessory"></i>
                     </ion-item>
                 </ion-list>
@@ -102,18 +101,18 @@
                     <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.ecard">
                         <img src="img/e_card.png">
                         <h2>校园卡</h2>
-                        <p>看看狗粮还有多少</p>
+                        <p>看狗粮，轻松找回</p>
                         <i class="icon ion-card icon-accessory"></i>
                     </ion-item>
                     <div class="spacer-1x"></div>
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page29">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.library">
                         <img src="img/librar.png">
                         <h2>图书馆</h2>
                         <p>人丑就要多读书</p>
                         <i class="icon ion-android-create icon-accessory"></i>
                     </ion-item>
                     <div class="spacer-1x"></div>
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page30">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.repair">
                         <img src="img/repair.png">
                         <h2>报修</h2>
                         <p>报修，如此便捷</p>
@@ -128,7 +127,7 @@
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg collection-list">
                 <div class="spacer-2x"></div>
                 <ion-list>
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page26">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.love">
                         <img src="img/blank_class.png">
                         <h2>告白</h2>
                         <p>来一场轰轰烈烈的爱情</p>
@@ -137,7 +136,7 @@
                 </ion-list>
                 <div class="spacer-2x"></div>
                 <ion-list>
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.page17">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.map">
                         <img src="img/score.png">
                         <h2>地图</h2>
                         <p>校园那么大</p>
@@ -146,7 +145,16 @@
                 </ion-list>
                 <div class="spacer-2x"></div>
                 <ion-list id="page2-list23">
-                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.ecard">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.calendar">
+                        <img src="img/e_card.png">
+                        <h2>校历</h2>
+                        <p>学年安排</p>
+                        <i class="icon ion-card icon-accessory"></i>
+                    </ion-item>
+                </ion-list>
+                <div class="spacer-2x"></div>
+                <ion-list id="page2-list23">
+                    <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.express">
                         <img src="img/e_card.png">
                         <h2>代取快递</h2>
                         <p>为您服务</p>

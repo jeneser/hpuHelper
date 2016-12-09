@@ -99,15 +99,7 @@ angular.module('app.routes', ['ionicUIRouter'])
   })
 
   // 周边子页面路由
-  .state('tabsController.page32', {
-    url: '/cet46',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page32.html',
-        controller: 'page32Ctrl'
-      }
-    }
-  })
+  
 
   .state('tabsController.page33', {
     url: '/share',
@@ -119,15 +111,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  .state('tabsController.page34', {
-    url: '/second_hand',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page34.html',
-        controller: 'page34Ctrl'
-      }
-    }
-  })
+
 
   .state('tabsController.page35', {
     url: '/shop',
@@ -139,15 +123,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  .state('tabsController.page36', {
-    url: '/part_time',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page36.html',
-        controller: 'page36Ctrl'
-      }
-    }
-  })
+  
 
   .state('tabsController.page37', {
     url: '/exercitation',
@@ -159,25 +135,9 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  .state('tabsController.page38', {
-    url: '/b_school',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page38.html',
-        controller: 'page38Ctrl'
-      }
-    }
-  })
 
-  .state('tabsController.page41', {
-    url: '/express',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page41.html',
-        controller: 'page41Ctrl'
-      }
-    }
-  })
+
+
 
   // 工具子页面路由 tab4
   // 课程表路由
@@ -190,17 +150,37 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-
-  .state('tabsController.page26', {
+  // 空教室
+  .state('tabsController.classroom', {
     url: '/classroom',
     views: {
       'tab4': {
-        templateUrl: 'templates/page26.html',
-        controller: 'page26Ctrl'
+        templateUrl: 'templates/classroom.html',
+        controller: 'classroomCtrl'
       }
     }
   })
-  //一卡通
+  // 查成绩
+  .state('tabsController.mark', {
+    url: '/mark',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/mark.html',
+        controller: 'markCtrl'
+      }
+    }
+  })
+  // 四六级
+  .state('tabsController.cet46', {
+    url: '/cet46',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/cet46.html',
+        controller: 'cet46Ctrl'
+      }
+    }
+  })
+  //校园卡
   .state('tabsController.ecard', {
     url: '/ecard',
     views: {
@@ -210,36 +190,68 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-
-  .state('tabsController.page29', {
+  // 图书馆
+  .state('tabsController.library', {
     url: '/library',
     views: {
       'tab4': {
-        templateUrl: 'templates/page29.html',
-        controller: 'page29Ctrl'
+        templateUrl: 'templates/library.html',
+        controller: 'libraryCtrl'
+      }
+    }
+  })
+  // 报修
+  .state('tabsController.repair', {
+    url: '/repair',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/repair.html',
+        controller: 'repairCtrl'
+      }
+    }
+  })
+  // 表白
+  .state('tabsController.love', {
+    url: '/love',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/love.html',
+        controller: 'loveCtrl'
+      }
+    }
+  })
+  // 地图
+  .state('tabsController.map', {
+    url: '/map',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/map.html',
+        controller: 'mapCtrl'
+      }
+    }
+  })
+  // 校历
+  .state('tabsController.calendar', {
+    url: '/calendar',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/calendar.html',
+        controller: 'calendarCtrl'
+      }
+    }
+  })
+  // 代取快递
+  .state('tabsController.express', {
+    url: '/express',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/express.html',
+        controller: 'expressCtrl'
       }
     }
   })
 
-  .state('tabsController.page30', {
-    url: '/fix',
-    views: {
-      'tab4': {
-        templateUrl: 'templates/page30.html',
-        controller: 'page30Ctrl'
-      }
-    }
-  })
 
-  .state('tabsController.page17', {
-    url: '/mark',
-    views: {
-      'tab4': {
-        templateUrl: 'templates/page17.html',
-        controller: 'page17Ctrl'
-      }
-    }
-  })
 
 
 

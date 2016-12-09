@@ -221,25 +221,36 @@
   color: rgba(29, 138, 231, 0.5);
   margin-right: 5px; }
 
-/* 无border item */
-.used-list .item, .collection-list .item {
+.courses .item, .used-list .item, .collection-list .item {
   border: none; }
 
-.course {
+.school-calendar span:first-child {
+  margin-left: 10px;
+  color: #1f1f1f; }
+
+.course-list .item {
+  border: none;
+  margin: 5px 0;
+  padding: 10px 16px; }
+
+.course .title {
+  margin-top: 0;
+  margin-bottom: 10px; }
+
+.course span:first-child {
+  display: block;
+  float: left;
+  width: 48px;
   height: 48px;
-  margin: 20px 0; }
-  .course .title {
-    margin-bottom: 10px; }
-  .course span:first-child {
-    display: block;
-    float: left;
-    width: 48px;
-    height: 48px;
-    margin-right: 20px;
-    padding: 4px 0;
-    text-align: center;
-    background-color: #1d8ae7;
-    color: #fff; }
+  margin-right: 20px;
+  padding: 4px 0;
+  color: #fff;
+  text-align: center;
+  background-color: #1d8ae7; }
+
+.course .info {
+  margin-top: 10px;
+  color: #9ea7ac; }
 
 /* 背景层快速拨号 */
 .fab-dial .fab-bg {

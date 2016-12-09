@@ -221,11 +221,11 @@
   color: rgba(29, 138, 231, 0.5);
   margin-right: 5px; }
 
-/* 无border item */
 .courses .item, .used-list .item, .collection-list .item {
   border: none; }
 
 .school-calendar span:first-child {
+  margin-left: 10px;
   color: #1f1f1f; }
 
 .course-list .item {
