@@ -34,15 +34,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-  .state('tabsController.page33', {
-    url: '/share',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page33.html',
-        controller: 'page33Ctrl'
-      }
-    }
-  })
   .state('tabsController.page35', {
     url: '/shop',
     views: {
@@ -73,15 +64,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-  .state('tabsController.page18', {
-    url: '/fsth',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/page18.html',
-        controller: 'page18Ctrl'
-      }
-    }
-  })
   .state('tabsController.page19', {
     url: '/game',
     views: {
@@ -97,15 +79,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       'tab3': {
         templateUrl: 'templates/page22.html',
         controller: 'page22Ctrl'
-      }
-    }
-  })
-  .state('tabsController.page24', {
-    url: '/movie',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/page24.html',
-        controller: 'page24Ctrl'
       }
     }
   })
@@ -244,10 +217,64 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
   // 设置
-  .state('setting', {
+  .state('tabsController.setting', {
     url: '/setting',
-    templateUrl: 'templates/setting.html',
-    controller: 'settingCtrl'
+    views: {
+      'tab5': {
+        templateUrl: 'templates/setting.html',
+        controller: 'settingCtrl'
+      }
+    }
+  })
+  // 消息通知
+  .state('tabsController.message', {
+    url: '/message',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/message.html',
+        controller: 'messageCtrl'
+      }
+    }
+  })
+  // 我的发布
+  .state('tabsController.publish', {
+    url: '/publish',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/publish.html',
+        controller: 'publishCtrl'
+      }
+    }
+  })
+  // 我的关注
+  .state('tabsController.follow', {
+    url: '/follow',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/follow.html',
+        controller: 'followCtrl'
+      }
+    }
+  })
+  // 密码绑定
+  .state('tabsController.binding', {
+    url: '/binding',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/binding.html',
+        controller: 'bindingCtrl'
+      }
+    }
+  })
+  // 关于
+  .state('tabsController.about', {
+    url: '/about',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/about.html',
+        controller: 'aboutCtrl'        
+      }
+    }
   })
 
 
@@ -308,19 +335,11 @@ angular.module('app.routes', ['ionicUIRouter'])
     controller: 'page6Ctrl'
   })
 
-  .state('about', {
-    url: '/about',
-    templateUrl: 'templates/about.html',
-    controller: 'aboutCtrl'
-  })
+  
 
   
 
-  .state('binding', {
-    url: '/binding',
-    templateUrl: 'templates/binding.html',
-    controller: 'bindingCtrl'
-  })
+  
 
   .state('page15', {
     url: '/help',

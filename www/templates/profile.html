@@ -3,40 +3,40 @@
     <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg profile">
         <div class="spacer-1x"></div>
         <ion-list class="">
-            <ion-item class="item-avatar" ui-sref="setting">
+            <ion-item class="item-avatar" ui-sref="tabsController.setting">
                 <img src="img/avatar.png">
                 <h2>王江山</h2>
                 <p class="nick">昵称: Jeneser</p>
             </ion-item>
         </ion-list>
         <ion-list>
-            <ion-item class="item-icon-left">
+            <ion-item class="item-icon-left" ui-sref="tabsController.message">
                 <i class="icon ion-ios-chatbubble"></i>
-                <h4 class="title">我的消息</h4>
+                <span class="title">消息通知</span>
                 <span class="badge badge-assertive">0</span>
             </ion-item>
-            <ion-item class="item-icon-left">
+            <ion-item class="item-icon-left" ui-sref="tabsController.publish">
                 <i class="icon ion-ios-compose"></i>
-                <h4 class="title">我的发布</h4>
+                <span class="title">我的发布</span>
             </ion-item>
-            <ion-item class="item-icon-left">
+            <ion-item class="item-icon-left" ui-sref="tabsController.follow">
                 <i class="icon ion-ios-heart"></i>
-                <h4 class="title">我的关注</h4>
+                <span class="title">我的关注</span>
             </ion-item>
         </ion-list>
         <ion-list>
-            <ion-item class="item-icon-left" ui-sref="binding">
+            <ion-item class="item-icon-left" ui-sref="tabsController.binding">
                 <i class="icon ion-ios-locked"></i>
-                <h4 class="title">密码绑定</h4>
+                <span class="title">密码绑定</span>
                 <span class="item-note">未完成</span>
             </ion-item>
-            <ion-item class="item-icon-left" ui-sref="setting">
+            <ion-item class="item-icon-left" ui-sref="tabsController.setting">
                 <i class="icon ion-ios-gear"></i>
-                <h4 class="title">设置</h4>
+                <span class="title">设置</span>
             </ion-item>
-            <ion-item class="item-icon-left" ui-sref="about">
+            <ion-item class="item-icon-left" ui-sref="tabsController.about">
                 <i class="icon ion-ios-information"></i>
-                <h4 class="title">关于</h4>
+                <span class="title">关于</span>
             </ion-item>
         </ion-list>
     </ion-content>
