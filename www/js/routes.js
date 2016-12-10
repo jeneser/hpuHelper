@@ -3,14 +3,16 @@ angular.module('app.routes', ['ionicUIRouter'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  // 底部菜单tab
+  // 底部导航
+  // -------------------------------
   .state('tabsController', {
     url: '/tabs',
     templateUrl: 'templates/tabsController.html',
     abstract:true
   })
 
-  // 主页面
+  // 首页
+  // -------------------------------
   .state('tabsController.home', {
     url: '/home',
     views: {
@@ -22,6 +24,7 @@ angular.module('app.routes', ['ionicUIRouter'])
   })
 
   // 赛课
+  // -------------------------------
   .state('tabsController.saike', {
     url: '/saike',
     views: {
@@ -31,76 +34,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-
-  // 发现
-  .state('tabsController.explore', {
-    url: '/explore',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/explore.html',
-        controller: 'exploreCtrl'
-      }
-    }
-  })
-
-  // 工具
-  .state('tabsController.tools', {
-    url: '/tools',
-    views: {
-      'tab4': {
-        templateUrl: 'templates/tools.html',
-        controller: 'toolsCtrl'
-      }
-    }
-  })
-  
-  // 个人中心
-  .state('tabsController.profile', {
-    url: '/profile',
-    views: {
-      'tab5': {
-        templateUrl: 'templates/profile.html',
-        controller: 'profileCtrl'
-      }
-    }
-  })
-
-  // 新闻详情页
-  .state('tabsController.newsContent', {
-    url: '/newsContent/:objectId',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/newsContent.html',
-        controller: 'newsContentCtrl'
-      }
-    }
-  })
-
-  // 公告详情页
-  .state('tabsController.notice', {
-    url: '/noticeContent',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/noticeContent.html',
-        controller: 'noticeContentCtrl'
-      }
-    }
-  })
-
-  // 招聘详情页
-  .state('tabsController.recruit', {
-    url: '/recruitContent',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/recruitContent.html',
-        controller: 'recruitContentCtrl'
-      }
-    }
-  })
-
-  // 周边子页面路由
-  
-
   .state('tabsController.page33', {
     url: '/share',
     views: {
@@ -110,9 +43,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-
-
-
   .state('tabsController.page35', {
     url: '/shop',
     views: {
@@ -122,9 +52,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-
-  
-
   .state('tabsController.page37', {
     url: '/exercitation',
     views: {
@@ -135,11 +62,65 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
+  // 发现
+  // -------------------------------
+  .state('tabsController.explore', {
+    url: '/explore',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/explore.html',
+        controller: 'exploreCtrl'
+      }
+    }
+  })
+  .state('tabsController.page18', {
+    url: '/fsth',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/page18.html',
+        controller: 'page18Ctrl'
+      }
+    }
+  })
+  .state('tabsController.page19', {
+    url: '/game',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/page19.html',
+        controller: 'page19Ctrl'
+      }
+    }
+  })
+  .state('tabsController.page22', {
+    url: '/community',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/page22.html',
+        controller: 'page22Ctrl'
+      }
+    }
+  })
+  .state('tabsController.page24', {
+    url: '/movie',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/page24.html',
+        controller: 'page24Ctrl'
+      }
+    }
+  })
 
-
-
-
-  // 工具子页面路由 tab4
+  // 工具
+  // -------------------------------
+  .state('tabsController.tools', {
+    url: '/tools',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/tools.html',
+        controller: 'toolsCtrl'
+      }
+    }
+  })
   // 课程表路由
   .state('tabsController.course', {
     url: '/course',
@@ -250,10 +231,68 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
+  
+  // 个人中心
+  // -------------------------------
+  .state('tabsController.profile', {
+    url: '/profile',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/profile.html',
+        controller: 'profileCtrl'
+      }
+    }
+  })
+  // 设置
+  .state('setting', {
+    url: '/setting',
+    templateUrl: 'templates/setting.html',
+    controller: 'settingCtrl'
+  })
 
 
 
 
+
+  // 新闻详情页
+  .state('tabsController.newsContent', {
+    url: '/newsContent/:objectId',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/newsContent.html',
+        controller: 'newsContentCtrl'
+      }
+    }
+  })
+
+  // 公告详情页
+  .state('tabsController.notice', {
+    url: '/noticeContent',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/noticeContent.html',
+        controller: 'noticeContentCtrl'
+      }
+    }
+  })
+
+  // 招聘详情页
+  .state('tabsController.recruit', {
+    url: '/recruitContent',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/recruitContent.html',
+        controller: 'recruitContentCtrl'
+      }
+    }
+  })
+
+  // 搜索
+  .state('search', {
+    url: '/search',
+    templateUrl: 'templates/search.html',
+    controller: 'searchCtrl'
+  })
 
 
 
@@ -289,86 +328,10 @@ angular.module('app.routes', ['ionicUIRouter'])
     controller: 'page15Ctrl'
   })
 
-  .state('setting', {
-    url: '/setting',
-    templateUrl: 'templates/setting.html',
-    controller: 'settingCtrl'
-  })
-
-  .state('search', {
-    url: '/search',
-    templateUrl: 'templates/page13.html',
-    controller: 'page13Ctrl'
-  })
-
   
 
-  .state('tabsController.page18', {
-    url: '/fsth',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/page18.html',
-        controller: 'page18Ctrl'
-      }
-    }
-  })
 
-  .state('tabsController.page19', {
-    url: '/game',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/page19.html',
-        controller: 'page19Ctrl'
-      }
-    }
-  })
-
-  /*
-    The IonicUIRouter.js UI-Router Modification is being used for this route.
-    To navigate to this route, do NOT use a URL. Instead use one of the following:
-      1) Using the ui-sref HTML attribute:
-        ui-sref='tabsController.page20'
-      2) Using $state.go programatically:
-        $state.go('tabsController.page20');
-    This allows your app to figure out which Tab to open this page in on the fly.
-    If you're setting a Tabs default page or modifying the .otherwise for your app and
-    must use a URL, use one of the following:
-      /page1/tab2/office
-      /page1/tab3/office
-  */
-  .state('tabsController.page20', {
-    url: '/office',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page20.html',
-        controller: 'page20Ctrl'
-      },
-      'tab3': {
-        templateUrl: 'templates/page20.html',
-        controller: 'page20Ctrl'
-      }
-    }
-  })
-
-  .state('tabsController.page22', {
-    url: '/community',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/page22.html',
-        controller: 'page22Ctrl'
-      }
-    }
-  })
-
-  .state('tabsController.page24', {
-    url: '/movie',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/page24.html',
-        controller: 'page24Ctrl'
-      }
-    }
-  })
+  
 
 
 
@@ -427,7 +390,5 @@ angular.module('app.routes', ['ionicUIRouter'])
   })
 
 $urlRouterProvider.otherwise('/tabs/home')
-
-
 
 });
