@@ -43,7 +43,7 @@
                             <img src="img/avatar.png" alt="">
                             <span>黑咖啡</span>
                         </a>
-                        <a href="#">
+                        <a ui-sref="tabsController.choiceContent">
                             <h2 class="title"><b>界面的不同部分视图或包含界面的不同部分分为子视图或包含</b></h2>
                             <p class="describtion">Ionic遵循视图控制模式，通俗的理解和 Cocoa 触摸框架相似。在视图控制模式中，我们将界面的不同部分分为子视图或包含其他视图的制模式中，我们将界面的不同部分分</p>
                         </a>
@@ -149,7 +149,7 @@
             </div>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header explore-activity">
                 <div class="poster">
-                    <a href="#">
+                    <a ui-sref="tabsController.posterContent">
                         <h2>寻找校园“云”达人</h2>
                         <span>124赞</span>
                         <span>· 4没兴趣</span>
@@ -205,7 +205,7 @@
                 
             </ion-content>
         </ion-slide>
-        <!-- 生活 -->
+        <!-- 话题 -->
         <ion-slide>
             <!-- 背景层快速拨号 -->
             <div class="fab-dial">
@@ -234,7 +234,7 @@
                 <ion-refresher pulling-text="下拉刷新" on-refresh="slide.doRefresh()"></ion-refresher>
                 <div class="topic-list">
                     <div class="item">
-                        <a href="#">
+                        <a ui-sref="tabsController.topic">
                             <h2 class="title"><b>周边消费攻略</b></h2>
                             <p class="description">天下吃货本一家，分享你的美食经历！</p>
                         </a>

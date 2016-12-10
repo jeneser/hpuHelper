@@ -18,7 +18,37 @@ angular.module('app.routes', ['ionicUIRouter'])
     views: {
       'tab1': {
         templateUrl: 'templates/home.html',
-        controller: 'sliderCtrl'
+        controller: 'homeCtrl'
+      }
+    }
+  })
+  // 新闻详情页
+  .state('tabsController.newsContent', {
+    url: '/newsContent/:objectId',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/newsContent.html',
+        controller: 'newsContentCtrl'
+      }
+    }
+  })
+  // 公告详情页
+  .state('tabsController.notice', {
+    url: '/noticeContent',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/noticeContent.html',
+        controller: 'noticeContentCtrl'
+      }
+    }
+  })
+  // 招聘详情页
+  .state('tabsController.recruit', {
+    url: '/recruitContent',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/recruitContent.html',
+        controller: 'recruitContentCtrl'
       }
     }
   })
@@ -34,24 +64,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-  .state('tabsController.page35', {
-    url: '/shop',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page35.html',
-        controller: 'page35Ctrl'
-      }
-    }
-  })
-  .state('tabsController.page37', {
-    url: '/exercitation',
-    views: {
-      'tab2': {
-        templateUrl: 'templates/page37.html',
-        controller: 'page37Ctrl'
-      }
-    }
-  })
 
   // 发现
   // -------------------------------
@@ -64,25 +76,37 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-  .state('tabsController.page19', {
-    url: '/game',
+  // 精选内容页
+  .state('tabsController.choiceContent', {
+    url: '/choiceContent',
     views: {
       'tab3': {
-        templateUrl: 'templates/page19.html',
-        controller: 'page19Ctrl'
+        templateUrl: 'templates/choiceContent.html',
+        controller: 'choiceContentCtrl'
       }
     }
   })
-  .state('tabsController.page22', {
-    url: '/community',
+  // 活动海报内容页
+  .state('tabsController.posterContent', {
+    url: '/posterContent',
     views: {
       'tab3': {
-        templateUrl: 'templates/page22.html',
-        controller: 'page22Ctrl'
+        templateUrl: 'templates/posterContent.html',
+        controller: 'posterContentCtrl'
       }
     }
   })
-
+  // 话题
+  .state('tabsController.topic', {
+    url: '/topic',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/topic.html',
+        controller: 'topicCtrl'
+      }
+    }
+  })
+  
   // 工具
   // -------------------------------
   .state('tabsController.tools', {
@@ -161,6 +185,16 @@ angular.module('app.routes', ['ionicUIRouter'])
       'tab4': {
         templateUrl: 'templates/repair.html',
         controller: 'repairCtrl'
+      }
+    }
+  })
+  // 社团榜
+  .state('tabsController.clubs', {
+    url: '/clubs',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/clubs.html',
+        controller: 'clubsCtrl'
       }
     }
   })
@@ -276,136 +310,49 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-
-
-
-
-
-  // 新闻详情页
-  .state('tabsController.newsContent', {
-    url: '/newsContent/:objectId',
+  // 反馈
+  .state('tabsController.feedback', {
+    url: '/feedback',
     views: {
-      'tab1': {
-        templateUrl: 'templates/newsContent.html',
-        controller: 'newsContentCtrl'
+      'tab5': {
+        templateUrl: 'templates/feedback.html',
+        controller: 'feedbackCtrl'
+      }
+    }
+  })
+  // 更换头像
+  .state('tabsController.changeVatar', {
+    url: '/changeVatar',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/changeVatar.html',
+        controller: 'changeVatarCtrl'
       }
     }
   })
 
-  // 公告详情页
-  .state('tabsController.notice', {
-    url: '/noticeContent',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/noticeContent.html',
-        controller: 'noticeContentCtrl'
-      }
-    }
-  })
-
-  // 招聘详情页
-  .state('tabsController.recruit', {
-    url: '/recruitContent',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/recruitContent.html',
-        controller: 'recruitContentCtrl'
-      }
-    }
-  })
-
-  // 搜索
+  //　搜索
+  // -------------------------------
   .state('search', {
     url: '/search',
     templateUrl: 'templates/search.html',
     controller: 'searchCtrl'
   })
 
-
-
-  .state('page5', {
+  //　登陆
+  // -------------------------------
+  .state('login', {
     url: '/login',
-    templateUrl: 'templates/page5.html',
-    controller: 'page5Ctrl'
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
   })
 
-  .state('page6', {
+  //　注册
+  // -------------------------------
+  .state('sign', {
     url: '/sign',
-    templateUrl: 'templates/page6.html',
-    controller: 'page6Ctrl'
-  })
-
-  
-
-  
-
-  
-
-  .state('page15', {
-    url: '/help',
-    templateUrl: 'templates/page15.html',
-    controller: 'page15Ctrl'
-  })
-
-  
-
-
-  
-
-
-
-  .state('page31', {
-    url: '/feedback',
-    templateUrl: 'templates/page31.html',
-    controller: 'page31Ctrl'
-  })
-
-
-
-
-
-  .state('page40', {
-    url: '/my_sign',
-    templateUrl: 'templates/page40.html',
-    controller: 'page40Ctrl'
-  })
-
-  .state('page42', {
-    url: '/sex',
-    templateUrl: 'templates/page42.html',
-    controller: 'page42Ctrl'
-  })
-
-  .state('page43', {
-    url: '/rank',
-    templateUrl: 'templates/page43.html',
-    controller: 'page43Ctrl'
-  })
-
-  .state('page44', {
-    url: '/contact_me',
-    templateUrl: 'templates/page44.html',
-    controller: 'page44Ctrl'
-  })
-
-  .state('page45', {
-    url: '/change_face',
-    templateUrl: 'templates/page45.html',
-    controller: 'page45Ctrl'
-  })
-
-  .state('page27', {
-    url: '/forum',
-    templateUrl: 'templates/page27.html',
-    controller: 'page27Ctrl'
-  })
-
-
-
-  .state('page46', {
-    url: '/real_name',
-    templateUrl: 'templates/page46.html',
-    controller: 'page46Ctrl'
+    templateUrl: 'templates/sign.html',
+    controller: 'signCtrl'
   })
 
 $urlRouterProvider.otherwise('/tabs/home')
