@@ -1,14 +1,14 @@
 # HPU二狗 - 最适合河南理工大学童鞋使用的手机APP。
 
 [![forthebadge](http://forthebadge.com/images/badges/built-by-developers.svg)](http://jenes.site)
+[![Build Status](https://travis-ci.org/angular/angular.svg?branch=master)](https://travis-ci.org/jeneser/hpuHelper)
 
-## 截图
-
-![image](screenshot-home.jpg)
 
 ## 技术栈
 
-更新中...
+1. ionic
+2. angularjs
+3. cordova
 
 ## 加入我们
 
