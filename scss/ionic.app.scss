@@ -31,34 +31,32 @@ $bar-height:                      44px !default;
 
 // spacer
 // -------------------------------
+
 $spacer-height:                   10px !default;
 
+// 公共样式
+// -------------------------------
 
 /* 背景 */
 .bg {
 	background-color: $calm;
 }
-
 /* 间隔 */
 @for $i from 1 through 3 {
 	.spacer-#{$i}x {
 		height: $spacer-height * $i;
 	}
 }
-
 /* 下拉刷新 */
 .scroll-refresher {
 	top: -50px;
 	z-index: 3;
 }
-
-
 /* 顶部tabs */
 .tabs-top > .tabs {
 	margin-top: -$bar-height;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, .1);
 }
-
 /* 底部tabs */
 .bottom-tabs {
 	.tab-item-active {
@@ -68,23 +66,67 @@ $spacer-height:                   10px !default;
 		box-shadow: 0 -5px 8px rgba(0, 0, 0, .1);
 	}
 }
-
 /* item左侧图标 */
 .item-icon-left {
 	.icon {
 		color: $stable;
 	}
 }
-
 /* 滑动框高度 */
 .slider{
-    height: 100%;
+  height: 100%;
 }
-
+/* 封面 */
 %cover {
 	width: 100%;
 	height: 100%;
 	max-height: 180px;
+}
+/* 背景层快速拨号 */
+.fab-dial {
+	$alpha:                  .8 !default;
+	.fab-bg {
+		position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba($light, $alpha);
+	    z-index: 99;
+	}
+	.fab-trigger {
+		position: absolute;
+	    bottom: 72px;
+	    right: 20px;
+	    background-color: #feca28;
+	    border-radius: 50%;
+	    font-size: 18px;
+	    color: $light;
+	    padding: 17.5px 21.25px;
+	    box-shadow: 0 6px 10px rgba(0,0,0, .2);
+	    z-index: 99;
+	}
+	.fab-actions {
+		position: absolute;
+	    bottom: 140px;
+	    right: 25px;
+	    text-align: right;
+	    z-index: 99;
+	    i {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+    	font-size: 20px;
+    	color: $dark;
+			background-color: rgba($calm, $alpha);
+			margin: 10px 0px 10px 10px;
+			padding: 10px;
+			border-radius: 50%;
+	    }
+	    span {
+			background-color: rgba($calm, $alpha);
+			padding: 5px;
+			border-radius: 5px;
+		}
+	}
 }
 
 // 首页　home
@@ -98,9 +140,9 @@ $item-thumbnail-height:           90px !default;
 	.item {
 		border: none;
 		border-bottom: solid 1px rgba($calm, .5);
-    	margin: 12px 0 0 12px;
-    	padding-left: 0;
-    	padding-bottom: 10px;
+  	margin: 12px 0 0 12px;
+  	padding-left: 0;
+  	padding-bottom: 10px;
 	}
 	span {
     	position: absolute;
@@ -115,7 +157,6 @@ $item-thumbnail-height:           90px !default;
 	    }
 	}
 }
-
 /* 图说 */
 .picture {
 	.title {
@@ -125,7 +166,6 @@ $item-thumbnail-height:           90px !default;
 		@extend %cover;
 	}
 }
-
 /* 内容加载中 */
 .loading{
 	position: absolute;
@@ -137,7 +177,6 @@ $item-thumbnail-height:           90px !default;
 		height: 48px !important;
 	}
 }
-
 /* 新闻,推荐内容页 招聘内容页 */
 .news-content, .recruit-content {
 	.time {
@@ -146,9 +185,9 @@ $item-thumbnail-height:           90px !default;
 	.tag {
 		color: $positive;
 		padding: 1px 10px;
-	    margin-left: 10px;
-	    border: solid 1px;
-	    border-radius: 5px;
+    margin-left: 10px;
+    border: solid 1px;
+    border-radius: 5px;
 	}
 	.content {
 		margin-top: 20px;
@@ -164,7 +203,6 @@ $item-thumbnail-height:           90px !default;
 		color: $positive;
 	}
 }
-
 /* 公告内容页 */
 .notice-content {
 	text-align: center;
@@ -176,12 +214,10 @@ $item-thumbnail-height:           90px !default;
 	}
 	button.button-block {
 		width: 63%;
-    	margin: 0 auto;
-    	margin-top: 40px;
+  	margin: 0 auto;
+  	margin-top: 40px;
 	}
 }
-
-
 
 // 发现 explore
 // -------------------------------
@@ -208,11 +244,11 @@ $item-thumbnail-height:           90px !default;
 	.top-slide {
 		height: 150px;
 		img {
-			width: 100%;
-			height: 100%;
-			max-height: 150px;
-			margin: 0;
-			padding: 0;
+		width: 100%;
+		height: 100%;
+		max-height: 150px;
+		margin: 0;
+		padding: 0;
 		}
 	}
 	.title {
@@ -232,7 +268,7 @@ $item-thumbnail-height:           90px !default;
 	}
 	.describtion {
 		height: 60px;
-    	overflow: hidden;
+    overflow: hidden;
 		color: $dark;
 		margin-top: 10px;
 	}
@@ -243,7 +279,6 @@ $item-thumbnail-height:           90px !default;
 		margin-top: 10px;
 	}
 }
-
 /* 活动 */
 .explore-activity {
 	.poster {
@@ -251,13 +286,13 @@ $item-thumbnail-height:           90px !default;
 		margin: 5px 0;
 		a {
 			position: absolute;
-    		top: 0;
-    		bottom: 0;
-    		left: 0;
-    		right: 0;
-    		padding: 42% 4% 5%;
-    		text-decoration: none;
-    		line-height: 1.5;
+  		top: 0;
+  		bottom: 0;
+  		left: 0;
+  		right: 0;
+  		padding: 42% 4% 5%;
+  		text-decoration: none;
+  		line-height: 1.5;
 		}
 		h2 {
 			width: 300px;
@@ -271,11 +306,6 @@ $item-thumbnail-height:           90px !default;
 		span {
 			color: $light;
 		}
-		// .tag {
-		// 	border: solid 1px $positive;
-		//     border-radius: 8px;
-		//     padding: 1px 5px;
-		// }
 		img {
 			display: block;
 			width: 100%;
@@ -283,9 +313,7 @@ $item-thumbnail-height:           90px !default;
 			max-height: 240px;
 		}
 	}
-
 }
-
 /* 生活,公告,招聘 */
 .topic-list, .notice, .recruit {
 	margin: 10px 0;
@@ -302,10 +330,7 @@ $item-thumbnail-height:           90px !default;
 		margin: 0 0 10px 0;
 	}
 	p {
-    	padding-bottom: 10px;
-	}
-	.tag, .follow {
-		// line-height: 25px;
+  	padding-bottom: 10px;
 	}
 	.follow {
 		color: $dark;
@@ -318,13 +343,13 @@ $item-thumbnail-height:           90px !default;
 	.tag {
 		position: absolute;
 		bottom: 16px;
-    	right: 16px;
+		right: 16px;
 		float: right;
 		padding: 1px 5px 0 5px;
-    	font-size: small;
+		font-size: small;
 		color: rgba($positive, .8);
-	    border: solid 1px;
-	    border-radius: 5px;
+		border: solid 1px;
+		border-radius: 5px;
 	}
 }
 .notice, .recruit {
@@ -367,14 +392,14 @@ $item-thumbnail-height:           90px !default;
 	}
 	span:first-child {
 		display: block;
-	    float: left;
-	    width: 48px;
-	    height: 48px;
-	    margin-right: 20px;
-	    padding: 4px 0;
-	    color: $light;
-	    text-align: center;
-	    background-color: $positive;
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    padding: 4px 0;
+    color: $light;
+    text-align: center;
+    background-color: $positive;
 	}
 	.info {
 		margin-top: 10px;
@@ -394,59 +419,28 @@ $item-thumbnail-height:           90px !default;
 		color: $dark;
 	}
 	.title {
-		color: $dark;
+    color: $dark;
 	}
 }
-
-/* 背景层快速拨号 */
-.fab-dial {
-	$alpha:                  .8 !default;
-	.fab-bg {
-		position: absolute;
-	    width: 100%;
-	    height: 100%;
-	    background-color: rgba($light, $alpha);
-	    z-index: 99;
-	}
-	.fab-trigger {
-		position: absolute;
-	    bottom: 72px;
-	    right: 20px;
-	    background-color: #feca28;
-	    border-radius: 50%;
-	    font-size: 18px;
-	    color: $light;
-	    padding: 17.5px 21.25px;
-	    box-shadow: 0 6px 10px rgba(0,0,0, .2);
-	    z-index: 99;
-	}
-	.fab-actions {
-		position: absolute;
-	    bottom: 140px;
-	    right: 25px;
-	    text-align: right;
-	    z-index: 99;
-	    i {
-			display: inline-block;
-			width: 40px;
-			height: 40px;
-	    	font-size: 20px;
-	    	color: $dark;
-			background-color: rgba($calm, $alpha);
-			margin: 10px 0px 10px 10px;
-			padding: 10px;
-			border-radius: 50%;
-	    }
-	    span {
-			background-color: rgba($calm, $alpha);
-			padding: 5px;
-			border-radius: 5px;
-		}
-	}
-
+/* 关于 */
+.about {
+  .item {
+    border: none;
+    margin: 5px 0;
+  }
 }
-
-
+.app-info {
+  margin-top: 40px;
+  text-align: center;
+  .name {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  p {
+    color: $dark;
+  }
+}
 
 @import "www/lib/ionic/scss/ionic";
 body.platform-ios {
