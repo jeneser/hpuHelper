@@ -361,6 +361,20 @@
   border: none;
   margin: 5px 0; }
 
+/* 密码绑定 */
+.binding .item {
+  border: none; }
+
+.binding form {
+  margin: 24px 0 0 0; }
+
+.binding label {
+  margin: 20px 0; }
+
+.binding a {
+  font-size: small;
+  color: #d4d4d4; }
+
 /* 设置 */
 .setting .item {
   border: none;

@@ -485,6 +485,22 @@ $item-thumbnail-height:           90px !default;
     margin: 5px 0;
   }
 }
+/* 密码绑定 */
+.binding {
+  .item {
+    border: none;
+  }
+  form {
+    margin: 24px 0 0 0;
+  }
+  label {
+    margin: 20px 0; 
+  }
+  a {
+    font-size: small;
+    color: $stable;
+  }
+}
 /* 设置 */
 .setting {
   .item {
