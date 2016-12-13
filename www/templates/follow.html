@@ -1,8 +1,30 @@
-<ion-view title="" id="follow">
-    <ion-nav-bar class="bar-positive">
+<ion-view title="我的关注" id="follow">
+    <ion-nav-bar align-title="center" class="bar-positive">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content padding="true" class="has-header">
-        follow
+    <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg follow">
+        <div class="spacer-1x"></div>
+        <ion-list>
+            <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.love">
+                <img src="img/blank_class.png">
+                <h2>告白</h2>
+                <p>来一场轰轰烈烈的爱情</p>
+            </ion-item>
+            <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.map">
+                <img src="img/score.png">
+                <h2>地图</h2>
+                <p>校园那么大</p>
+            </ion-item>
+            <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.love">
+                <img src="img/blank_class.png">
+                <h2>告白</h2>
+                <p>来一场轰轰烈烈的爱情</p>
+            </ion-item>
+            <ion-item class="item-avatar item-icon-right" ui-sref="tabsController.map">
+                <img src="img/score.png">
+                <h2>地图</h2>
+                <p>校园那么大</p>
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

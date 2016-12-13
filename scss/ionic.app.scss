@@ -422,11 +422,19 @@ $item-thumbnail-height:           90px !default;
     color: $dark;
 	}
 }
+/* 我的关注 */
+.follow {
+  .item {
+    border: none;
+    margin: 5px 0;
+  }
+}
 /* 设置 */
 .setting {
   .item {
     border: none;
     margin: 5px 0;
+    color: $dark;
   }
   .button-group {
     margin: 0 10px;

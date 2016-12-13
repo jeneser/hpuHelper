@@ -304,10 +304,16 @@
 .profile .title {
   color: #757575; }
 
+/* 我的关注 */
+.follow .item {
+  border: none;
+  margin: 5px 0; }
+
 /* 设置 */
 .setting .item {
   border: none;
-  margin: 5px 0; }
+  margin: 5px 0;
+  color: #757575; }
 
 .setting .button-group {
   margin: 0 10px; }

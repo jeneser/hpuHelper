@@ -304,10 +304,21 @@
 .profile .title {
   color: #757575; }
 
+/* 设置 */
+.setting .item {
+  border: none;
+  margin: 5px 0; }
+
+.setting .button-group {
+  margin: 0 10px; }
+
 /* 关于 */
 .about .item {
   border: none;
   margin: 5px 0; }
+
+.about a.item {
+  color: #757575; }
 
 .app-info {
   margin-top: 40px;
