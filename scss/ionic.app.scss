@@ -27,7 +27,7 @@ $tabs-stable-text:                $stable !default;
 // Bars
 // -------------------------------
 
-$bar-height:                      44px !default;
+$bar-height:                      49px !default;
 
 // spacer
 // -------------------------------
@@ -435,6 +435,7 @@ $item-thumbnail-height:           90px !default;
   span {
     float: right;
     color: $stable;
+    font-size: small;
   }
   p:last-child {
     background-color: $calm;
@@ -453,7 +454,28 @@ $item-thumbnail-height:           90px !default;
     font-size: 24px;
     color: $light;
     text-align: center;
+    margin-right: 5px;
     background-color: $positive;
+  }
+}
+/* 我的发布 */
+.publish {
+  .item {
+    border: none;
+    margin: 5px 0;
+  }
+  i {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    color: $light;
+    background-color: $positive;
+    text-align: center;
+    border-radius: 50%;
   }
 }
 /* 我的关注 */

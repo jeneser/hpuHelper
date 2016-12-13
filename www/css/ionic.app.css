@@ -20,7 +20,7 @@
 
 /* 顶部tabs */
 .tabs-top > .tabs {
-  margin-top: -44px;
+  margin-top: -49px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); }
 
 /* 底部tabs */
@@ -315,7 +315,8 @@
 
 .message span {
   float: right;
-  color: #d4d4d4; }
+  color: #d4d4d4;
+  font-size: small; }
 
 .message p:last-child {
   background-color: #f0f4f5;
@@ -334,7 +335,26 @@
   font-size: 24px;
   color: #ffffff;
   text-align: center;
+  margin-right: 5px;
   background-color: #1d8ae7; }
+
+/* 我的发布 */
+.publish .item {
+  border: none;
+  margin: 5px 0; }
+
+.publish i {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #1d8ae7;
+  text-align: center;
+  border-radius: 50%; }
 
 /* 我的关注 */
 .follow .item {
@@ -3862,25 +3882,25 @@ ion-infinite-scroll {
 
 /* If you change these, change platform.scss as well */
 .has-header {
-  top: 44px; }
+  top: 49px; }
 
 .no-header {
   top: 0; }
 
 .has-subheader {
-  top: 88px; }
+  top: 98px; }
 
 .has-tabs-top {
-  top: 93px; }
+  top: 98px; }
 
 .has-header.has-subheader.has-tabs-top {
-  top: 137px; }
+  top: 147px; }
 
 .has-footer {
-  bottom: 44px; }
+  bottom: 49px; }
 
 .has-subfooter {
-  bottom: 88px; }
+  bottom: 98px; }
 
 .has-tabs,
 .bar-footer.has-tabs {
@@ -3891,10 +3911,10 @@ ion-infinite-scroll {
     height: auto; }
 
 .bar-subfooter.has-tabs {
-  bottom: 93px; }
+  bottom: 98px; }
 
 .has-footer.has-tabs {
-  bottom: 93px; }
+  bottom: 98px; }
 
 .pane {
   -webkit-transform: translate3d(0, 0, 0);
@@ -4240,7 +4260,7 @@ a.subdued {
   box-sizing: border-box;
   padding: 5px;
   width: 100%;
-  height: 44px;
+  height: 49px;
   border-width: 0;
   border-style: solid;
   border-top: 1px solid transparent;
@@ -4362,13 +4382,13 @@ a.subdued {
     overflow: hidden;
     margin: 0 10px;
     min-width: 30px;
-    height: 43px;
+    height: 48px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 17px;
     font-weight: 500;
-    line-height: 44px; }
+    line-height: 49px; }
     .bar .title.title-left {
       text-align: left; }
     .bar .title.title-right {
@@ -4449,7 +4469,7 @@ a.subdued {
 
 .platform-android .bar .title {
   font-size: 19px;
-  line-height: 44px; }
+  line-height: 49px; }
 
 .bar-light .button {
   border-color: transparent;
@@ -4639,7 +4659,7 @@ a.subdued {
   border-top-width: 1px;
   border-bottom-width: 0;
   background-position: top;
-  height: 44px; }
+  height: 49px; }
   .bar-footer.item-input-inset {
     position: absolute; }
 
@@ -4647,14 +4667,14 @@ a.subdued {
   padding: 0; }
 
 .bar-subheader {
-  top: 44px;
+  top: 49px;
   display: block;
-  height: 44px; }
+  height: 49px; }
 
 .bar-subfooter {
-  bottom: 44px;
+  bottom: 49px;
   display: block;
-  height: 44px; }
+  height: 49px; }
 
 .nav-bar-block {
   position: absolute;
@@ -5391,7 +5411,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
 /* If you change this, change platform.scss as well */
 .tabs-top > .tabs,
 .tabs.tabs-top {
-  top: 44px;
+  top: 49px;
   padding-top: 0;
   background-position: bottom;
   border-top-width: 0;
@@ -5660,21 +5680,21 @@ ion-tabs.tabs-color-active-dark .tab-item {
   .modal.ng-leave-active {
     bottom: 0; }
   .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) {
-    height: 44px; }
+    height: 49px; }
     .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) > * {
       margin-top: 0; }
   .platform-ios.platform-cordova .modal-wrapper .modal .tabs-top > .tabs,
   .platform-ios.platform-cordova .modal-wrapper .modal .tabs.tabs-top {
-    top: 44px; }
+    top: 49px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-header,
   .platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {
-    top: 44px; }
+    top: 49px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-subheader {
-    top: 88px; }
+    top: 98px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-tabs-top {
-    top: 93px; }
+    top: 98px; }
   .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-subheader.has-tabs-top {
-    top: 137px; }
+    top: 147px; }
   .modal-backdrop-bg {
     -webkit-transition: opacity 300ms ease-in-out;
     transition: opacity 300ms ease-in-out;
@@ -9867,7 +9887,7 @@ a.button {
  * Platform specific tweaks
  */
 .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
-  height: 64px; }
+  height: 69px; }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
     margin-top: 19px !important; }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
@@ -9875,23 +9895,23 @@ a.button {
 
 .platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs,
 .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
-  top: 64px; }
+  top: 69px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-header,
 .platform-ios.platform-cordova:not(.fullscreen) .bar-subheader {
-  top: 64px; }
+  top: 69px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-subheader {
-  top: 108px; }
+  top: 118px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-tabs-top {
-  top: 113px; }
+  top: 118px; }
 
 .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
-  top: 157px; }
+  top: 167px; }
 
 .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) {
-  height: 44px; }
+  height: 49px; }
   .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
     margin-top: -1px; }
   .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) > * {
@@ -9899,10 +9919,10 @@ a.button {
 
 .platform-ios.platform-cordova .popover .has-header,
 .platform-ios.platform-cordova .popover .bar-subheader {
-  top: 44px; }
+  top: 49px; }
 
 .platform-ios.platform-cordova .popover .has-subheader {
-  top: 88px; }
+  top: 98px; }
 
 .platform-ios.platform-cordova.status-bar-hide {
   margin-bottom: 20px; }
