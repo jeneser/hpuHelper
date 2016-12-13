@@ -1,8 +1,8 @@
 <ion-view title="设置" id="setting">
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar align-title="center" class="bar-positive">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
+    <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg setting">
         <div class="spacer-1x"></div>
         <ion-list>
             <ion-item class="item item-avatar" ui-sref="tabsController.changeVatar">
@@ -10,7 +10,6 @@
                 <h2>头像</h2>
                 <p>点击更换</p>
             </ion-item>
-            <div class="spacer-1x"></div>
             <ion-item>
                 昵称
                 <span class="item-note">Jenes</span>
@@ -32,8 +31,15 @@
                 <span class="item-note">1668358930@qq.com</span>
             </ion-item>
         </ion-list>
+        <div class="spacer-1x"></div>
+        <ion-list>
+            <ion-item>
+                清除缓存
+            </ion-item>
+        </ion-list>
         <div class="spacer-3x"></div>
-        <button id="page12-button12" class="button button-stable  button-block button-outline">清除缓存</button>
-        <button id="page12-button18" class="button button-assertive  button-block">退出</button>
+        <div class="button-group">
+            <button class="button button-assertive button-block button-outline">退出登陆</button>            
+        </div>
     </ion-content>
 </ion-view>

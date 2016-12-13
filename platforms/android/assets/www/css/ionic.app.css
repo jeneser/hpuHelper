@@ -38,10 +38,52 @@
 .slider {
   height: 100%; }
 
+/* 封面 */
 .picture .cover, .explore-choice .cover {
   width: 100%;
   height: 100%;
   max-height: 180px; }
+
+/* 背景层快速拨号 */
+.fab-dial .fab-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 99; }
+
+.fab-dial .fab-trigger {
+  position: absolute;
+  bottom: 72px;
+  right: 20px;
+  background-color: #feca28;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 17.5px 21.25px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  z-index: 99; }
+
+.fab-dial .fab-actions {
+  position: absolute;
+  bottom: 140px;
+  right: 25px;
+  text-align: right;
+  z-index: 99; }
+  .fab-dial .fab-actions i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #757575;
+    background-color: rgba(240, 244, 245, 0.8);
+    margin: 10px 0px 10px 10px;
+    padding: 10px;
+    border-radius: 50%; }
+  .fab-dial .fab-actions span {
+    background-color: rgba(240, 244, 245, 0.8);
+    padding: 5px;
+    border-radius: 5px; }
 
 /* 推荐　*/
 .recommend-list .item, .news-list .item {
@@ -262,46 +304,20 @@
 .profile .title {
   color: #757575; }
 
-/* 背景层快速拨号 */
-.fab-dial .fab-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 99; }
+/* 关于 */
+.about .item {
+  border: none;
+  margin: 5px 0; }
 
-.fab-dial .fab-trigger {
-  position: absolute;
-  bottom: 72px;
-  right: 20px;
-  background-color: #feca28;
-  border-radius: 50%;
-  font-size: 18px;
-  color: #ffffff;
-  padding: 17.5px 21.25px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  z-index: 99; }
-
-.fab-dial .fab-actions {
-  position: absolute;
-  bottom: 140px;
-  right: 25px;
-  text-align: right;
-  z-index: 99; }
-  .fab-dial .fab-actions i {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    color: #757575;
-    background-color: rgba(240, 244, 245, 0.8);
-    margin: 10px 0px 10px 10px;
-    padding: 10px;
-    border-radius: 50%; }
-  .fab-dial .fab-actions span {
-    background-color: rgba(240, 244, 245, 0.8);
-    padding: 5px;
-    border-radius: 5px; }
+.app-info {
+  margin-top: 40px;
+  text-align: center; }
+  .app-info .name {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px; }
+  .app-info p {
+    color: #757575; }
 
 /*!
   Ionicons, v2.0.1

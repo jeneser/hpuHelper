@@ -44,7 +44,7 @@
     <author email="jeneserwang@gmail.com" href="http://jenes.site">
       jeneser
     </author>
-    <content original-src="index.html" src="http://192.168.0.103:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <allow-navigation href="http://192.168.0.103:8100" />

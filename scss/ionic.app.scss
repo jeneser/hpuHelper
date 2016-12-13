@@ -422,11 +422,24 @@ $item-thumbnail-height:           90px !default;
     color: $dark;
 	}
 }
+/* 设置 */
+.setting {
+  .item {
+    border: none;
+    margin: 5px 0;
+  }
+  .button-group {
+    margin: 0 10px;
+  }
+}
 /* 关于 */
 .about {
   .item {
     border: none;
     margin: 5px 0;
+  }
+  a.item {
+    color: $dark;
   }
 }
 .app-info {

@@ -433,12 +433,6 @@ angular.module('app.controllers', [])
 
   }
 ])
-// 更换头像
-.controller('changeVatarCtrl', ['$scope', '$stateParams',
-  function($scope, $stateParams) {
-
-  }
-])
 
 //　搜索
 // -------------------------------

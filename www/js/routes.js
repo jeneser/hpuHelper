@@ -320,16 +320,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-  // 更换头像
-  .state('tabsController.changeVatar', {
-    url: '/changeVatar',
-    views: {
-      'tab5': {
-        templateUrl: 'templates/changeVatar.html',
-        controller: 'changeVatarCtrl'
-      }
-    }
-  })
 
   //　搜索
   // -------------------------------
