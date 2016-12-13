@@ -422,6 +422,40 @@ $item-thumbnail-height:           90px !default;
     color: $dark;
 	}
 }
+/* 消息通知 */
+.message {
+  .item {
+    border: none;
+    margin: 10px 0;
+  }
+  h2 {
+    display: inline-block;
+    color: $positive;
+  }
+  span {
+    float: right;
+    color: $stable;
+  }
+  p:last-child {
+    background-color: $calm;
+    margin: 10px 0 0 20px;
+  }
+  .content {
+    color: $royal;
+    margin: 10px 0 0 20px;
+    white-space: normal;
+  }
+  i {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 24px;
+    color: $light;
+    text-align: center;
+    background-color: $positive;
+  }
+}
 /* 我的关注 */
 .follow {
   .item {

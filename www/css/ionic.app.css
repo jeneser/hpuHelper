@@ -304,6 +304,38 @@
 .profile .title {
   color: #757575; }
 
+/* 消息通知 */
+.message .item {
+  border: none;
+  margin: 10px 0; }
+
+.message h2 {
+  display: inline-block;
+  color: #1d8ae7; }
+
+.message span {
+  float: right;
+  color: #d4d4d4; }
+
+.message p:last-child {
+  background-color: #f0f4f5;
+  margin: 10px 0 0 20px; }
+
+.message .content {
+  color: #1a1a1a;
+  margin: 10px 0 0 20px;
+  white-space: normal; }
+
+.message i {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #1d8ae7; }
+
 /* 我的关注 */
 .follow .item {
   border: none;
