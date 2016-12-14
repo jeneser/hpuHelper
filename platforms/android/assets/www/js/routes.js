@@ -306,7 +306,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     views: {
       'tab5': {
         templateUrl: 'templates/about.html',
-        controller: 'aboutCtrl'        
+        controller: 'aboutCtrl'
       }
     }
   })

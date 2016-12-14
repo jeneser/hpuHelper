@@ -422,9 +422,29 @@ angular.module('app.controllers', [])
   }
 ])
 // 关于
-.controller('aboutCtrl', ['$scope', '$stateParams',
-  function($scope, $stateParams) {
+.controller('aboutCtrl', ['$scope', '$stateParams', '$ionicModal', '$cordovaInAppBrowser', 
+  function($scope, $stateParams, $ionicModal, $cordovaInAppBrowser) {
+    $ionicModal.fromTemplateUrl('templates/openSource.html', {
+      scope: $scope
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
 
+    // 开源协议
+    $scope.openUrl = function() {
+      var options = {
+        location: 'yes',
+        clearcache: 'yes',
+        toolbar: 'no'
+      };
+      $cordovaInAppBrowser.open('https://github.com/jeneser/hpuHelper', '_blank', options)
+        .then(function(event) {
+          // success
+        })
+        .catch(function(event) {
+          alert("抱歉！链接出问题了");
+        });
+    }
   }
 ])
 // 反馈

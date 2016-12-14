@@ -1,5 +1,5 @@
 <ion-view title="Tabs Controller" id="tabs">
-    <ion-tabs class="tabs-stable tabs-icon-only bottom-tabs" id="tabsController-tabs1">
+    <ion-tabs class="tabs-stable tabs-icon-only bottom-tabs" id="tabsController-tabs1" ng-class="{'tabs-item-hide': $root.hideTabs}">
         <ion-tab icon="ion-navicon-round" href="#/tabs/home" id="tabsController-tab1">
             <ion-nav-view name="tab1"></ion-nav-view>
         </ion-tab>
