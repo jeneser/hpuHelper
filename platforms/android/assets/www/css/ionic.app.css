@@ -305,7 +305,7 @@
   color: #757575; }
 
 .used-list .item, .collection-list .item {
-  margin: 10px 0; }
+  margin: 5px 0; }
 
 .used-list i:first-child, .collection-list i:first-child {
   font-size: 22px;
