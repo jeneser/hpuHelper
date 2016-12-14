@@ -44,6 +44,16 @@
   height: 100%;
   max-height: 180px; }
 
+.used-list i:first-child, .collection-list i:first-child, .publish i, .follow i {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  text-align: center; }
+
 /* 背景层快速拨号 */
 .fab-dial .fab-bg {
   position: absolute;
@@ -294,6 +304,14 @@
   margin-top: 10px;
   color: #757575; }
 
+.used-list .item, .collection-list .item {
+  margin: 10px 0; }
+
+.used-list i:first-child, .collection-list i:first-child {
+  font-size: 22px;
+  background-color: #1d8ae7;
+  border-radius: 50%; }
+
 .profile .item {
   border: none;
   margin: 5px 0; }
@@ -338,28 +356,29 @@
   margin-right: 5px;
   background-color: #1d8ae7; }
 
-/* 我的发布 */
-.publish .item {
+/* 我的发布,我的关注 */
+.publish .item, .follow .item {
   border: none;
   margin: 5px 0; }
 
-.publish i {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+.publish i, .follow i {
   font-size: 24px;
-  color: #ffffff;
   background-color: #1d8ae7;
-  text-align: center;
   border-radius: 50%; }
 
-/* 我的关注 */
-.follow .item {
-  border: none;
-  margin: 5px 0; }
+/* 密码绑定 */
+.binding .item {
+  border: none; }
+
+.binding form {
+  margin: 24px 0 0 0; }
+
+.binding label {
+  margin: 20px 0; }
+
+.binding a {
+  font-size: small;
+  color: #d4d4d4; }
 
 /* 设置 */
 .setting .item {

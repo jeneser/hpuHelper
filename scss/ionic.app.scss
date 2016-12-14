@@ -82,6 +82,16 @@ $spacer-height:                   10px !default;
 	height: 100%;
 	max-height: 180px;
 }
+%left-avatar {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: $light;
+    text-align: center;
+}
 /* 背景层快速拨号 */
 .fab-dial {
 	$alpha:                  .8 !default;
@@ -406,7 +416,17 @@ $item-thumbnail-height:           90px !default;
 		color: $dark;
 	}
 }
-
+.used-list, .collection-list {
+  .item {
+    margin: 10px 0;
+  } 
+  i:first-child {
+    @extend %left-avatar;
+    font-size: 22px;
+    background-color: $positive;
+    border-radius: 50%;
+  }
+}
 // 个人中心　profile
 // -------------------------------
 
@@ -458,31 +478,17 @@ $item-thumbnail-height:           90px !default;
     background-color: $positive;
   }
 }
-/* 我的发布 */
-.publish {
+/* 我的发布,我的关注 */
+.publish, .follow {
   .item {
     border: none;
     margin: 5px 0;
   }
   i {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    @extend %left-avatar;
     font-size: 24px;
-    color: $light;
     background-color: $positive;
-    text-align: center;
     border-radius: 50%;
-  }
-}
-/* 我的关注 */
-.follow {
-  .item {
-    border: none;
-    margin: 5px 0;
   }
 }
 /* 密码绑定 */
