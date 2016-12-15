@@ -422,15 +422,31 @@ angular.module('app.controllers', [])
   }
 ])
 // 关于
-.controller('aboutCtrl', ['$scope', '$stateParams', '$ionicModal', '$cordovaInAppBrowser', 
-  function($scope, $stateParams, $ionicModal, $cordovaInAppBrowser) {
-    $ionicModal.fromTemplateUrl('templates/openSource.html', {
-      scope: $scope
-    }).then(function(modal) {
-      $scope.modal = modal;
+.controller('aboutCtrl', ['$scope', '$ionicHistory', '$ionicModal', '$cordovaInAppBrowser',　'$cordovaToast',  
+  function($scope, $ionicHistory, $ionicModal, $cordovaInAppBrowser, $cordovaToast) {
+    // 模态窗口
+    $scope.openModal = function(url) {
+      $ionicModal.fromTemplateUrl(url, {
+        scope: $scope
+      }).then(function(modal) {
+        $scope.modal = modal;
+        modal.show();
+        if ($ionicHistory.backView()) {
+          $scope.modal.hide();
+        }
+      });
+    }
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    }
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
     });
-
-    // 开源协议
+    // 检查更新
+    $scope.checkUpdate = function() {
+      $cordovaToast.showShortCenter('已是最新版本');
+    }
+    // 打开链接
     $scope.openUrl = function() {
       var options = {
         location: 'yes',

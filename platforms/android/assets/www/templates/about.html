@@ -1,5 +1,5 @@
-<ion-view title="关于" id="about" hide-tabs="true">
-	<ion-nav-bar align-title="center" class="bar-positive">
+<ion-view id="about" hide-tabs="true">
+	<ion-nav-bar class="bar-positive">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     <ion-content has-bouncing="true" overflow-scroll="false" class="has-header about bg">
@@ -12,7 +12,7 @@
 			<a class="item" href="#">
 				检查更新
 			</a>
-			<a class="item item-icon-right" href="#">
+			<a class="item item-icon-right" href="" ng-click="modal.show()">
 				开源协议
 				<i class="icon ion-chevron-right icon-accessory"></i>
 			</a>
