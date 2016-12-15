@@ -422,8 +422,8 @@ angular.module('app.controllers', [])
   }
 ])
 // 关于
-.controller('aboutCtrl', ['$scope', '$ionicHistory', '$ionicModal', '$cordovaInAppBrowser',　'$cordovaToast',  
-  function($scope, $ionicHistory, $ionicModal, $cordovaInAppBrowser, $cordovaToast) {
+.controller('aboutCtrl', ['$scope','$rootScope', '$ionicHistory', '$ionicModal', '$cordovaInAppBrowser',　'$cordovaToast',  
+  function($scope, $rootScope, $ionicHistory, $ionicModal, $cordovaInAppBrowser, $cordovaToast) {
     // 模态窗口
     $scope.openModal = function(url) {
       $ionicModal.fromTemplateUrl(url, {
@@ -431,9 +431,7 @@ angular.module('app.controllers', [])
       }).then(function(modal) {
         $scope.modal = modal;
         modal.show();
-        if ($ionicHistory.backView()) {
-          $scope.modal.hide();
-        }
+        $rootScope.isModal = 1;
       });
     }
     $scope.closeModal = function() {
@@ -461,6 +459,7 @@ angular.module('app.controllers', [])
           alert("抱歉！链接出问题了");
         });
     }
+
   }
 ])
 // 反馈
