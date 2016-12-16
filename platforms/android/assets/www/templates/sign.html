@@ -1,26 +1,23 @@
 <ion-view title="注册" id="sign">
-    <ion-content padding="true" class="has-header">
-        <form id="page6-form4" class="list">
-            <ion-list id="page6-list9">
-                <label class="item item-input" id="page6-input3">
-                    <span class="input-label">用户名</span>
-                    <input type="text" placeholder="请输入用户名">
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">注册</h1>
+    </ion-header-bar>
+    <ion-content padding="true" has-bouncing="true" overflow-scroll="false" class="has-header bg binding">
+        <form id="">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" placeholder="用户名">
                 </label>
-                <label class="item item-input" id="page6-input4">
-                    <span class="input-label">学号</span>
-                    <input type="number" placeholder="一卡通号">
+                <label class="item item-input">
+                    <input type="password" placeholder="密码">
                 </label>
-                <label class="item item-input" id="page6-input5">
-                    <span class="input-label">密码</span>
-                    <input type="password" placeholder="教务处密码">
+                <label class="item item-input">
+                    <input type="password" placeholder="确认密码">
                 </label>
-                <label class="item item-input" id="page6-input14">
-                    <span class="input-label">确认密码</span>
-                    <input type="password" placeholder="">
-                </label>
-            </ion-list>
-            <div class="spacer" style="width: 300px; height: 45px;"></div>
-            <button id="page6-button11" class="button button-balanced  button-block">注册</button>
+            </div>
+            <button class="button button-outline button-block button-positive">注册</button>
         </form>
+        
+        <a ui-sref="login" class="button button-positive  button-block button-clear">返回登陆</a>
     </ion-content>
 </ion-view>

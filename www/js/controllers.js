@@ -188,9 +188,9 @@ angular.module('app.controllers', [])
     $scope.exploreTabs = [{
       name: '精选'
     }, {
-      name: '活动'
+      name: '话题'
     }, {
-      name: '生活'
+      name: '活动'
     }];
     $scope.flag;
 
