@@ -60,10 +60,6 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
         if ($rootScope.backButtonPressedOnceToExit) {
             ionic.Platform.exitApp();
         }
-        else if ($rootScope.isModal) {
-            $rootScope.isModal = !$rootScope.isModal;
-            return false;
-        }
         else if ($ionicHistory.backView()) {
             $ionicHistory.goBack();
         } else {

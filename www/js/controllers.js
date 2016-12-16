@@ -431,7 +431,6 @@ angular.module('app.controllers', [])
       }).then(function(modal) {
         $scope.modal = modal;
         modal.show();
-        $rootScope.isModal = 1;
       });
     }
     $scope.closeModal = function() {
