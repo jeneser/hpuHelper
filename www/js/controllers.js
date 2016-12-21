@@ -91,93 +91,44 @@ angular.module('app.controllers', [])
   }
 ])
 
-// 赛课
+// 活动
 // -------------------------------
-.controller('saikeCtrl', ['$scope', '$stateParams', '$cordovaBarcodeScanner', '$cordovaInAppBrowser', '$ionicPopup', '$timeout', '$cordovaNetwork',
-  function($scope, $stateParams, $cordovaBarcodeScanner, $cordovaInAppBrowser, $ionicPopup, $timeout, $cordovaNetwork) {
-    // 网络检查
-    $scope.getNetwork = function() {
-      var networkState = navigator.connection.type;
+.controller('activityCtrl', ['$scope', '$timeout', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', '$ionicBackdrop',
+  function($scope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, $ionicBackdrop) {
+    $scope.exploreTabs = [{
+      name: '活动'
+    }, {
+      name: '组织'
+    }];
+    $scope.flag;
 
-      var states = {};
-      states[Connection.UNKNOWN] = 'Unknown connection';
-      states[Connection.ETHERNET] = 'Ethernet connection';
-      states[Connection.WIFI] = 'WiFi connection';
-      states[Connection.CELL_2G] = 'Cell 2G connection';
-      states[Connection.CELL_3G] = 'Cell 3G connection';
-      states[Connection.CELL_4G] = 'Cell 4G connection';
-      states[Connection.CELL] = 'Cell generic connection';
-      states[Connection.NONE] = 'No network connection';
-
-      alert('Connection type: ' + states[networkState]);
-      // var type = $cordovaNetwork.getNetwork()
-      // var isOnline = $cordovaNetwork.isOnline()
-      // var isOffline = $cordovaNetwork.isOffline()
-
-      // // listen for Online event
-      // $rootScope.$on('$cordovaNetwork:online', function(event, networkState){
-      //   var onlineState = networkState;
-      //   alert(type);
-      // })
-
-      // // listen for Offline event
-      // $rootScope.$on('$cordovaNetwork:offline', function(event, networkState){
-      //   var offlineState = networkState;
-      //   alert(offlineState);
-      // })
-    }
-
-    // 对话框
-    $scope.showConfirm = function() {
-      var confirmPopup = $ionicPopup.confirm({
-        title: '退出',
-        template: '你确定要退出应用吗？'
-      });
-      confirmPopup.then(function(res) {
-        if (res) {
-          console.log('You are sure');
-        } else {
-          console.log('You are not sure');
-        }
-      });
+    $scope.slideChanged = function(index) {
+      $ionicTabsDelegate._instances[$scope.flag].select(index);
     };
 
-    $scope.loadbarcode = function() {
-      console.log(1);
-      alert(1);
-      $cordovaBarcodeScanner
-        .scan()
-        .then(function(barcodeData) {
-          alert(barcodeData);
-          alert(barcodeData.text);
-        }, function(error) {
-          alert(error);
-          alert('error!');
-        });
+    $scope.$on('$ionicView.afterEnter', function() {
+      //等待视图加载完成的时候默认选中第一个菜单
+      if ($scope.flag == undefined) {
+        console.log($ionicTabsDelegate._instances.length);
+        $scope.flag = $ionicTabsDelegate._instances.length - 1;
+      };
+      $ionicTabsDelegate._instances[$scope.flag].select($ionicSlideBoxDelegate.currentIndex());
+    });
+    $scope.$on('$ionicView.leave', function() {
+      console.log($scope.flag);
+    });
+
+    $scope.selectTab = function(index) {
+      //滑动的索引
+      $ionicSlideBoxDelegate.slide(index);
     }
 
-    // 内置浏览器
-    var options = {
-      location: 'yes',
-      clearcache: 'yes',
-      toolbar: 'yes'
+    // 背景层快速拨号
+    $scope.isShow = 0;
+    $scope.showDial = function() {
+      $scope.isShow = !$scope.isShow;
     };
 
-    $scope.loadurl = function() {
-      $cordovaInAppBrowser.open('http://baidu.com', '_blank', options)
-        .then(function(event) {
-          // success
-          alert(1);
-        })
-        .catch(function(event) {
-          // error
-          alert(2);
-        });
-
-
-      // $cordovaInAppBrowser.close();
-
-    }
   }
 ])
 

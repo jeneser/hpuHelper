@@ -55,12 +55,12 @@ angular.module('app.routes', ['ionicUIRouter'])
 
   // 赛课
   // -------------------------------
-  .state('tabsController.saike', {
-    url: '/saike',
+  .state('tabsController.activity', {
+    url: '/activity',
     views: {
       'tab2': {
-        templateUrl: 'templates/saike.html',
-        controller: 'saikeCtrl'
+        templateUrl: 'templates/activity.html',
+        controller: 'activityCtrl'
       }
     }
   })

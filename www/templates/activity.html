@@ -1,0 +1,189 @@
+<ion-view title="活动" id="activity">
+    <ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)">
+        <!-- 活动 -->
+        <ion-slide>
+            <!-- 背景层快速拨号 -->
+            <div class="fab-dial">
+                <div ng-class="{'fab-bg': isShow}" ng-click="showDial()"></div>
+                <div class="fab-group">
+                    <ul class="fab-actions" ng-show="isShow">
+                        <li>
+                            <span>发布话题</span>
+                            <i class="ion-pound"></i>
+                        </li>
+                        <li>
+                            <span>写文章</span>
+                            <i class="ion-edit"></i>
+                        </li>
+                        <li>
+                            <span>随机读</span>
+                            <i class="ion-shuffle"></i>
+                        </li>
+                    </ul>
+                    <span class="fab-trigger" ng-click="showDial()">
+                        <i class="icon ion-plus"></i>
+                    </span>
+                </div>
+            </div>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header explore-activity">
+                <div class="poster">
+                    <a ui-sref="tabsController.posterContent">
+                        <h2>寻找校园“云”达人</h2>
+                        <span>124赞</span>
+                        <span>· 4没兴趣</span>
+                        <span class="tag">宣传海报</span>
+                    </a>
+                    <img src="http://img.hb.aicdn.com/148289fbd1796bd61f8f05565d9df47f51ab62f891e978-QD9noH_fw658" alt="pic">
+                </div>
+                <div class="poster">
+                    <a href="#">
+                        <h2>第十一届全校摄影大赛作品展-决赛投票</h2>
+                        <span>124浏览</span>
+                        <span>· 4喜欢</span>
+                        <span class="tag">投票</span>
+                    </a>
+                    <img src="http://img.hb.aicdn.com/86080e5814cb371b9acad88974cafd35f54503307b66b4-GKztie_fw658" alt="pic">
+                </div>
+                <div class="poster">
+                    <a href="#">
+                        <h2>河南理工大学年度人物评选</h2>
+                        <span>124浏览</span>
+                        <span>· 4喜欢</span>
+                        <span class="tag">宣传海报</span>
+                    </a>
+                    <img src="http://img.hb.aicdn.com/8a11cd7b60bcce22813163e5e60662c34b1b6b1b9b7492-gLD2NN_fw658" alt="pic">
+                </div>
+                <div class="poster">
+                    <a href="#">
+                        <h2>第十一届全校摄影大赛作品展-决赛投票</h2>
+                        <span>124浏览</span>
+                        <span>· 4喜欢</span>
+                        <span class="tag">宣传海报</span>
+                    </a>
+                    <img src="http://img.hb.aicdn.com/7cda12c2bd090a595c51dd3776caa5f667a30c7d66b6f9-MUNVKG_fw658" alt="pic">
+                </div>
+                <div class="poster">
+                    <a href="#">
+                        <h2>我也不知道填充点什么好</h2>
+                        <span>124浏览</span>
+                        <span>· 4喜欢</span>
+                        <span class="tag">宣传海报</span>
+                    </a>
+                    <img src="http://img.hb.aicdn.com/e9f77ad2cf03e14e5f4093e361b65bfe8e5689f894c42-VK68up_fw658" alt="pic">
+                </div>
+                <div class="poster">
+                    <a href="#">
+                        <h2>寻找校园“云”达人</h2>
+                        <span>124浏览</span>
+                        <span>· 4喜欢</span>
+                        <span class="tag">宣传海报</span>
+                    </a>
+                    <img src="http://img.hb.aicdn.com/ca2805c36add65a6d215213464b529258449235b6f1a78-TrXQAR_fw658" alt="pic">
+                </div>
+                
+            </ion-content>
+        </ion-slide>
+        <!-- 话题 -->
+        <ion-slide>
+            <!-- 背景层快速拨号 -->
+            <div class="fab-dial">
+                <div ng-class="{'fab-bg': isShow}" ng-click="showDial()"></div>
+                <div class="fab-group">
+                    <ul class="fab-actions" ng-show="isShow">
+                        <li>
+                            <span>发布话题</span>
+                            <i class="ion-pound"></i>
+                        </li>
+                        <li>
+                            <span>写文章</span>
+                            <i class="ion-edit"></i>
+                        </li>
+                        <li>
+                            <span>随机读</span>
+                            <i class="ion-shuffle"></i>
+                        </li>
+                    </ul>
+                    <span class="fab-trigger" ng-click="showDial()">
+                        <i class="icon ion-plus"></i>
+                    </span>
+                </div>
+            </div>
+            <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
+                <ion-refresher pulling-text="下拉刷新" on-refresh="slide.doRefresh()"></ion-refresher>
+                <div class="topic-list">
+                    <div class="item">
+                        <a ui-sref="tabsController.topic">
+                            <h2 class="title"><b>周边消费攻略</b></h2>
+                            <p class="description">天下吃货本一家，分享你的美食经历！</p>
+                        </a>
+                        <a href="#" class="publisher">
+                            <img src="img/avatar.png" alt="">
+                            <span>黑咖啡</span>
+                        </a>
+                        <span class="follow">· 155关注</span>
+                        <span class="tag">消费</span>
+                    </div>
+                </div>
+                <div class="topic-list">
+                    <div class="item">
+                        <a href="#">
+                            <h2 class="title"><b>周边消费费攻略攻略</b></h2>
+                            <p class="description">天下吃货本一家，分享你的美食经历！天下吃货本一家，分享你的美食经历！天下吃货本一家，分享你的美食经历！</p>
+                        </a>
+                        <a href="#" class="publisher">
+                            <img src="img/avatar.png" alt="">
+                            <span>黑咖啡</span>
+                        </a>
+                        <span class="follow">· 155关注</span>
+                        <span class="tag">驾校</span>
+                    </div>
+                </div>
+                <div class="topic-list">
+                    <div class="item">
+                        <a href="#">
+                            <h2 class="title"><b>周边消费攻略</b></h2>
+                            <p class="description">天下吃货本一家，分享你的美食经历！</p>
+                        </a>
+                        <a href="#" class="publisher">
+                            <img src="img/avatar.png" alt="">
+                            <span>黑咖啡</span>
+                        </a>
+                        <span class="follow">· 155关注</span>
+                        <span class="tag">租房</span>
+                    </div>
+                </div>
+                <div class="topic-list">
+                    <div class="item">
+                        <a href="#">
+                            <h2 class="title"><b>周边消费攻略费攻略</b></h2>
+                            <p class="description">天下吃货本一家，分享你的美食经历！</p>
+                        </a>
+                        <a href="#" class="publisher">
+                            <img src="img/avatar.png" alt="">
+                            <span>黑咖啡</span>
+                        </a>
+                        <span class="follow">· 155关注</span>
+                        <span class="tag">购物</span>
+                    </div>
+                </div>
+                <div class="topic-list">
+                    <div class="item">
+                        <a href="#">
+                            <h2 class="title"><b>周边消费攻略</b></h2>
+                            <p class="description">天下吃货本一家，分享你的美食经历！</p>
+                        </a>
+                        <a href="#" class="publisher">
+                            <img src="img/avatar.png" alt="">
+                            <span>黑咖啡</span>
+                        </a>
+                        <span class="follow">· 155关注</span>
+                        <span class="tag">兼职</span>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-slide>
+    </ion-slide-box>
+    <ion-tabs class="tabs-top tabs-striped tabs-positive">
+        <ion-tab ng-repeat="item in exploreTabs" on-select="selectTab($index)" title="{{item.name}}"></ion-tab>
+    </ion-tabs>
+</ion-view>
