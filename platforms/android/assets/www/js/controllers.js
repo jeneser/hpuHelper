@@ -141,7 +141,7 @@ angular.module('app.controllers', [])
     }, {
       name: '话题'
     }, {
-      name: '活动'
+      name: '冒泡'
     }];
     $scope.flag;
 

@@ -53,7 +53,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  // 赛课
+  // 活动
   // -------------------------------
   .state('tabsController.activity', {
     url: '/activity',
@@ -61,6 +61,16 @@ angular.module('app.routes', ['ionicUIRouter'])
       'tab2': {
         templateUrl: 'templates/activity.html',
         controller: 'activityCtrl'
+      }
+    }
+  })
+  // 活动海报内容页
+  .state('tabsController.posterContent', {
+    url: '/posterContent',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/posterContent.html',
+        controller: 'posterContentCtrl'
       }
     }
   })
@@ -83,16 +93,6 @@ angular.module('app.routes', ['ionicUIRouter'])
       'tab3': {
         templateUrl: 'templates/choiceContent.html',
         controller: 'choiceContentCtrl'
-      }
-    }
-  })
-  // 活动海报内容页
-  .state('tabsController.posterContent', {
-    url: '/posterContent',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/posterContent.html',
-        controller: 'posterContentCtrl'
       }
     }
   })
