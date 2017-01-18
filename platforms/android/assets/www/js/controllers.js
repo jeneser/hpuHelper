@@ -2,8 +2,8 @@ angular.module('app.controllers', [])
 
 // 首页
 // -------------------------------
-.controller('homeCtrl', ['$scope', '$rootScope', '$timeout', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', 'sliderService',
-  function($scope, $rootScope, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, sliderService) {
+.controller('homeCtrl', ['$scope', '$rootScope', '$ionicHistory', '$timeout', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', 'sliderService',
+  function($scope, $rootScope, $ionicHistory, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, sliderService) {
     var classify = sliderService.getClassify();
     console.log(classify);
     $scope.slides = classify;
@@ -41,6 +41,8 @@ angular.module('app.controllers', [])
       //滑动的索引和速度
       $ionicSlideBoxDelegate.slide(index);
     }
+
+    $ionicHistory.clearHistory();
   }
 ])
 // 新闻详情
@@ -314,8 +316,8 @@ angular.module('app.controllers', [])
 
 // 个人中心
 // -------------------------------
-.controller('profileCtrl', ['$rootScope', '$scope', '$stateParams', '$cordovaStatusbar', '$cordovaToast', '$cordovaLocalNotification', '$timeout',
-  function($rootScope, $scope, $stateParams, $cordovaStatusbar, $cordovaToast, $cordovaLocalNotification, $timeout) {
+.controller('profileCtrl', ['$rootScope', '$scope', '$ionicHistory', '$stateParams', '$cordovaStatusbar', '$cordovaToast', '$cordovaLocalNotification', '$timeout', 
+  function($rootScope, $scope, $ionicHistory, $stateParams, $cordovaStatusbar, $cordovaToast, $cordovaLocalNotification, $timeout) {
     // $cordovaStatusbar.styleHex('#4e85c1');
     // $cordovaToast.showShortCenter('欢迎');
     // var ti = "重要通知";
@@ -334,6 +336,19 @@ angular.module('app.controllers', [])
     // };
     // $scope.scheduleSingleNotification();
 
+    $scope.realName = '未登录';
+    $scope.user = '';
+    
+    var token = localStorage.getItem("token");
+    var user = localStorage.getItem("user");
+
+    $scope.user = user;
+    $scope.realName = '王江山';
+
+    console.log("欢迎你" +　user);
+    console.log(token);
+    // $cordovaToast.showShortCenter(token);
+    
   }
 ])
 // 设置
@@ -429,16 +444,66 @@ angular.module('app.controllers', [])
 
 //　登陆
 // -------------------------------
-.controller('loginCtrl', ['$scope', '$stateParams',
-  function($scope, $stateParams) {
+.controller('loginCtrl', ['$scope', '$state', '$ionicHistory', 'loginService', 
+  function($scope, $state, $ionicHistory, loginService) {
+    $scope.userData = {}
 
+    $scope.loginForm = function (form) {
+      if (form.$valid) {
+        console.log($scope.userData);
+
+        loginService.login($scope.userData, function(res) {
+          console.log(res);
+          // 存token
+          var user = res.user;
+          var token = res.token;
+
+          localStorage.setItem("user", user);
+          localStorage.setItem("token", token);
+
+          console.log("登陆成功");
+          $state.go("tabsController.home", {isLogin: true});
+          
+        }, function() {
+          console.log('err');
+        });
+      } else {
+        console.log('表单填写错误');
+      }
+
+    }
   }
 ])
 
 //　注册
 // -------------------------------
-.controller('signCtrl', ['$scope', '$stateParams',
-  function($scope, $stateParams) {
+.controller('signCtrl', ['$scope', '$state', 'signupService', 
+  function($scope, $state, signupService) {
+    $scope.userData = {}
 
+    $scope.signupForm = function (form) {
+      if (form.$valid) {
+        // 注册
+        console.log($scope.userData);
+
+        signupService.signup($scope.userData, function(res) {
+          console.log(res);
+          // 存token
+          var user = res.user;
+          var token = res.token;
+
+          localStorage.setItem("user", user);
+          localStorage.setItem("token", token);
+
+          console.log("注册成功");
+          $state.go("tabsController.profile", {});
+        }, function() {
+          console.log('err');
+        });
+      } else {
+        console.log('表单填写错误');
+      }
+
+    }
   }
 ])

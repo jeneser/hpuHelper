@@ -6,13 +6,23 @@
         <div class="app-info">
             <img src="img/drawable-hdpi-icon.png">
         </div>
-        <form id="">
+        <form name="login_form" ng-submit="loginForm(login_form)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="用户名">
+                    <input 
+                        type="text" 
+                        name="userName" 
+                        ng-model="userData.userName"
+                        placeholder="用户名" 
+                        required>
                 </label>
                 <label class="item item-input">
-                    <input type="password" placeholder="密码">
+                    <input 
+                        type="password" 
+                        name="pass" 
+                        ng-model="userData.pass"
+                        placeholder="密码" 
+                        required>
                 </label>
             </div>
             <button class="button button-outline button-block button-positive">登陆</button>

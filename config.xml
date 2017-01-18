@@ -16,6 +16,7 @@
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
+  <preference name="StatusBarBackgroundColor" value="#166eb8"/>
   <feature name="StatusBar">
     <preference name="Fullscreen" value="false"/>
   </feature>

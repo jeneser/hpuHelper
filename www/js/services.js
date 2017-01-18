@@ -8,7 +8,8 @@ angular.module('app.services', [])
 
 }])
 
-// 滑动菜单
+//　滑动菜单
+// -------------------------------
 .service('sliderService', function($http) {
     this.getClassify = function() {
         return [
@@ -40,7 +41,6 @@ angular.module('app.services', [])
                         $this.page = 2;
 
                         $this.items = response.result;
-                        $log($this);
                         $this.callback();
                     });
                 },
@@ -181,7 +181,8 @@ angular.module('app.services', [])
     }
 })
 
-// 新闻内容
+//　新闻内容
+// -------------------------------
 .service('newsContentService', function($http, $rootScope) {
     var item = '';
     return {
@@ -226,3 +227,38 @@ angular.module('app.services', [])
     }
 }])
 
+//　注册
+// -------------------------------
+.service('signupService', ['$rootScope', '$http', 
+    function ($rootScope, $http) {
+    return {
+        signup: function (userDate, success, err) {
+            $http.post($rootScope.baseUrl + 'user/signup', userDate).success(function(res) {
+                // console.log(res);
+                success(res);
+            }).error(function() {
+                // console.log('授权失败');
+                err();
+            });
+        }
+    }    
+    
+}])
+
+//　登陆
+// -------------------------------
+.service('loginService', ['$rootScope', '$http', 
+    function ($rootScope, $http) {
+    return {
+        login: function (userDate, success, err) {
+            $http.post($rootScope.baseUrl + 'user/signin', userDate).success(function(res) {
+                // console.log(res);
+                success(res);
+            }).error(function() {
+                // console.log('授权失败');
+                err();
+            });
+        }
+    }    
+    
+}])

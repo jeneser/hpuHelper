@@ -73,6 +73,9 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
         return false;
     }, 101);
 
+    //　接口配置
+    $rootScope.baseUrl = 'http://localhost:4000/';
+    // $rootScope.baseUrl = 'http://localhost:1337/localhost:4000/';
 })
 
 .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
@@ -81,6 +84,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
         $ionicConfigProvider.scrolling.jsScrolling(false);        
     }
 
+    // 平台样式
     $ionicConfigProvider.platform.ios.tabs.style('standard');
     $ionicConfigProvider.platform.ios.tabs.position('bottom');
     $ionicConfigProvider.platform.android.tabs.style('standard');
