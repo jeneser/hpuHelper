@@ -1,7 +1,7 @@
 // Ionic Starter App
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'ngCordova'])
 
-.run(function($rootScope, $ionicPlatform, $location, $ionicHistory, $timeout, $cordovaToast, $cordovaLocalNotification) {
+.run(function($rootScope, $ionicPlatform, $state, $ionicHistory, $timeout, $cordovaToast, $cordovaLocalNotification) {
     $ionicPlatform.ready(function () {
         // 键盘配置
         if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -74,16 +74,15 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     }, 101);
 
     //　接口配置
-    $rootScope.baseUrl = 'http://localhost:4000/';
+    $rootScope.baseUrl = 'http://45.76.162.124:3000/';
     // $rootScope.baseUrl = 'http://localhost:1337/localhost:4000/';
 })
 
-.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function ($ionicConfigProvider, $httpProvider) {
     // 原生滚动
     if (!ionic.Platform.isIOS()) {
         $ionicConfigProvider.scrolling.jsScrolling(false);        
     }
-
     // 平台样式
     $ionicConfigProvider.platform.ios.tabs.style('standard');
     $ionicConfigProvider.platform.ios.tabs.position('bottom');
@@ -95,4 +94,24 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');
     $ionicConfigProvider.platform.ios.views.transition('ios');
     $ionicConfigProvider.platform.android.views.transition('android');
+    // Authorization
+    $httpProvider.interceptors.push(['$q', '$location', 
+        function($q, $location) {
+            return {
+                'request': function (config) {
+                    var token = localStorage.getItem('token');
+                    config.headers = config.headers || {};
+                    if (token) {
+                        config.headers.Authorization = 'Bearer ' + token;
+                    }
+                    return config;
+                },
+                'responseError': function(response) {
+                    if(response.status === 401 || response.status === 403) {
+                        $location.path('/login');
+                    }
+                    return $q.reject(response);
+                }
+            }
+        }]);
 });

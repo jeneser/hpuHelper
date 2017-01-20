@@ -2,8 +2,8 @@ angular.module('app.controllers', [])
 
 // 首页
 // -------------------------------
-.controller('homeCtrl', ['$scope', '$rootScope', '$ionicHistory', '$timeout', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', 'sliderService',
-  function($scope, $rootScope, $ionicHistory, $timeout, $ionicSlideBoxDelegate, $ionicTabsDelegate, sliderService) {
+.controller('homeCtrl', ['$scope', '$state', '$ionicHistory', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', 'sliderService',
+  function($scope, $state, $ionicHistory, $ionicSlideBoxDelegate, $ionicTabsDelegate, sliderService) {
     var classify = sliderService.getClassify();
     console.log(classify);
     $scope.slides = classify;
@@ -42,7 +42,19 @@ angular.module('app.controllers', [])
       $ionicSlideBoxDelegate.slide(index);
     }
 
-    $ionicHistory.clearHistory();
+    // 权限控制
+    var token = localStorage.getItem("token");
+    var user = localStorage.getItem("user");
+    if (token && user) {
+      $state.go('tabsController.home');
+    } else {
+      $state.go('login');
+    }
+
+    $scope.$on('$ionicView.afterEnter', function () {
+      $ionicHistory.clearHistory();
+    });
+
   }
 ])
 // 新闻详情
@@ -462,7 +474,7 @@ angular.module('app.controllers', [])
           localStorage.setItem("token", token);
 
           console.log("登陆成功");
-          $state.go("tabsController.home", {isLogin: true});
+          $state.go('tabsController.home');
           
         }, function() {
           console.log('err');
@@ -470,8 +482,17 @@ angular.module('app.controllers', [])
       } else {
         console.log('表单填写错误');
       }
-
     }
+
+    $scope.$on('$ionicView.beforeEnter', function () {
+      // 权限控制
+      var token = localStorage.getItem("token");
+      var user = localStorage.getItem("user");
+      if (token && user) {
+        $state.go('tabsController.home');
+      }
+    });
+
   }
 ])
 
@@ -496,7 +517,7 @@ angular.module('app.controllers', [])
           localStorage.setItem("token", token);
 
           console.log("注册成功");
-          $state.go("tabsController.profile", {});
+          $state.go('login');
         }, function() {
           console.log('err');
         });
