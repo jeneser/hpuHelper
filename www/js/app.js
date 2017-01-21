@@ -73,8 +73,9 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
   }, 101);
 
   //　接口配置
-  $rootScope.baseUrl = 'http://45.76.162.124:3000/';
-  // $rootScope.baseUrl = 'http://localhost:1337/localhost:4000/';
+  // $rootScope.BASEURL = 'http://45.76.162.124:3000/';
+  $rootScope.BASEURL = 'http://localhost:1337/45.76.162.124:3000/';
+  // $rootScope.BASEURL = 'http://localhost:1337/localhost:4000/';
 })
 
 .config(function($ionicConfigProvider, $httpProvider) {

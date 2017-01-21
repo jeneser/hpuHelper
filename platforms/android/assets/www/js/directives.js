@@ -1,6 +1,6 @@
 angular.module('app.directives', [])
 
-.directive('blankDirective', [function(){
+.directive('blankDirective', [function() {
 
 }])
 
@@ -10,8 +10,8 @@ angular.module('app.directives', [])
     restrict: 'A',
     link: function(scope, element, attributes) {
       scope.$on('$ionicView.beforeEnter', function() {
-        scope.$watch(attributes.hideTabs, function(value){
-            $rootScope.hideTabs = value;
+        scope.$watch(attributes.hideTabs, function(value) {
+          $rootScope.hideTabs = value;
         });
       });
       scope.$on('$ionicView.beforeLeave', function() {

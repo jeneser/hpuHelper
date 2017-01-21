@@ -167,15 +167,6 @@ $item-thumbnail-height:           90px !default;
 	    }
 	}
 }
-/* 图说 */
-.picture {
-	.title {
-		margin: 8px 0;
-	}
-	.cover {
-		@extend %cover;
-	}
-}
 /* 内容加载中 */
 .loading{
 	position: absolute;
@@ -432,7 +423,7 @@ $item-thumbnail-height:           90px !default;
 .used-list, .collection-list {
   .item {
     margin: 5px 0;
-  } 
+  }
   i:first-child {
     @extend %left-avatar;
     font-size: 22px;
@@ -513,7 +504,7 @@ $item-thumbnail-height:           90px !default;
     margin: 24px 0 0 0;
   }
   label {
-    margin: 20px 0; 
+    margin: 20px 0;
   }
   a {
     font-size: small;

@@ -3,107 +3,174 @@ angular.module('app.controllers', [])
 // 首页
 // -------------------------------
 .controller('homeCtrl', ['$scope', '$state', '$ionicHistory', '$ionicSlideBoxDelegate', '$ionicTabsDelegate', 'sliderService',
-    function($scope, $state, $ionicHistory, $ionicSlideBoxDelegate, $ionicTabsDelegate, sliderService) {
-      var classify = sliderService.getClassify();
-      console.log(classify);
-      $scope.slides = classify;
-      $scope.tabs = classify;
+  function($scope, $state, $ionicHistory, $ionicSlideBoxDelegate, $ionicTabsDelegate, sliderService) {
 
-      // 加载数据
-      var getData = function(index) {
-        var c = classify[index];
-        console.log(c);
-        c.doRefresh();
-        // 安卓平台不会自动触发加载
-        if (ionic.Platform.isAndroid()) {
-          c.doRefresh();
-        }
-        // 初始化数据，和回调函数
+    var token = localStorage.getItem("token");
+    var user = localStorage.getItem("user");
+
+    var classify = sliderService.getClassify();
+    console.log(classify);
+    $scope.slides = classify;
+    $scope.tabs = classify;
+
+    // 权限控制
+    if (token && user) {
+      $state.go('tabsController.home');
+    } else {
+      $state.go('login');
+    }
+
+    // 加载数据
+    var getData = function(index) {
+      var c = classify[index];
+      console.log(c);
+      c.doRefresh();
+
+      c.cb = function() {
+        console.log('ok!');
         c.isload = false;
-        c.callback = function() {
-          $scope.$broadcast('scroll.refreshComplete');
-          $scope.$broadcast('scroll.infiniteScrollComplete');
-        }
+        $scope.$broadcast('scroll.refreshComplete');
+        $scope.$broadcast('scroll.infiniteScrollComplete');
       }
-      getData(0);
+    }
+    getData(0);
 
-      $scope.slideChanged = function(index) {
-        getData(index);
+    $scope.slideChanged = function(index) {
+      getData(index);
+      // 视图中存在多个tabs
+      $ionicTabsDelegate._instances[1].select(index);
+    };
 
-        //这里使用instances[1]的原因是视图中有两个tabs
-        $ionicTabsDelegate._instances[1].select(index);
+    $scope.selectedTab = function(index) {
+      $ionicSlideBoxDelegate.slide(index);
+    }
+
+    $scope.$on('$ionicView.afterEnter', function() {
+      // 视图加载完成默认选中第一个菜单
+      $ionicTabsDelegate._instances[1].select($ionicSlideBoxDelegate.currentIndex());
+      // 防止回退到登陆页
+      $ionicHistory.clearHistory();
+    });
+
+  }
+])
+
+// 新闻详情
+// -------------------------------
+.controller('newsCtrl', ['$scope', '$stateParams', '$cordovaInAppBrowser', 'newsService',
+  function($scope, $stateParams, $cordovaInAppBrowser, newsService) {
+
+    var objectId = $stateParams.objectId;
+    console.log(objectId);
+    $scope.loading = true;
+
+    newsService.requestData(objectId);
+
+    // 打开原文链接
+    $scope.openUrl = function(url) {
+      var options = {
+        location: 'yes',
+        clearcache: 'yes',
+        toolbar: 'no'
       };
-      $scope.$on('$ionicView.afterEnter', function() {
-        //等待视图加载完成的时候默认选中第一个菜单
-        $ionicTabsDelegate._instances[1].select($ionicSlideBoxDelegate.currentIndex());
-      });
-      $scope.selectedTab = function(index) {
-        //滑动的索引和速度
-        $ionicSlideBoxDelegate.slide(index);
-      }
-
-      // 权限控制
-      var token = localStorage.getItem("token");
-      var user = localStorage.getItem("user");
-      if (token && user) {
-        $state.go('tabsController.home');
-      } else {
-        $state.go('login');
-      }
-
-      $scope.$on('$ionicView.afterEnter', function() {
-        $ionicHistory.clearHistory();
-      });
-
+      $cordovaInAppBrowser.open(url, '_blank', options)
+        .then(function(event) {
+          // success
+        })
+        .catch(function(event) {
+          alert("抱歉！链接出问题了");
+        });
     }
-  ])
-  // 新闻详情
-  .controller('newsContentCtrl', ['$scope', '$state', '$stateParams', '$cordovaInAppBrowser', 'newsContentService',
-    function($scope, $state, $stateParams, $cordovaInAppBrowser, newsContentService) {
-      var objectId = $stateParams.objectId;
-      console.log(objectId);
-      $scope.loading = true;
 
-      newsContentService.requestData(objectId);
+    $scope.$on('newsServiceUpdata', function(event, data) {
 
-      // 打开原文链接
+      $scope.loading = !$scope.loading;
+      console.log($scope.loading);
+      $scope.item = data;
+      console.log($scope.item);
+    })
+  }
+])
 
-      $scope.openUrl = function(url) {
-        var options = {
-          location: 'yes',
-          clearcache: 'yes',
-          toolbar: 'no'
-        };
-        $cordovaInAppBrowser.open(url, '_blank', options)
-          .then(function(event) {
-            // success
-          })
-          .catch(function(event) {
-            alert("抱歉！链接出问题了");
-          });
-      }
+// 后勤详情
+// -------------------------------
+.controller('logisticsCtrl', ['$scope', '$stateParams', '$cordovaInAppBrowser', 'logisticsService',
+  function($scope, $stateParams, $cordovaInAppBrowser, logisticsService) {
 
-      $scope.$on('newsContentServiceUpdata', function(event, data) {
+    var objectId = $stateParams.objectId;
+    console.log(objectId);
+    $scope.loading = true;
 
-        $scope.loading = !$scope.loading;
-        console.log($scope.loading);
-        $scope.item = data;
-        console.log($scope.item);
-      })
+    logisticsService.requestData(objectId);
+
+    // 打开原文链接
+    $scope.openUrl = function(url) {
+      var options = {
+        location: 'yes',
+        clearcache: 'yes',
+        toolbar: 'no'
+      };
+      $cordovaInAppBrowser.open(url, '_blank', options)
+        .then(function(event) {
+          // success
+        })
+        .catch(function(event) {
+          alert("抱歉！链接出问题了");
+        });
     }
-  ])
-  // 公告详情
-  .controller('noticeContentCtrl', ['$scope', '$stateParams',
-    function($scope, $stateParams) {
 
-    }
-  ])
-  // 招聘详情
-  .controller('recruitContentCtrl', ['$scope', '$stateParams',
-    function($scope, $stateParams) {
+    $scope.$on('logisticsServiceUpdata', function(event, data) {
 
+      $scope.loading = !$scope.loading;
+      console.log($scope.loading);
+      $scope.item = data;
+      console.log($scope.item);
+    })
+  }
+])
+
+// 公告详情
+.controller('noticeCtrl', ['$scope', '$stateParams',
+  function($scope, $stateParams) {
+
+  }
+])
+
+// 招聘详情
+.controller('recruitCtrl', ['$scope', '$stateParams', '$cordovaInAppBrowser', 'recruitContentService',
+  function($scope, $stateParams, $cordovaInAppBrowser, recruitContentService) {
+
+    var objectId = $stateParams.objectId;
+    console.log(objectId);
+    $scope.loading = true;
+
+    recruitContentService.requestData(objectId);
+
+    // 打开原文链接
+    $scope.openUrl = function(url) {
+      var options = {
+        location: 'yes',
+        clearcache: 'yes',
+        toolbar: 'no'
+      };
+      $cordovaInAppBrowser.open(url, '_blank', options)
+        .then(function(event) {
+          // success
+        })
+        .catch(function(event) {
+          alert("抱歉！链接出问题了");
+        });
     }
-  ])
+
+    $scope.$on('recruitContentServiceUpdata', function(event, data) {
+
+      $scope.loading = !$scope.loading;
+      console.log($scope.loading);
+      $scope.item = data;
+      console.log($scope.item);
+    })
+  }
+])
 
 // 活动
 // -------------------------------

@@ -28,7 +28,7 @@
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
                 <ion-refresher on-refresh="slide.doRefresh()"></ion-refresher>
                 <div class="list recommend-list">
-                    <a ng-repeat="item in slides[0].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{ item.objectId }}">
+                    <a ng-repeat="item in slides[0].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/news/{{ item.objectId }}">
                         <img ng-src="http://pic.68ps.com/down/UploadFile/20131001/sc131001_1a.jpg" alt="pic">
                         <h2>
                             <b>{{ item.title }}</b>
@@ -46,40 +46,40 @@
         <!-- 新闻视图 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
-                <ion-refresher on-refresh="slide.doRefresh()"></ion-refresher>
+                <ion-refresher on-refresh="slides[1].doRefresh()"></ion-refresher>
                 <div class="list news-list">
-                    <a ng-repeat="item in slides[1].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
+                    <a ng-repeat="item in slides[1].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/news/{{item._id}}">
                         <img ng-src="{{item.cover}}" alt="pic">
                         <h2>
-                            <b>{{ item.title }}</b>
+                            <b>{{item.title}}</b>
                         </h2>
                         <span>
-                            <i class="tag">{{　item.from　}}</i>
-                            <i class="time">2016/12/3</i>
+                            <i class="tag">{{item.tag}}</i>
+                            <i class="time">{{item.time|date:'yyyy/MM/dd'}}</i>
                         </span>
                     </a>
                 </div>
-                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                <ion-infinite-scroll ng-if="!slides[1].isload" on-infinite="slides[1].loadMore()" distance="1%">
                 </ion-infinite-scroll>
             </ion-content>
         </ion-slide>
         <!-- 后勤视图 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
-                <ion-refresher on-refresh="slide.doRefresh()"></ion-refresher>
+                <ion-refresher on-refresh="slides[2].doRefresh()"></ion-refresher>
                 <div class="list news-list">
-                    <a ng-repeat="item in slides[1].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
+                    <a ng-repeat="item in slides[2].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/logistics/{{item._id}}">
                         <img ng-src="{{item.cover}}" alt="pic">
                         <h2>
-                            <b>{{ item.title }}</b>
+                            <b>{{item.title}}</b>
                         </h2>
                         <span>
-                            <i class="tag">{{　item.from　}}</i>
-                            <i class="time">2016/12/3</i>
+                            <i class="tag">{{item.tag}}</i>
+                            <i class="time">{{item.time|date:'yyyy/MM/dd'}}</i>
                         </span>
                     </a>
                 </div>
-                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                <ion-infinite-scroll ng-if="!slides[2].isload" on-infinite="slides[2].loadMore()" distance="1%">
                 </ion-infinite-scroll>
             </ion-content>
         </ion-slide>
@@ -88,7 +88,7 @@
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
                 <div class="notice">
                     <div class="item">
-                        <a ng-href="#/tabs/noticeContent">
+                        <a ng-href="#/tabs/notice">
                             <h2 class="title">
                                 <b>关于做好2017年度国家艺术基金项目申报工作的通知</b>
                             </h2>
@@ -161,93 +161,19 @@
         <!-- 招聘视图 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header bg">
-                <div class="recruit">
-                    <div class="item">
-                        <a ng-href="#/tabs/recruitContent">
-                            <h2 class="title">
-                                <b>高校2016-2017届毕业生冬季就业双选会</b>
-                            </h2>
-                            <p class="description">为全力促进2016-2017年高校毕业生、实习生就业，根据有关单位统一部署</p>
-                            <span class="tag">校外招聘</span>
-                            <span class="time">2016-11-17</span>
-                        </a>
-                    </div>
+                <ion-refresher on-refresh="slides[4].doRefresh()"></ion-refresher>
+                <div class="recruit" ng-repeat="item in slides[4].items" >
+                    <a class="item" ng-href="#/tabs/recruit/{{item._id}}">
+                        <h2 class="title">
+                            <b>{{item.title}}</b>
+                        </h2>
+                        <span class="tag">{{item.tag}}</span>
+                        <span class="time">{{item.time|date:'yyyy-MM-dd'}}</span>
+                    </a>
                 </div>
-                <div class="recruit">
-                    <div class="item">
-                        <a ng-href="#/tabs/recruitContent">
-                            <h2 class="title">
-                                <b>届毕业生冬季就业双选会</b>
-                            </h2>
-                            <p class="description">为全力促进2016-2017年高校毕业生、实习生就业，根据有关单位统一部署</p>
-                            <span class="tag">校外招聘</span>
-                            <span class="time">2016-11-17</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="recruit">
-                    <div class="item">
-                        <a ng-href="#/tabs/recruitContent">
-                            <h2 class="title">
-                                <b>河南高校2016-2017届毕业生冬季就业双选会</b>
-                            </h2>
-                            <p class="description">为全力促进2016-2017年高校毕业生、实习生就业，根据有关单位统一部署</p>
-                            <span class="tag">校外招聘</span>
-                            <span class="time">2016-11-17</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="recruit">
-                    <div class="item">
-                        <a ng-href="#/tabs/recruitContent">
-                            <h2 class="title">
-                                <b>毕业生冬季就业双选会</b>
-                            </h2>
-                            <p class="description">为全力促进2016-2017年高校毕业生、实习生就业，根据有关单位统一部署</p>
-                            <span class="tag">校外招聘</span>
-                            <span class="time">2016-11-17</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="recruit">
-                    <div class="item">
-                        <a ng-href="#/tabs/recruitContent">
-                            <h2 class="title">
-                                <b>高校20业生冬季就业双选会</b>
-                            </h2>
-                            <p class="description">为全力促进2016-2017年高校毕业生、实习生就业，根据有关单位统一部署</p>
-                            <span class="tag">校外招聘</span>
-                            <span class="time">2016-11-17</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="recruit">
-                    <div class="item">
-                        <a ng-href="#/tabs/recruitContent">
-                            <h2 class="title">
-                                <b>届毕业生冬季就业双选会</b>
-                            </h2>
-                            <p class="description">为全力促进2016-2017年高校毕业生、实习生就业，根据有关单位统一部署</p>
-                            <span class="tag">校外招聘</span>
-                            <span class="time">2016-11-17</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="recruit">
-                    <div class="item">
-                        <a ng-href="#/tabs/recruitContent">
-                            <h2 class="title">
-                                <b>2016-2017届毕业生冬季就业双选会</b>
-                            </h2>
-                            <p class="description">为全力促进2016-2017年高校毕业生、实习生就业，根据有关单位统一部署</p>
-                            <span class="tag">校外招聘</span>
-                            <span class="time">2016-11-17</span>
-                        </a>
-                    </div>
-                </div>
+                <ion-infinite-scroll ng-if="!slides[4].isload" on-infinite="slides[4].loadMore()" distance="1%">
+                </ion-infinite-scroll>
             </ion-content>
-            <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
-            </ion-infinite-scroll>
         </ion-slide>
     </ion-slide-box>
     <ion-tabs class="tabs-top tabs-striped tabs-positive">

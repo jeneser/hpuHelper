@@ -46,7 +46,7 @@
         <!-- 新闻视图 -->
         <ion-slide>
             <ion-content has-bouncing="true" overflow-scroll="false" class="has-header">
-                <ion-refresher on-refresh="slide.doRefresh()"></ion-refresher>
+                <ion-refresher on-refresh="slides[1].doRefresh()"></ion-refresher>
                 <div class="list news-list">
                     <a ng-repeat="item in slides[1].items" class="item item-thumbnail-right item-text-wrap" ng-href="#/tabs/newsContent/{{item.objectId}}">
                         <img ng-src="{{item.cover}}" alt="pic">
@@ -54,12 +54,12 @@
                             <b>{{ item.title }}</b>
                         </h2>
                         <span>
-                            <i class="tag">{{　item.from　}}</i>
-                            <i class="time">2016/12/3</i>
+                            <i class="tag">{{　item.tag　}}</i>
+                            <i class="time">{{　item.time | date:'d/M/yyyy'　}}</i>
                         </span>
                     </a>
                 </div>
-                <ion-infinite-scroll ng-if="!slide.isload" on-infinite="slide.loadMore()" distance="1%">
+                <ion-infinite-scroll ng-if="!slides[1].isload" on-infinite="slides[1].loadMore()" distance="1%">
                 </ion-infinite-scroll>
             </ion-content>
         </ion-slide>

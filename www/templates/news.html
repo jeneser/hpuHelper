@@ -3,13 +3,13 @@
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     <ion-content padding="true" has-bouncing="true" overflow-scroll="false" class="has-header">
-        <div class="loading" ng-show="loading">  
+        <div class="loading" ng-show="loading">
             <ion-spinner icon="lines" class="spinner-positive"></ion-spinner>
         </div>
         <div class="news-content" ng-hide="loading">
             <h2>{{item.title}}</h2>
-            <span class="time">{{item.created_at}}</span>
-            <span class="tag">{{item.from}}</span>
+            <span class="time">{{item.time|date:'yyyy-MM-dd'}}</span>
+            <span class="tag">{{item.tag}}</span>
             <div class="content" ng-bind-html="item.content"></div>
             <div class="footer">
                 <span ng-click="openUrl(item.url)">阅读原文</span>

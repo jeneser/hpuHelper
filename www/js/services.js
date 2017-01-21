@@ -1,202 +1,252 @@
 angular.module('app.services', [])
 
-.factory('BlankFactory', [function() {
-
-}])
-
-.service('BlankService', [function() {
-
-}])
-
 //　滑动菜单
 // -------------------------------
-.service('sliderService', function($http) {
-  this.getClassify = function() {
-    return [{
-      name: '推荐',
-      isload: true,
-      page: 1,
-      rows: 20,
-      url: 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=' + this.page + '&callback=JSON_CALLBACK',
-      items: [],
-      loadMore: function() {
-        $this = this;
-        console.log("正在加载更多数据..." + this.page);
-        $http.jsonp(this.url).success(function(response) {
-          $this.items = $this.items.concat(response.result);
+.service('sliderService', ['$rootScope', '$http',
+  function($rootScope, $http) {
 
-          if (response.length < 20) {
-            $this.isload = false;
-          }
-          $this.page++;
-          console.log($this);
-          $this.callback();
-        });
-      },
-      doRefresh: function() {
-        $this = this;
-        console.log("正在执行refresh操作...");
-        $http.jsonp(this.url).success(function(response) {
-          $this.page = 2;
+    this.getClassify = function() {
+      return [{
+        name: '推荐',
+        isload: true,
+        page: 1,
+        rows: 20,
+        url: 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=' + this.page + '&callback=JSON_CALLBACK',
+        items: [],
+        loadMore: function() {
+          $this = this;
+          console.log("正在加载更多数据..." + this.page);
+          $http.jsonp(this.url).success(function(response) {
+            $this.items = $this.items.concat(response.result);
 
-          $this.items = response.result;
-          $this.callback();
-        });
-      },
-      callback: function() {
-        //回掉函数
-      }
-    }, {
-      name: '新闻',
-      isload: true,
-      limit: 3,
-      skip: 0,
-      items: [],
-      loadMore: function(callback) {
-        $this = this;
-        console.log("正在加载更多数据...");
-        var url = 'http://jenes.site/hpu/public/getNewsList/json/' + this.limit + '/' + this.skip;
+            if (response.length < 20) {
+              $this.isload = false;
+            }
+            $this.page++;
+            console.log($this);
+            $this.callback();
+          });
+        },
+        doRefresh: function() {
+          $this = this;
+          console.log("正在执行refresh操作...");
+          $http.jsonp(this.url).success(function(response) {
+            $this.page = 2;
 
-        $http.get(url).success(function(response) {
-          $this.items = $this.items.concat(response.results);
-          $this.skip += 3;
-          $this.callback();
-        });
-      },
-      doRefresh: function() {
-        $this = this;
-        console.log("正在执行refresh操作...");
-        var url = 'http://jenes.site/hpu/public/getNewsList/json/6/0';
+            $this.items = response.result;
+            $this.callback();
+          });
+        },
+        callback: function() {
+          //回掉函数
+        }
+      }, {
+        name: '新闻',
+        isload: true,
+        limit: 3,
+        skip: 6,
+        items: [],
+        loadMore: function() {
+          $this = this;
+          console.log("正在加载更多数据...");
+          var url = $rootScope.BASEURL + 'api/v1/news?limit=' + this.limit + '&skip=' + this.skip;
 
-        $http.get(url).success(function(response) {
-          $this.items = response.results;
-          $this.callback();
-          console.log("刷新完成");
-        });
-      },
-      callback: function() {
-        //回掉函数
-      }
-    }, {
-      name: '后勤',
-      isload: true,
-      limit: 3,
-      skip: 0,
-      items: [],
-      loadMore: function(callback) {
-        $this = this;
-        console.log("正在加载更多数据...");
-        var url = 'http://jenes.site/hpu/public/getWeiBo/json/' + this.limit + '/' + this.skip;
+          $http.get(url)
+            .success(function(res) {
+              $this.items = $this.items.concat(res);
+              $this.skip += 3;
+            })
+            .finally(function() {
+              $this.cb();
+            });
+        },
+        doRefresh: function() {
+          $this = this;
+          console.log("正在执行refresh操作...");
+          var url = $rootScope.BASEURL + 'api/v1/news?limit=' + $this.skip + '&skip=0';
 
-        $http.get(url).success(function(response) {
-          $this.items = $this.items.concat(response.results);
-          console.log($this.items);
-          $this.skip += 3;
-          $this.callback();
-        });
-      },
-      doRefresh: function() {
-        $this = this;
-        console.log("正在执行refresh操作...");
-        var url = 'http://jenes.site/hpu/public/getWeiBo/json/3/0';
+          $http.get(url)
+            .success(function(res) {
+              console.log(res);
+              $this.items = res;
+            })
+            .finally(function() {
+              $this.cb();
+            });
+        },
+        cb: function() {}
+      }, {
+        name: '后勤',
+        isload: true,
+        limit: 3,
+        skip: 6,
+        items: [],
+        loadMore: function() {
+          $this = this;
+          console.log("正在加载更多数据...");
+          var url = $rootScope.BASEURL + 'api/v1/logistics?limit=' + this.limit + '&skip=' + this.skip;
 
-        $http.get(url).success(function(response) {
-          $this.items = response.results;
-          $this.callback();
-          console.log("刷新完成");
-        });
-      },
-      callback: function() {
-        //回掉函数
-      }
-    }, {
-      name: '公告',
-      isload: true,
-      page: 1,
-      rows: 20,
-      items: [],
-      loadMore: function(callback) {
-        $this = this;
-        console.log("正在加载更多数据..." + this.page);
-        // var url= 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=15&page='+this.page+'&callback=JSON_CALLBACK';
+          $http.get(url)
+            .success(function(res) {
+              $this.items = $this.items.concat(res);
+              $this.skip += 3;
+            })
+            .finally(function() {
+              $this.cb();
+            });
+        },
+        doRefresh: function() {
+          $this = this;
+          console.log("正在执行refresh操作...");
+          var url = $rootScope.BASEURL + 'api/v1/logistics?limit=' + $this.skip + '&skip=0';
 
-        $http.jsonp(url).success(function(response) {
-          $this.items = $this.items.concat(response.result);
-          $this.page++;
-          if (response.length < 20) {
-            $this.isload = false;
-          }
-          $this.callback();
-        });
-      },
-      doRefresh: function() {
-        $this = this;
-        console.log("正在执行refresh操作...");
-        $http.jsonp(this.url).success(function(response) {
-          $this.page = 2;
-          $this.items = response.result
-          $this.callback();
-        });
-      },
-      callback: function() {
-        //回掉函数
-      }
-    }, {
-      name: '招聘',
-      isload: true,
+          $http.get(url)
+            .success(function(res) {
+              console.log(res);
+              $this.items = res;
+            })
+            .finally(function() {
+              $this.cb();
+            });
+        },
+        cb: function() {}
+      }, {
+        name: '公告',
+        isload: true,
+        page: 1,
+        rows: 20,
+        items: [],
+        loadMore: function(callback) {
+          $this = this;
+          console.log("正在加载更多数据..." + this.page);
+          // var url= 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=15&page='+this.page+'&callback=JSON_CALLBACK';
 
-      page: 1,
-      rows: 20,
-      items: [],
-      loadMore: function() {
-        $this = this;
-        var url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=' + this.page + '&callback=JSON_CALLBACK';
-        console.log("正在加载更多数据..." + this.page);
-        $http.jsonp(url).success(function(response) {
-          $this.items = $this.items.concat(response.result);
-          $this.page++;
-          $this.callback();
-        });
-      },
-      doRefresh: function() {
-        $this = this;
-        console.log("正在执行refresh操作...");
-        $http.jsonp(this.url).success(function(response) {
-          $this.page = 2;
-          if (response.length < 20) {
-            $this.isload = false;
-          }
-          $this.items = response.result
-          $this.callback();
-        });
-      },
-      callback: function() {
-        //回掉函数
-      }
-    }]
+          $http.jsonp(url).success(function(response) {
+            $this.items = $this.items.concat(response.result);
+            $this.page++;
+            if (response.length < 20) {
+              $this.isload = false;
+            }
+            $this.callback();
+          });
+        },
+        doRefresh: function() {
+          $this = this;
+          console.log("正在执行refresh操作...");
+          $http.jsonp(this.url).success(function(response) {
+            $this.page = 2;
+            $this.items = response.result
+            $this.callback();
+          });
+        },
+        callback: function() {
+          //回掉函数
+        }
+      }, {
+        name: '招聘',
+        isload: true,
+        limit: 3,
+        skip: 6,
+        items: [],
+        loadMore: function() {
+          $this = this;
+          console.log("正在加载更多数据...");
+          var url = $rootScope.BASEURL + 'api/v1/job?limit=' + this.limit + '&skip=' + this.skip;
+
+          $http.get(url)
+            .success(function(res) {
+              $this.items = $this.items.concat(res);
+              $this.skip += 3;
+            })
+            .finally(function() {
+              $this.cb();
+            });
+        },
+        doRefresh: function() {
+          $this = this;
+          console.log("正在执行refresh操作...");
+          var url = $rootScope.BASEURL + 'api/v1/job?limit=' + $this.skip + '&skip=0';
+
+          $http.get(url)
+            .success(function(res) {
+              console.log(res);
+              $this.items = res;
+            })
+            .finally(function() {
+              $this.cb();
+            });
+        },
+        cb: function() {}
+      }]
+    }
   }
-})
+])
 
 //　新闻内容
 // -------------------------------
-.service('newsContentService', function($http, $rootScope) {
+.service('newsService', function($http, $rootScope) {
   var item = '';
   return {
     requestData: function(objectId) {
 
-      var newsContentUrl = 'http://jenes.site/hpu/public/getNewsContent/json/' + objectId;
+      var newsUrl = $rootScope.BASEURL + 'api/v1/news/' + objectId;
 
-      $http.get(newsContentUrl).success(
-        function(response) {
-          item = response;
-          console.log(response);
-          //广播告诉 controller数据请求完成
+      $http.get(newsUrl)
+        .success(function(res) {
+          item = res;
+          console.log(res);
 
-          $rootScope.$broadcast('newsContentServiceUpdata', item);
-        }
-      ).error(function() {
-        console.log('数据获取失败!');
-      });
+          $rootScope.$broadcast('newsServiceUpdata', item);
+        })
+        .error(function() {
+          console.log('数据获取失败!');
+        });
+    }
+  }
+})
+
+//　后勤内容
+// -------------------------------
+.service('logisticsService', function($http, $rootScope) {
+  var item = '';
+  return {
+    requestData: function(objectId) {
+
+      var logisticsUrl = $rootScope.BASEURL + 'api/v1/logistics/' + objectId;
+
+      $http.get(logisticsUrl)
+        .success(function(res) {
+          item = res;
+          console.log(res);
+
+          $rootScope.$broadcast('logisticsServiceUpdata', item);
+        })
+        .error(function() {
+          console.log('数据获取失败!');
+        });
+    }
+  }
+})
+
+//　招聘内容
+// -------------------------------
+.service('recruitContentService', function($http, $rootScope) {
+  var item = '';
+  return {
+    requestData: function(objectId) {
+
+      var recruitContentUrl = $rootScope.BASEURL + 'api/v1/job/' + objectId;
+
+      $http.get(recruitContentUrl)
+        .success(function(res) {
+          item = res;
+          console.log(res);
+
+          $rootScope.$broadcast('recruitContentServiceUpdata', item);
+        })
+        .error(function() {
+          console.log('数据获取失败!');
+        });
     }
   }
 })
@@ -207,9 +257,9 @@ angular.module('app.services', [])
   return {
     requestData: function() {
 
-      var newsContentUrl = 'http://jenes.site/hpu/public/timetables';
+      var newsUrl = 'http://jenes.site/hpu/public/timetables';
 
-      $http.get(newsContentUrl).success(
+      $http.get(newsUrl).success(
         function(response) {
           timetales = response;
           // console.log(response.Other);
@@ -229,7 +279,7 @@ angular.module('app.services', [])
   function($rootScope, $http) {
     return {
       signup: function(userDate, success, err) {
-        $http.post($rootScope.baseUrl + 'user/signup', userDate).success(function(res) {
+        $http.post($rootScope.BASEURL + 'user/signup', userDate).success(function(res) {
           // console.log(res);
           success(res);
         }).error(function() {
@@ -248,7 +298,7 @@ angular.module('app.services', [])
   function($rootScope, $http) {
     return {
       login: function(userDate, success, err) {
-        $http.post($rootScope.baseUrl + 'user/signin', userDate).success(function(res) {
+        $http.post($rootScope.BASEURL + 'user/signin', userDate).success(function(res) {
           // console.log(res);
           success(res);
         }).error(function() {

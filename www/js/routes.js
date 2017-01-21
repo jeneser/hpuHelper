@@ -3,17 +3,17 @@ angular.module('app.routes', ['ionicUIRouter'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  // 底部导航
-  // -------------------------------
+    // 底部导航
+    // -------------------------------
     .state('tabsController', {
-    url: '/tabs',
-    templateUrl: 'templates/tabsController.html',
-    abstract: true
-  })
+      url: '/tabs',
+      templateUrl: 'templates/tabsController.html',
+      abstract: true
+    })
 
-  // 首页
-  // -------------------------------
-  .state('tabsController.home', {
+    // 首页
+    // -------------------------------
+    .state('tabsController.home', {
       url: '/home',
       views: {
         'tab1': {
@@ -22,40 +22,54 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
-    // 新闻详情页
-    .state('tabsController.newsContent', {
-      url: '/newsContent/:objectId',
+
+    // 新闻
+    .state('tabsController.news', {
+      url: '/news/:objectId',
       views: {
         'tab1': {
-          templateUrl: 'templates/newsContent.html',
-          controller: 'newsContentCtrl'
-        }
-      }
-    })
-    // 公告详情页
-    .state('tabsController.notice', {
-      url: '/noticeContent',
-      views: {
-        'tab1': {
-          templateUrl: 'templates/noticeContent.html',
-          controller: 'noticeContentCtrl'
-        }
-      }
-    })
-    // 招聘详情页
-    .state('tabsController.recruit', {
-      url: '/recruitContent',
-      views: {
-        'tab1': {
-          templateUrl: 'templates/recruitContent.html',
-          controller: 'recruitContentCtrl'
+          templateUrl: 'templates/news.html',
+          controller: 'newsCtrl'
         }
       }
     })
 
-  // 活动
-  // -------------------------------
-  .state('tabsController.activity', {
+    // 后勤
+    .state('tabsController.logistics', {
+      url: '/logistics/:objectId',
+      views: {
+        'tab1': {
+          templateUrl: 'templates/news.html',
+          controller: 'logisticsCtrl'
+        }
+      }
+    })
+
+    // 公告
+    .state('tabsController.notice', {
+      url: '/notice',
+      views: {
+        'tab1': {
+          templateUrl: 'templates/notice.html',
+          controller: 'noticeCtrl'
+        }
+      }
+    })
+
+    // 招聘
+    .state('tabsController.recruit', {
+      url: '/recruit/:objectId',
+      views: {
+        'tab1': {
+          templateUrl: 'templates/recruit.html',
+          controller: 'recruitCtrl'
+        }
+      }
+    })
+
+    // 活动
+    // -------------------------------
+    .state('tabsController.activity', {
       url: '/activity',
       views: {
         'tab2': {
@@ -64,6 +78,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 活动海报内容页
     .state('tabsController.posterContent', {
       url: '/posterContent',
@@ -75,9 +90,9 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     })
 
-  // 发现
-  // -------------------------------
-  .state('tabsController.explore', {
+    // 发现
+    // -------------------------------
+    .state('tabsController.explore', {
       url: '/explore',
       views: {
         'tab3': {
@@ -86,6 +101,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 精选内容页
     .state('tabsController.choiceContent', {
       url: '/choiceContent',
@@ -96,6 +112,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 话题
     .state('tabsController.topic', {
       url: '/topic',
@@ -107,9 +124,9 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     })
 
-  // 工具
-  // -------------------------------
-  .state('tabsController.tools', {
+    // 工具
+    // -------------------------------
+    .state('tabsController.tools', {
       url: '/tools',
       views: {
         'tab4': {
@@ -118,6 +135,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 课程表路由
     .state('tabsController.course', {
       url: '/course',
@@ -128,6 +146,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 空教室
     .state('tabsController.classroom', {
       url: '/classroom',
@@ -138,6 +157,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 查成绩
     .state('tabsController.mark', {
       url: '/mark',
@@ -148,6 +168,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 四六级
     .state('tabsController.cet46', {
       url: '/cet46',
@@ -158,6 +179,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     //校园卡
     .state('tabsController.ecard', {
       url: '/ecard',
@@ -168,6 +190,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 图书馆
     .state('tabsController.library', {
       url: '/library',
@@ -178,6 +201,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 报修
     .state('tabsController.repair', {
       url: '/repair',
@@ -188,6 +212,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 社团榜
     .state('tabsController.clubs', {
       url: '/clubs',
@@ -198,6 +223,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 表白
     .state('tabsController.love', {
       url: '/love',
@@ -208,6 +234,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 地图
     .state('tabsController.map', {
       url: '/map',
@@ -218,6 +245,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 校历
     .state('tabsController.calendar', {
       url: '/calendar',
@@ -228,6 +256,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 代取快递
     .state('tabsController.express', {
       url: '/express',
@@ -239,9 +268,9 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     })
 
-  // 个人中心
-  // -------------------------------
-  .state('tabsController.profile', {
+    // 个人中心
+    // -------------------------------
+    .state('tabsController.profile', {
       url: '/profile',
       views: {
         'tab5': {
@@ -250,6 +279,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 设置
     .state('tabsController.setting', {
       url: '/setting',
@@ -260,6 +290,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 消息通知
     .state('tabsController.message', {
       url: '/message',
@@ -270,6 +301,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 我的发布
     .state('tabsController.publish', {
       url: '/publish',
@@ -280,6 +312,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 我的关注
     .state('tabsController.follow', {
       url: '/follow',
@@ -290,6 +323,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 密码绑定
     .state('tabsController.binding', {
       url: '/binding',
@@ -300,6 +334,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 关于
     .state('tabsController.about', {
       url: '/about',
@@ -310,6 +345,7 @@ angular.module('app.routes', ['ionicUIRouter'])
         }
       }
     })
+
     // 反馈
     .state('tabsController.feedback', {
       url: '/feedback',
@@ -321,29 +357,29 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     })
 
-  //　搜索
-  // -------------------------------
-  .state('search', {
-    url: '/search',
-    templateUrl: 'templates/search.html',
-    controller: 'searchCtrl'
-  })
+    //　搜索
+    // -------------------------------
+    .state('search', {
+      url: '/search',
+      templateUrl: 'templates/search.html',
+      controller: 'searchCtrl'
+    })
 
-  //　登陆
-  // -------------------------------
-  .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'loginCtrl'
-  })
+    //　登陆
+    // -------------------------------
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginCtrl'
+    })
 
-  //　注册
-  // -------------------------------
-  .state('sign', {
-    url: '/sign',
-    templateUrl: 'templates/sign.html',
-    controller: 'signCtrl'
-  })
+    //　注册
+    // -------------------------------
+    .state('sign', {
+      url: '/sign',
+      templateUrl: 'templates/sign.html',
+      controller: 'signCtrl'
+    })
 
   $urlRouterProvider.otherwise('/tabs/home')
 
